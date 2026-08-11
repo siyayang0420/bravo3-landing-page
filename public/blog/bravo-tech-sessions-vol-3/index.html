@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting to Bravo AI Sessions Vol. 3 — Bravo Blog</title>
+
+    <!--
+      Redirect stub. This post used to live at /blog/bravo-tech-sessions-vol-3/
+      before "Bravo Tech Sessions" was renamed to "Bravo AI Sessions".
+
+      This lives in public/ so it is copied verbatim into the build — the real
+      fix is a 301 in nginx (see deploy/nginx-redirects.conf), which is instant
+      and transfers ranking cleanly. This stands in until that is in place.
+
+      Deliberately NOT noindex: `noindex` would tell search engines to drop this
+      URL outright, which throws away the very link equity the redirect exists to
+      pass on. An instant meta-refresh plus a canonical is the combination Google
+      treats closest to a permanent redirect.
+    -->
+    <link rel="canonical" href="https://bravoapp.ai/blog/bravo-ai-sessions-vol-3/" />
+    <meta http-equiv="refresh" content="0; url=https://bravoapp.ai/blog/bravo-ai-sessions-vol-3/" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <style>
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        font-family: Inter, system-ui, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #202020;
+        text-align: center;
+      }
+      a { color: inherit; }
+    </style>
+  </head>
+  <body>
+    <!-- Only ever seen if both the meta refresh and JS fail; it still has to be
+         a real link so the page is never a dead end. -->
+    <p>
+      This post has moved to
+      <a href="https://bravoapp.ai/blog/bravo-ai-sessions-vol-3/">Bravo AI Sessions Vol. 3</a>.
+    </p>
+
+    <script>
+      /* `replace`, not `assign`: the stub must not enter history, or Back from
+         the new post lands here and bounces the visitor straight forward again. */
+      location.replace('https://bravoapp.ai/blog/bravo-ai-sessions-vol-3/');
+    </script>
+  </body>
+</html>
