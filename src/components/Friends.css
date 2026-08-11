@@ -1,0 +1,78 @@
+/* "Bring friends. Earn together." — Figma 5831:8541. Same one-viewport shell as
+   .ask / .taste / .pay; copy left, phone right. */
+.friends {
+  position: relative;
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+.friends__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 128px;
+  width: 100%;
+  max-width: var(--page-w);
+  padding: 0 32px;
+}
+
+.friends__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 671px;
+  flex: 0 1 671px;
+}
+
+/* `.display` also sets line-height, so the extra class keeps the design's 1.6 */
+.friends .friends__title {
+  font-size: clamp(34px, min(5.4vw, 7.4vh), 84px);
+  line-height: 1.6;
+  color: var(--ds-black);
+  margin: 0;
+  /* The column is `align-items: flex-start`, so the h2 shrink-wraps to its
+     widest line — landing exactly on "Earn Together."'s width and wrapping it
+     on a sub-pixel rounding. Taking the full column keeps the two <br> lines. */
+  width: 100%;
+}
+.friends__lede {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ds-black);
+  max-width: 620px;
+  margin: 0;
+  text-wrap: pretty;
+}
+.friends__cta { flex-shrink: 0; }
+
+/* 344px in Figma; capped against viewport height so the phone can't outgrow
+   the single-screen section (it is 2.06x taller than it is wide). */
+.friends__phone { width: clamp(200px, min(24vw, 41vh), 344px); }
+
+@media (max-width: 1100px) {
+  .friends__inner { gap: 64px; }
+}
+
+@media (max-width: 900px) {
+  .friends { padding: 80px 0; }
+  .friends__inner { flex-direction: column; align-items: flex-start; gap: 56px; padding: 0 var(--gutter); }
+  .friends__copy { flex: 0 0 auto; max-width: none; }
+  .friends__phone { width: min(40vw, 24vh); align-self: center; }
+}
+
+@media (max-width: 600px) {
+  .friends { padding: 56px 0; }
+  .friends__inner { gap: 40px; }
+  .friends__copy { gap: 24px; }
+  .friends__lede { font-size: 18px; }
+  .friends__phone { width: min(52vw, 30vh); }
+}

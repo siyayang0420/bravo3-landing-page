@@ -10,7 +10,7 @@ export default function Nav() {
       <div className="nav__status">
        
       </div>
-      <Button size="mid" href={APP_STORE_URL} {...EXTERNAL_LINK}>Get the app</Button>
+      <Button size="mid" href={APP_STORE_URL} {...EXTERNAL_LINK}>Get the App</Button>
     </nav>
   );
 }

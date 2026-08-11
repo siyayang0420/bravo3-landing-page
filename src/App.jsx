@@ -3,6 +3,7 @@ import Hero from './components/Hero.jsx';
 import Marquee from './components/Marquee.jsx';
 import Ask from './components/Ask.jsx';
 import Taste from './components/Taste.jsx';
+import Friends from './components/Friends.jsx';
 import Pay from './components/Pay.jsx';
 import Footer from './components/Footer.jsx';
 import AvatarMorph from './components/AvatarMorph.jsx';
@@ -21,6 +22,7 @@ export default function App() {
       <Marquee />
       <Ask />
       <Taste />
+      <Friends />
       <Pay />
       <Footer />
       {/* Emma's avatar grows from the phone answer into the Ask stage */}

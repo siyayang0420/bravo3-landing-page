@@ -14,8 +14,13 @@
   overflow: hidden;
 }
 
+/* Source order is copy-then-phone (so the stacked layout puts the title on top);
+   row-reverse restores the design's mirror — phone left, copy right — at desktop.
+   With two children and justify-content:center this is visually identical to
+   laying them out forwards. */
 .pay__inner {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
   gap: 128px;
