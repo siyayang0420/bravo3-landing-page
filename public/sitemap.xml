@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Single-page site: one canonical URL. The in-page sections (#ask, #taste,
-     #friends, #get) are not separate documents and must not be listed here —
-     duplicate-content signals for the same page hurt more than they help. -->
+<!-- The landing page is a single document: its in-page sections (#ask, #taste,
+     #friends, #get) are deliberately NOT listed, since duplicate-content signals
+     for the same URL hurt more than they help. The blog pages are real,
+     separately-addressable documents, so they are. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bravoapp.ai/</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://bravoapp.ai/blog/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://bravoapp.ai/blog/bravo-tech-sessions-vol-3/</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>

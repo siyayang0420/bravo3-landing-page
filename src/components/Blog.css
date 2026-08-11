@@ -1,0 +1,119 @@
+/* Blog index + post — Figma 5852:14661 / 5852:14838.
+   Alignment follows the landing page, not the Figma frame: same .page column,
+   same `--gutter`, and the nav keeps its own padding so the wordmark sits on
+   exactly the same x as it does on the home page. Bottom padding only — the
+   nav's own 28px supplies the top, as it does on the landing page. */
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 0 0 32px;
+  width: 100%;
+}
+.blog > * { width: 100%; }
+
+/* --- index --------------------------------------------------------------- */
+.blog__head { display: flex; flex-direction: column; gap: 24px; padding: 0 var(--gutter); }
+.blog .blog__title {
+  font-size: 36px;
+  line-height: 1.6;
+  color: var(--ds-black);
+  margin: 0;
+}
+.blog__lede { margin: 0; font-size: 24px; line-height: 1.2; color: var(--ds-black); }
+
+.blog__list {
+  list-style: none;
+  margin: 0;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 484px));
+  gap: 48px 32px;
+}
+
+.blog-card { display: flex; flex-direction: column; gap: 8px; max-width: 484px; }
+.blog-card__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 484 / 363;
+  object-fit: cover;
+}
+/* the date/title pair is a tight 2px stack under the image */
+.blog-card__date { font-size: 14px; line-height: 1.6; color: #737373; }
+.blog-card__title {
+  margin: -6px 0 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--ds-black);
+}
+.blog-card:hover .blog-card__title { opacity: .6; }
+
+/* --- post ---------------------------------------------------------------- */
+/* Figma centres an 800px column inside the 1480px page column. */
+.post {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.post > * { width: 100%; }
+
+.post__crumbs { display: flex; align-items: center; gap: 6px; width: auto; }
+.post__crumb {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--ds-black);
+  white-space: nowrap;
+}
+a.post__crumb:hover { opacity: .6; }
+.post__crumb-sep { display: block; width: 16px; height: 16px; object-fit: contain; flex-shrink: 0; }
+
+.post__hero, .post__figure {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.post__hero { aspect-ratio: 800 / 599; }
+
+.post__body { display: flex; flex-direction: column; gap: 12px; }
+.blog .post__title {
+  font-size: 24px;
+  line-height: 1.6;
+  color: var(--ds-black);
+  margin: 0;
+}
+.post__date { font-size: 14px; line-height: 1.6; color: #737373; }
+.post__body p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ds-black);
+  text-wrap: pretty;
+}
+/* Figma sets a blank line between paragraphs rather than a tighter rhythm */
+.post__body p + p { margin-top: 1em; }
+.post__body a { text-decoration: underline; }
+.post__body a:hover { opacity: .6; }
+
+@media (max-width: 900px) {
+  .blog { gap: 48px; }
+}
+
+@media (max-width: 600px) {
+  .blog { gap: 40px; }
+  .blog .blog__title { font-size: 28px; }
+  .blog__lede { font-size: 18px; }
+  .blog__list { grid-template-columns: 1fr; gap: 32px; }
+  .post { gap: 24px; }
+  .blog .post__title { font-size: 20px; }
+  .post__crumb { font-size: 14px; }
+}

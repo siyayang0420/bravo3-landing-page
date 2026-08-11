@@ -6,6 +6,12 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   { ignores: ['dist', 'node_modules'] },
   {
+    /* Build config runs in Node, not the browser — without this, Node globals
+       and `import.meta` read as undefined. */
+    files: ['*.config.js'],
+    languageOptions: { globals: globals.node },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
