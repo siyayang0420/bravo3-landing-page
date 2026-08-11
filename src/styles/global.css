@@ -1,0 +1,66 @@
+@import './tokens.css';
+
+* { box-sizing: border-box; }
+
+/* clip, not hidden — full-bleed children measure 100vw and would otherwise
+   overhang by the scrollbar width. clip leaves vertical scrolling untouched. */
+html, body { overflow-x: clip; }
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+a:hover { opacity: .75; }
+
+.page { max-width: var(--page-w); margin: 0 auto; }
+
+/* type scale */
+.display {
+  font-family: var(--font-display);
+  line-height: var(--display-leading);
+  letter-spacing: -.02em;
+  margin: 0;
+}
+.h2 { font-size: 56px; font-weight: 800; line-height: 1.03; letter-spacing: -.04em; margin: 0; text-wrap: balance; }
+.lede { font-size: 20px; line-height: 1.55; color: var(--ink-body); text-wrap: pretty; }
+.body { font-size: 18px; line-height: 1.6; color: var(--ink-body); text-wrap: pretty; }
+.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-muted); }
+
+/* buttons live in components/Button.css */
+
+/* shell */
+.section { padding: 90px var(--gutter); }
+.section--dark { background: var(--ink); color: var(--on-dark); }
+.section--dark .body { color: var(--on-dark-muted); }
+
+/* product screenshots */
+.phone { border-radius: var(--radius-phone); box-shadow: 0 30px 64px rgba(20,16,10,.24); display: block; }
+.section--dark .phone { box-shadow: 0 30px 64px rgba(0,0,0,.5); }
+
+/* photography placeholders — swap for real art */
+.photo-slot { background: repeating-linear-gradient(135deg, var(--sand) 0 12px, var(--sand-alt) 12px 24px); border-radius: 20px; position: relative; }
+.photo-slot__label { position: absolute; left: 14px; bottom: 14px; font-size: 10px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: #7A7362; }
+
+/* motion */
+@keyframes floaty {
+  0%, 100% { transform: translate3d(0,0,0) rotate(var(--r, 0deg)); }
+  50%      { transform: translate3d(0,-16px,0) rotate(var(--r, 0deg)); }
+}
+@keyframes floaty-alt {
+  0%, 100% { transform: translate3d(0,0,0) rotate(var(--r, 0deg)); }
+  50%      { transform: translate3d(0,13px,0) rotate(var(--r, 0deg)); }
+}
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes pulse { 0%, 100% { opacity: .4; } 50% { opacity: .9; } }
+
+.float     { animation: floaty var(--dur, 10s) ease-in-out infinite; }
+.float-alt { animation: floaty-alt var(--dur, 12s) ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  .float, .float-alt, .marquee__track, .pulse { animation: none !important; }
+}

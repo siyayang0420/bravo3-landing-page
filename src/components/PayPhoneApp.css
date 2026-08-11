@@ -1,0 +1,208 @@
+/* Two screens stacked in the phone glass; the QR one crossfades to the receipt.
+   Everything inside is authored at the Figma design size (393px wide) and
+   scaled by JS, so all type stays real text and renders crisp at any size. */
+.pay-ph { z-index: 0; }
+
+.pay-ph__layer {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: opacity .5s ease;
+}
+/* the faded-out screen must not swallow pointer events meant for the coin */
+.pay-ph__layer.is-out { opacity: 0; pointer-events: none; }
+
+.pay-ph__frame {
+  position: absolute;
+  top: 0; left: 0;
+  width: 393px;
+  transform-origin: 0 0;
+  font-family: var(--font-ui);
+  color: var(--ds-black);
+  font-size: 14px;
+  line-height: 1.2;
+}
+.pay-ph__frame img { display: block; }
+
+.pay-scr { position: absolute; inset: 0; background: #fff; }
+
+/* ---------- shared chrome ---------- */
+.pay-status {
+  position: absolute;
+  left: 0; top: 10px;
+  width: 393px; height: 35px;
+  padding: 6px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  z-index: 2;
+}
+.pay-status__time {
+  font-family: var(--font-ios);
+  font-size: 17px; font-weight: 600;
+  letter-spacing: -.68px;
+}
+.pay-status__levels { display: flex; align-items: center; gap: 4px; }
+
+.pay-scr__back { position: absolute; left: 16px; top: 76px; width: 24px; height: 24px; }
+.pay-scr__back img { position: absolute; }
+.pay-scr__back img:nth-child(1) { left: 14.58%; top: 24.71%; width: 25.29%; height: 50.58%; }
+.pay-scr__back img:nth-child(2) { left: 16.67%; top: calc(50% - .75px); width: 70.12%; height: 1.5px; }
+
+.pay-scr__title {
+  position: absolute;
+  left: 0; top: 80px;
+  width: 393px; margin: 0;
+  font-size: 16px; font-weight: 700;
+  text-align: center;
+}
+
+.pay-scr__tools { position: absolute; left: 317px; top: 76px; display: flex; gap: 12px; }
+.pay-scr__tool { position: relative; width: 24px; height: 24px; }
+.pay-scr__add img { position: absolute; }
+.pay-scr__add img:nth-child(1) { inset: 8.33%; }
+.pay-scr__add img:nth-child(2) { left: 33.33%; top: calc(50% - .75px); width: 33.34%; height: 1.5px; }
+.pay-scr__add img:nth-child(3) { left: calc(50% - .75px); top: 33.33%; width: 1.5px; height: 33.34%; }
+
+/* ---------- screen 1: Pay / QR ---------- */
+.pay-qr__h {
+  position: absolute;
+  left: 0; top: 147px;
+  width: 393px; margin: 0;
+  font-size: 28px; font-weight: 700; line-height: 36px;
+  text-align: center;
+}
+
+.pay-qr__col {
+  position: absolute;
+  left: 24px; top: 207px;
+  width: 345px;
+  display: flex; flex-direction: column; align-items: center; gap: 24px;
+}
+.pay-qr__group { display: flex; flex-direction: column; align-items: center; gap: 24px; width: 301px; }
+
+.pay-qr__card {
+  width: 301px;
+  padding: 20px;
+  border-radius: 45px;
+  background: #fff;
+  display: flex; flex-direction: column; gap: 17px;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, .15));
+}
+
+.pay-qr__code { position: relative; width: 261px; height: 214px; }
+.pay-qr__img {
+  position: absolute;
+  left: 50%; top: 47px;
+  width: 167px; height: 167px;
+  transform: translateX(-50%);
+  object-fit: cover;
+}
+.pay-qr__more { position: absolute; left: 227px; top: 0; width: 34px; height: 34px; }
+.pay-qr__more-bg { position: absolute; inset: 0; width: 34px; height: 34px; }
+.pay-qr__more-dots { position: absolute; left: 5px; top: 5px; width: 24px; height: 24px; }
+
+/* transparent in the design, but it still holds the card's height */
+.pay-qr__offline { opacity: 0; font-size: 14px; line-height: 19px; text-align: center; }
+
+.pay-qr__controls { display: flex; flex-direction: column; gap: 12px; }
+
+.pay-qr__row {
+  width: 261px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #f5f5f5;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.pay-qr__rowleft { display: flex; align-items: center; gap: 9px; }
+.pay-qr__help { width: 18px; height: 18px; flex-shrink: 0; }
+.pay-qr__labels { display: flex; flex-direction: column; }
+.pay-qr__label { font-size: 14px; line-height: 19px; color: #000; white-space: nowrap; }
+.pay-qr__sub { font-size: 14px; line-height: 19px; color: #8e8e93; }
+
+.pay-qr__toggle {
+  position: relative;
+  width: 46px; height: 24.353px;
+  border-radius: 41px;
+  background: #5cdf1e;
+  flex-shrink: 0;
+}
+/* absolutely positioned replaced elements ignore `right` when width is auto,
+   so the knob gets explicit px straight off the Figma insets */
+.pay-qr__toggle img { position: absolute; left: 23px; top: .9px; width: 22.55px; height: 22.55px; }
+
+.pay-qr__btns { display: flex; gap: 13.94px; }
+.pay-qr__btn {
+  width: 123.534px; height: 39px;
+  border-radius: 12px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.pay-qr__btn--max { background: var(--ds-black); color: #fff; }
+.pay-qr__btn--max em { font-style: normal; font-size: 10px; line-height: 13px; }
+.pay-qr__btn--max b { font-weight: 500; font-size: 14px; line-height: 19px; }
+.pay-qr__btn--ghost {
+  background: #fff;
+  border-color: #e5e5ea;
+  color: #aeaeb2;
+  font-weight: 500; font-size: 14px; line-height: 19px;
+}
+
+.pay-qr__cap {
+  margin: 0;
+  width: 301px;
+  font-size: 16px; font-weight: 500; line-height: 21px;
+  color: #8e8e93;
+  text-align: center;
+}
+
+.pay-qr__pager { width: 56px; height: 8px; }
+
+.pay-qr__balance {
+  width: 301px; height: 90px;
+  padding: 20px 14px;
+  border-radius: 16px;
+  background: var(--ds-black);
+  color: #fff;
+  display: flex; flex-direction: column; justify-content: center; gap: 4px;
+}
+.pay-qr__amount { font-size: 20px; font-weight: 700; line-height: 26px; }
+.pay-qr__balrow { display: flex; align-items: center; justify-content: space-between; font-size: 14px; line-height: 19px; }
+.pay-qr__topup { display: inline-flex; align-items: center; gap: 2px; }
+/* the exported chevron points up; Figma rotates it into a right-facing arrow */
+.pay-qr__topup img { width: 7px; height: 12px; transform: rotate(90deg); }
+
+/* ---------- screen 2: Success ---------- */
+.pay-ok__wash {
+  position: absolute;
+  left: 0; top: -2px;
+  width: 393px; height: 502px;
+  background: linear-gradient(to bottom, rgba(47, 186, 95, .2), rgba(47, 186, 95, 0));
+}
+
+.pay-ok__check { position: absolute; left: 50%; top: 165px; width: 80px; height: 80px; transform: translateX(-50%); }
+.pay-ok__check-bg { position: absolute; inset: 0; width: 80px; height: 80px; }
+.pay-ok__check-tick { position: absolute; left: 24%; right: 24%; top: 28%; bottom: 28%; width: 52%; height: 44%; }
+
+.pay-ok__was,
+.pay-ok__now,
+.pay-ok__title,
+.pay-ok__link {
+  position: absolute;
+  left: 0; width: 393px; margin: 0;
+  text-align: center;
+}
+.pay-ok__was { top: 258px; font-size: 24px; font-weight: 700; color: #8e8e93; text-decoration: line-through; }
+.pay-ok__now { top: 285px; font-size: 48px; font-weight: 700; line-height: 57.6px; }
+.pay-ok__title { top: 345px; font-size: 24px; font-weight: 700; }
+.pay-ok__link { top: 382px; font-size: 14px; line-height: 19px; text-decoration: underline; }
+
+/* Figma 5821:7383 — 110px disc, horizontally centred, top 482 */
+.pay-ok__coin {
+  --coin-size: 110.018px;
+  left: 141px; top: 482px;
+  width: var(--coin-size); height: var(--coin-size);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pay-ph__layer { transition: none; }
+}

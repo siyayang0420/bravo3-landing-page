@@ -1,0 +1,205 @@
+/* "Taste is your new identity" — Figma 5831:7952. Same one-viewport shell as
+   .ask and .pay, but mirrored: art on the left, copy on the right. */
+.taste {
+  position: relative;
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+.taste__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 128px;
+  width: 100%;
+  max-width: var(--page-w);
+  padding: 0 32px;
+}
+
+/* --- art column ---------------------------------------------------------- */
+/* The two cards overlap in the design (the DNA card starts 257px down and 12px
+   in), so the stage is a positioned box and the cards are placed inside it. */
+.taste__stage {
+  position: relative;
+  flex: 0 0 auto;
+  width: min(393px, 42vw);
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* --- rank card ----------------------------------------------------------- */
+.taste__rank {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 4.32cqw;
+  border: 0.54cqw solid #707070;
+  border-radius: 4.32cqw;
+  display: flex;
+  flex-direction: column;
+  gap: 8.65cqw;
+  /* Figma paints a radial wash over a flat grey; flattened here to the same
+     read without the nested gradient stack. */
+  background:
+    radial-gradient(120% 150% at 50% 100%, rgba(181, 181, 181, .95) 0%, rgba(91, 91, 91, .88) 50%, rgba(0, 0, 0, .75) 100%),
+    #747474;
+  box-shadow:
+    inset -1.38px 0 2.12px rgba(255, 255, 255, .45),
+    inset 1.38px 0 1.06px rgba(255, 255, 255, .45),
+    inset 0 2.12px 5.74px rgba(255, 255, 255, .45);
+  filter: drop-shadow(0 3.24cqw 4.32cqw rgba(0, 0, 0, .34));
+  color: var(--ds-white);
+}
+.taste__rank img { display: block; }
+
+.taste__rank-top { display: flex; align-items: flex-start; justify-content: space-between; }
+.taste__rank-who { display: flex; align-items: center; gap: 1.62cqw; }
+.taste__rank-av {
+  display: block;
+  width: 7.9cqw;
+  aspect-ratio: 78 / 106;
+  border: 0.14cqw solid #fff;
+  border-radius: 27cqw;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.taste__rank-av img { width: 100%; height: 100%; object-fit: cover; }
+/* Figma layers the inset highlight above the photo, not on the wrapper */
+.taste__rank-av::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 .27cqw 1.08cqw #fff, inset 0 -.54cqw 1.35cqw rgba(0, 0, 0, .1);
+}
+.taste__rank-name { display: flex; flex-direction: column; gap: 3.24cqw; }
+.taste__rank-since { font-size: 3.24cqw; line-height: 1.2; }
+.taste__rank-title { font-family: var(--font-display); font-size: 3.78cqw; line-height: 1.2; }
+.taste__rank-share { width: 3.78cqw; height: 3.78cqw; flex-shrink: 0; }
+
+.taste__stats { display: flex; align-items: center; justify-content: space-between; }
+.taste__stat { display: flex; flex-direction: column; gap: 1.62cqw; }
+.taste__stat-value { font-size: 6.49cqw; font-weight: 700; line-height: 1.2; }
+.taste__stat-label {
+  display: flex; align-items: center; gap: 1.08cqw;
+  font-size: 3.24cqw; line-height: 1.2; color: #f2f2f2;
+  white-space: nowrap;
+}
+.taste__stat-label img { width: 3.78cqw; height: 3.78cqw; }
+
+.taste__rank-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  font-size: 3.24cqw; line-height: 1.2;
+}
+.taste__rank-mark { width: 12.28cqw; height: auto; }
+
+/* --- taste DNA card ------------------------------------------------------ */
+.taste__dna {
+  position: relative;
+  z-index: 0;
+  width: 94.15%;      /* 370 of 393 */
+  /* cqw is set on .taste__stage, so it only resolves on descendants like this
+     one — putting the gap on the stage itself would measure an outer container.
+     10cqw + the rank card's height lands the DNA card at the design's 257px. */
+  margin: 10cqw 0 0 3.05%;
+  padding: 4.07cqw;
+  border: 1px solid #e5e5e5;
+  border-radius: 4.07cqw;
+  background: var(--ds-white);
+  display: flex;
+  flex-direction: column;
+  gap: 8.14cqw;
+}
+.taste__dna img { display: block; }
+.taste__dna-head { display: flex; flex-direction: column; gap: 3.05cqw; }
+.taste__dna-by { display: flex; align-items: center; gap: 2.04cqw; }
+.taste__dna-logo { width: 16.14cqw; height: auto; }
+.taste__dna-says { font-size: 3.56cqw; line-height: 1.2; transform: skewX(-10deg); }
+.taste__dna-text { margin: 0; font-size: 3.56cqw; line-height: 1.25; color: var(--ds-black); }
+
+/* Radar plot. Figma's box is 326 x 290 (not square) and every child — rings,
+   data polygon, labels — is placed at its own coordinate inside it, so the
+   polygon keeps its real offset from the rings' centre. */
+.taste__chart { position: relative; width: 100%; aspect-ratio: 326 / 290; }
+.taste__ring { position: absolute; }
+.taste__plot { position: absolute; }
+.taste__axis {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--align, center);
+  font-size: 3.24cqw;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.taste__axis-name { color: #737373; }
+.taste__axis-value { color: var(--ds-black); }
+
+/* --- copy ---------------------------------------------------------------- */
+.taste__copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 671px;
+  flex: 0 1 671px;
+}
+
+/* `.display` also sets line-height, so the extra class keeps the design's 1.6 */
+.taste .taste__title {
+  font-size: clamp(34px, min(5.4vw, 7.4vh), 84px);
+  line-height: 1.6;
+  color: var(--ds-black);
+  margin: 0;
+}
+.taste__lede {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ds-black);
+  max-width: 620px;
+  margin: 0;
+  text-wrap: pretty;
+}
+.taste__cta { flex-shrink: 0; }
+
+@media (max-width: 1100px) {
+  .taste__inner { gap: 64px; }
+  .taste__stage { width: min(393px, 40vw); }
+}
+
+@media (max-width: 900px) {
+  .taste { padding: 80px 0; }
+  /* column-reverse keeps the copy first in reading order on narrow screens
+     while the source order stays art-then-copy for the desktop mirror */
+  .taste__inner { flex-direction: column-reverse; align-items: flex-start; gap: 56px; padding: 0 var(--gutter); }
+  .taste__copy { flex: 0 0 auto; max-width: none; }
+  .taste__stage { width: min(393px, 100%, 46vh); align-self: center; }
+}
+
+@media (max-width: 600px) {
+  .taste { padding: 40px 0; }
+  .taste__inner { gap: 32px; }
+  .taste__copy { gap: 24px; }
+  .taste__lede { font-size: 18px; }
+  .taste__stage { width: min(330px, 100%, 42vh); }
+  /* The card type is sized in cqw so it tracks the stage; on a narrow stage that
+     lands under 10px, so give the smallest labels a floor. This section runs a
+     little over one screen on phones — the two stacked cards need the room. */
+  .taste__axis,
+  .taste__stat-label,
+  .taste__rank-since,
+  .taste__rank-foot { font-size: max(11px, 3.24cqw); }
+  .taste__dna-text, .taste__dna-says { font-size: max(13px, 3.56cqw); }
+}

@@ -1,0 +1,35 @@
+/* Fixed flyer for the phone -> Ask avatar morph. Positioned entirely from JS
+   (top/left are 0 and the rect is applied via transform + width/height). */
+.avatar-morph {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  overflow: hidden;
+  border-radius: 100px;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, width, height;
+}
+.avatar-morph img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+/* Same layered inset highlight as .ask__face, scaled off the live width so it
+   stays proportional through the whole grow. */
+.avatar-morph::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 calc(var(--sh, 128px) * .033) calc(var(--sh, 128px) * .133) 0 #FFF,
+    inset 0 calc(var(--sh, 128px) * -.066) calc(var(--sh, 128px) * .166) 0 rgba(0, 0, 0, .1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avatar-morph { display: none; }
+}

@@ -1,0 +1,134 @@
+/* Full-bleed sign-off. Design frame is 1728 × 1000 (Figma 5835:8659); the
+   fixed sizes below are that frame's px, the horizontal ones are relative so
+   the photo, sheet and wash keep spanning the viewport.
+   Paint order is DOM order (every layer is positioned, z-index auto):
+   photo -> wash -> sheet -> content. */
+.footer {
+  position: relative;
+  margin-inline: calc(50% - 50vw);
+  width: 100vw;
+  overflow: hidden; /* clips the photo and wash, both wider/taller than the frame */
+  background: var(--ds-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* sheet (187 visible) + 108 = content at y 295, per the design */
+  gap: 108px;
+  padding-bottom: 143px;
+}
+
+/* Room full of people, thrown slightly out of focus so the card stays legible.
+   Overhangs on three sides so the blur's own soft edge falls outside the
+   footer; the top edge is hidden behind the white sheet. */
+.footer__photo {
+  position: absolute;
+  left: -5.7%;
+  right: -5.7%;
+  top: 65px;
+  bottom: -24px;
+  filter: blur(9.15px);
+  pointer-events: none;
+}
+.footer__photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.footer__photo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, .3); /* holds the photo back so white type reads */
+}
+
+/* Brand ramp — the same cyan -> yellow -> red as the prompt box ring, blurred
+   until it is just a wash of colour across the bottom. */
+.footer__wash {
+  position: absolute;
+  left: -7.2%;
+  bottom: -244px;
+  width: 114.4%;
+  height: 408px;
+  background: linear-gradient(93.67deg, #4af3ff 0.17%, #fee160 50%, #f94f4f 99.83%);
+  filter: blur(181.7px);
+  opacity: .8;
+  pointer-events: none;
+}
+
+/* The page above curves off here; on white-on-white it is the shadow that reads. */
+.footer__sheet {
+  position: relative;
+  width: 100%;
+  /* 231 tall in Figma but pulled 44px above the frame, so 187 of it shows */
+  height: 187px;
+  border-radius: 0 0 80px 80px;
+  background: var(--ds-white);
+  box-shadow: 0 0 106.1px -4px rgba(0, 0, 0, .25);
+  flex-shrink: 0;
+}
+
+.footer__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  width: 100%;
+  padding: 0 64px;
+}
+
+/* white now — the wordmark sits on the photo, not on the white sheet */
+.footer__mark { display: block; width: 198px; height: auto; color: var(--ds-white); }
+
+.footer__stack { display: flex; flex-direction: column; align-items: center; gap: 32px; }
+
+.footer__card {
+  width: 326px;
+  padding: 20.495px;
+  border-radius: 32px;
+  background: rgba(32, 32, 32, .6);
+  backdrop-filter: blur(32.024px);
+  -webkit-backdrop-filter: blur(32.024px);
+  display: flex;
+  flex-direction: column;
+  gap: 15.371px;
+}
+.footer__card-title {
+  margin: 0;
+  font-size: 20.495px;
+  font-weight: 600;
+  line-height: 1.09;
+  letter-spacing: -.41px;
+  color: var(--ds-white);
+  text-align: center;
+}
+.footer__qr {
+  padding: 10.248px;
+  border-radius: 24px;
+  background: var(--ds-white);
+}
+.footer__qr img { display: block; width: 264.515px; height: 264.515px; }
+
+.footer__badges { display: flex; gap: 9.449px; }
+.footer__badge { display: block; height: 46.065px; }
+.footer__badge img { display: block; height: 100%; width: auto; }
+.footer__badge:hover { opacity: .85; }
+
+@media (max-width: 900px) {
+  .footer { gap: 72px; padding-bottom: 96px; }
+  .footer__sheet { height: 140px; border-radius: 0 0 48px 48px; }
+  .footer__inner { gap: 48px; padding: 0 24px; }
+  .footer__wash { bottom: -200px; }
+  /* the sheet is shorter here, so the photo has to start higher to stay tucked
+     behind it rather than showing a blurred edge below the curve */
+  .footer__photo { top: 48px; }
+}
+
+@media (max-width: 420px) {
+  /* The stack is shrink-to-fit, so `width: 100%` on the card alone resolved
+     against its own 326px content and still overflowed. Constrain the stack
+     itself and everything inside follows. */
+  .footer__stack { width: 100%; }
+  .footer__card { width: 100%; max-width: 326px; }
+  .footer__qr img { width: 100%; height: auto; }
+  .footer__badges { width: 100%; justify-content: center; }
+  .footer__badge { height: auto; flex: 0 1 auto; min-width: 0; }
+  .footer__badge img { width: 100%; height: auto; }
+  .footer__mark { width: min(160px, 60%); }
+}

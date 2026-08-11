@@ -1,0 +1,8 @@
+/* full-bleed: breaks out of .page's max-width so the band runs edge to edge */
+.marquee { margin-inline: calc(50% - 50vw); overflow: hidden; padding: 20px 0; border-top: 1px solid var(--cream-line); border-bottom: 1px solid var(--cream-line); }
+
+/* No gap between the two groups — the phrase already ends in "· ", so the seam
+   reads exactly like every other separator. A gap here would also break the
+   loop: translateX(-50%) would land half a gap short and jump each cycle.
+   Duration is per-group (5 phrases), tuned to keep the original ~27px/s. */
+.marquee__track { display: flex; width: max-content; white-space: nowrap; font-size: 22px; line-height: 2.2; animation: marquee 117s linear infinite; }

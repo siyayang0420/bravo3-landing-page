@@ -1,0 +1,49 @@
+:root {
+  /* surfaces */
+  --page-bg: #FFFFFF;
+  --cream-line: #E2DACA;
+  --sand: #E9E2D3;
+  --sand-alt: #DED6C5;
+  --ink: #131210;
+  --ink-body: #3D392E;
+  --ink-muted: #6E6858;
+  --on-dark: #FAF7F0;
+  --on-dark-muted: #ABA595;
+
+  /* brand accent — used sparingly */
+  --yellow: #FFD400;
+  --on-yellow: #141210;
+
+  /* design system core (Figma: Bravo Design System — Core) */
+  --ds-black: #202020;
+  --ds-black-wash: rgba(32, 32, 32, .06);
+  --ds-white: #FFFFFF;
+  --heart-red: #C51F1F;
+  --heart-red-glow: rgba(197, 31, 31, .3);
+
+  /* type */
+  --font-display: 'Boldonse', system-ui, sans-serif;
+  --font-ui: 'Inter', system-ui, sans-serif;
+  /* iOS chrome inside the phone mockup (status bar, keyboard) — not brand type */
+  --font-ios: -apple-system, 'SF Pro Text', 'Helvetica Neue', system-ui, sans-serif;
+  /* Boldonse glyphs overflow tight leading — never go below 1.3 */
+  --display-leading: 1.34;
+
+  --page-w: 1480px;
+  /* scroll distance the hero stays pinned for while the phone animation plays */
+  --hero-budget: 210vh;
+  --gutter: 52px;
+  --radius-card: 18px;
+  --radius-phone: 34px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+}
+
+/* The page gutter is a desktop measure — at 52px a side it eats 28% of a 375px
+   screen. Scale it down so narrow layouts keep a usable content column. */
+@media (max-width: 900px) {
+  :root { --gutter: 32px; }
+}
+@media (max-width: 600px) {
+  :root { --gutter: 20px; }
+}

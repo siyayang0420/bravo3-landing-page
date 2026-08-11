@@ -1,0 +1,26 @@
+/* Layered art box is 344 × 708.878 (Figma node 5794:2375). Consumers set the
+   width; the aspect ratio and layer placement come from here. */
+.phone-mockup {
+  position: relative;
+  flex-shrink: 0;
+  aspect-ratio: 344 / 708.878;
+}
+/* The glass the app screen sits in; the bezel layers cover its edge. */
+.phone-mockup__screen {
+  position: absolute;
+  top: 1.05%;
+  left: 2.9%;
+  right: 2.6%;
+  bottom: 1.05%;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 13% / 6.3%;
+  z-index: 0;
+}
+
+.phone-mockup__layer {
+  position: absolute;
+  display: block;
+  max-width: none; /* percentage widths are relative to the phone box, not intrinsic size */
+  pointer-events: none; /* decorative bezel must not eat clicks meant for the screen */
+}
