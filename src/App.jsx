@@ -13,7 +13,8 @@ export default function App() {
     <main className="page">
       {/* Nav + hero are pinned together as one 100vh unit while the in-phone
           animation plays; the extra scene height below is that scroll budget. */}
-      <div className="hero-scene">
+      {/* id is the footer's "Home" target */}
+      <div className="hero-scene" id="top">
         <div className="hero-sticky">
           <Nav />
           <Hero />
