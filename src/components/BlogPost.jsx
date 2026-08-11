@@ -16,7 +16,7 @@ export default function BlogPost({ post }) {
           <nav className="post__crumbs" aria-label="Breadcrumb">
             <a className="post__crumb" href="/blog/">Bravo Blog</a>
             <img className="post__crumb-sep" src={chevron} alt="" aria-hidden="true" />
-            <span className="post__crumb" aria-current="page">Bravo Tech Sessions Vol. 3</span>
+            <span className="post__crumb" aria-current="page">Bravo AI Sessions Vol. 3</span>
           </nav>
 
           <img
@@ -48,7 +48,7 @@ export default function BlogPost({ post }) {
               for hosting us in their beautiful Yaletown space and keeping
               everyone fuelled with amazing coffee and food.
             </p>
-            <p>From prompt to plate—for real. See you at the next Bravo Tech Session!</p>
+            <p>From prompt to plate—for real. See you at the next Bravo AI Session!</p>
           </div>
 
           {post.gallery.map(({ src, alt, aspect, focus }) => (

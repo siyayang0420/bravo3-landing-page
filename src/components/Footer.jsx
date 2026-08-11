@@ -52,7 +52,7 @@ export default function Footer() {
         <div className="footer__nav">
           <nav className="footer__cols" aria-label="Footer">
             <div className="footer__col">
-              <p className="footer__col-title">Bravo Rewards App</p>
+              <p className="footer__col-title">Bravo AI</p>
               <a className="footer__link" href="#top" onClick={onHome}>Home</a>
               <a
                 className="footer__link"

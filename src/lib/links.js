@@ -8,7 +8,7 @@ export const EGIFT_URL = 'https://www.bravoup.ca/';
 export const EGIFT_BALANCE_URL = 'https://www.bravoup.ca/checkbalance';
 export const EGIFT_RESTAURANTS_URL = 'https://www.bravoup.ca/restaurants';
 
-/* Venue credited in the Tech Sessions post. */
+/* Venue credited in the AI Sessions post. */
 export const WREN_CAFE_URL = 'https://www.bravoup.ca/store/wren-cafe';
 
 export const SOCIAL_URLS = {

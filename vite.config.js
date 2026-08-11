@@ -23,7 +23,7 @@ export default defineConfig({
       input: {
         home: page('./index.html'),
         blog: page('./blog/index.html'),
-        'blog-tech-sessions-3': page('./blog/bravo-tech-sessions-vol-3/index.html'),
+        'blog-ai-sessions-3': page('./blog/bravo-ai-sessions-vol-3/index.html'),
       },
     },
   },

@@ -13,15 +13,15 @@ import p5 from '../assets/blog/p5.webp';
  */
 export const POSTS = [
   {
-    slug: 'bravo-tech-sessions-vol-3',
-    title: 'That’s a wrap on Bravo Tech Sessions Vol. 3',
+    slug: 'bravo-ai-sessions-vol-3',
+    title: 'That’s a wrap on Bravo AI Sessions Vol. 3',
     date: '2026-08-08',
     dateLabel: 'August 8, 2026',
     excerpt:
       'An inspiring evening exploring how AI is moving beyond chat and into real-world commerce — from discovery and booking to ordering, paying, and earning.',
     hero: heroImg,
     heroAlt:
-      'The Bravo team and guests gathered for a group photo at Bravo Tech Sessions Vol. 3',
+      'The Bravo team and guests gathered for a group photo at Bravo AI Sessions Vol. 3',
     /*
      * `aspect` is the frame Figma gives each photo, which is not always the
      * photo's own ratio — p3 and p5 are portrait sources shown in shorter
