@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { usePhoneScreenScale } from '../lib/usePhoneScreenScale.js';
 import blurBg from '../assets/challenge/blur-bg.svg';
 import blob from '../assets/challenge/blob.svg';
 import cellular from '../assets/challenge/cellular.svg';
@@ -62,9 +63,7 @@ function makeSparks() {
 }
 
 export default function ChallengeScreen() {
-  const host = useRef(null);
-  const [scale, setScale] = useState(1);
-  const [frameH, setFrameH] = useState(874);
+  const { ref: host, frameStyle } = usePhoneScreenScale(DESIGN_W, 874);
   const [bursts, setBursts] = useState({});
   const timers = useRef({});
 
@@ -79,23 +78,9 @@ export default function ChallengeScreen() {
     }, BURST_MS);
   };
 
-  /* Same trick as the other in-phone screens: author at Figma's 402px width and
-     scale to the glass, so all type stays real text instead of a flat image. */
-  useEffect(() => {
-    const el = host.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([e]) => {
-      const s = e.contentRect.width / DESIGN_W;
-      setScale(s);
-      setFrameH(e.contentRect.height / s);
-    });
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
-
   return (
     <div className="chal" ref={host}>
-      <div className="chal__frame" style={{ transform: `scale(${scale})`, height: `${frameH}px` }}>
+      <div className="chal__frame" style={frameStyle}>
         {/* warm gradient wash + the rotated blob behind the players */}
         <img className="chal__wash" src={blurBg} alt="" />
         <img className="chal__blob" src={blob} alt="" />

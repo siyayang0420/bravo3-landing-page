@@ -55,8 +55,14 @@
   text-align: center;
 }
 
-.pay-scr__tools { position: absolute; left: 317px; top: 76px; display: flex; gap: 12px; }
-.pay-scr__tool { position: relative; width: 24px; height: 24px; }
+/* align-items must not be the default `stretch`: the bare scan <img> is a flex
+   item here, and stretch overrides its intrinsic height and squashes the glyph. */
+.pay-scr__tools { position: absolute; left: 317px; top: 76px; display: flex; align-items: center; gap: 12px; }
+/* Shared by the scan <img> and the .pay-scr__add wrapper. Only the wrapper needs
+   to be a fixed square — leaving the glyph's height to its intrinsic ratio is
+   what stops these preserveAspectRatio="none" exports from stretching. */
+.pay-scr__tool { position: relative; width: 24px; }
+.pay-scr__add { height: 24px; }
 .pay-scr__add img { position: absolute; }
 .pay-scr__add img:nth-child(1) { inset: 8.33%; }
 .pay-scr__add img:nth-child(2) { left: 33.33%; top: calc(50% - .75px); width: 33.34%; height: 1.5px; }
@@ -168,8 +174,10 @@
 .pay-qr__amount { font-size: 20px; font-weight: 700; line-height: 26px; }
 .pay-qr__balrow { display: flex; align-items: center; justify-content: space-between; font-size: 14px; line-height: 19px; }
 .pay-qr__topup { display: inline-flex; align-items: center; gap: 2px; }
-/* the exported chevron points up; Figma rotates it into a right-facing arrow */
-.pay-qr__topup img { width: 7px; height: 12px; transform: rotate(90deg); }
+/* The exported chevron is a wide, flat glyph pointing up (13x7); Figma rotates
+   it into a right-facing arrow. Sized on its long axis so the rotation lands a
+   7x13 arrow rather than a stretched one. */
+.pay-qr__topup img { width: 13px; height: auto; transform: rotate(90deg); }
 
 /* ---------- screen 2: Success ---------- */
 .pay-ok__wash {

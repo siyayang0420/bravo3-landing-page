@@ -31,7 +31,7 @@ const BUBBLES = [
 
 export default function Ask() {
   return (
-    <section className="ask" id="ask">
+    <section className="section-screen ask" id="ask">
       {/* Figma has a 170 layer-blur orb behind the copy (≈85px CSS radius).
           We render the live WebGL orb instead of the flattened export so it
           keeps moving. */}
@@ -58,9 +58,9 @@ export default function Ask() {
             </form>
           </div>
 
-          <h2 className="display ask__title">Ask What Only Your Circle Knows</h2>
+          <h2 className="display section-title ask__title">Ask What Only Your Circle Knows</h2>
 
-          <p className="ask__lede">
+          <p className="section-lede ask__lede">
             From hidden gems your friends swear by to where everyone went last Friday night, Bravo combines AI with real dining experiences to help you decide with confidence.
           </p>
 

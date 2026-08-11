@@ -1,19 +1,7 @@
 /* "Bring friends. Earn together." — Figma 5831:8541. Same one-viewport shell as
    .ask / .taste / .pay; copy left, phone right. */
-.friends {
-  position: relative;
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 0;
-  background: var(--page-bg);
-  overflow: hidden;
-}
-
+/* shell, headline and lede come from .section-screen / .section-title /
+   .section-lede in global.css */
 .friends__inner {
   display: flex;
   align-items: center;
@@ -33,25 +21,10 @@
   flex: 0 1 671px;
 }
 
-/* `.display` also sets line-height, so the extra class keeps the design's 1.6 */
-.friends .friends__title {
-  font-size: clamp(34px, min(5.4vw, 7.4vh), 84px);
-  line-height: 1.6;
-  color: var(--ds-black);
-  margin: 0;
-  /* The column is `align-items: flex-start`, so the h2 shrink-wraps to its
-     widest line — landing exactly on "Earn Together."'s width and wrapping it
-     on a sub-pixel rounding. Taking the full column keeps the two <br> lines. */
-  width: 100%;
-}
-.friends__lede {
-  font-size: 24px;
-  line-height: 1.2;
-  color: var(--ds-black);
-  max-width: 620px;
-  margin: 0;
-  text-wrap: pretty;
-}
+/* The column is `align-items: flex-start`, so the h2 shrink-wraps to its widest
+   line — landing exactly on "Earn Together."'s width and wrapping it on a
+   sub-pixel rounding. Taking the full column keeps the two <br> lines. */
+.friends__title { width: 100%; }
 .friends__cta { flex-shrink: 0; }
 
 /* 344px in Figma; capped against viewport height so the phone can't outgrow

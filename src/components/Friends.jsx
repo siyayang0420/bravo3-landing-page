@@ -8,11 +8,11 @@ import './Friends.css';
    Copy on the left, the shared phone mockup on the right. */
 export default function Friends() {
   return (
-    <section className="friends" id="friends">
+    <section className="section-screen friends" id="friends">
       <div className="friends__inner">
         <div className="friends__copy">
-          <h2 className="display friends__title">Bring Friends<br />Earn Together</h2>
-          <p className="friends__lede">
+          <h2 className="display section-title friends__title">Bring Friends<br />Earn Together</h2>
+          <p className="section-lede friends__lede">
             Great meals deserve company. Bravo makes every dinner a little more
             rewarding when you experience it together.
           </p>

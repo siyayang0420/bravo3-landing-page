@@ -29,7 +29,9 @@
 .ai__top { position: absolute; top: 0; left: 0; width: 402px; display: flex; flex-direction: column; gap: 16px; }
 .ai__bar { display: flex; align-items: center; justify-content: space-between; padding: 65px 16px 0; }
 .ai__iconbtn { width: 32px; height: 32px; border-radius: 999px; display: flex; align-items: center; justify-content: center; }
-.ai__iconbtn img { width: 20px; height: 20px; }
+/* Figma exports these glyphs with preserveAspectRatio="none", so pinning both
+   axes stretches them. Pin one axis and let the intrinsic ratio drive the other. */
+.ai__iconbtn img { width: auto; height: 20px; }
 .ai__logo { width: 89.663px; height: 15px; }
 .ai__note { margin: 0; font-size: 12px; line-height: 16px; color: #8e8e93; text-align: center; }
 
@@ -92,7 +94,7 @@
   width: 35px; height: 35px; border-radius: 999px; background: #fff;
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
-.ai__venue-save img { width: 20px; height: 20px; }
+.ai__venue-save img { width: auto; height: 20px; }
 
 .ai__photos { display: flex; gap: 16px; }
 .ai__photo { width: 199px; height: 216px; border-radius: 16px; overflow: hidden; flex-shrink: 0; display: block; }
@@ -116,7 +118,7 @@
 }
 .ai__prompt-plus img { width: 20px; height: 20px; }
 .ai__prompt-ph { flex: 1; min-width: 0; font-size: 14px; color: #a3a3a3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.ai__prompt-mic { width: 22px; height: 22px; flex-shrink: 0; }
+.ai__prompt-mic { width: auto; height: 22px; flex-shrink: 0; }
 .ai__prompt-audio {
   width: 32px; height: 32px; border-radius: 999px; background: var(--ds-black);
   display: flex; align-items: center; justify-content: center; flex-shrink: 0;

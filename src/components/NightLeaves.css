@@ -1,6 +1,0 @@
-.nights { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
-.nights__body { max-width: 440px; margin-top: 20px; }
-.nights__stage { display: flex; gap: 20px; justify-self: end; }
-.nights__stage .phone { width: 240px; border-radius: 30px; }
-
-@media (max-width: 900px) { .nights { grid-template-columns: 1fr; } }

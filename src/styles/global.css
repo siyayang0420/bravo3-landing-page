@@ -31,6 +31,48 @@ a:hover { opacity: .75; }
 .body { font-size: 18px; line-height: 1.6; color: var(--ink-body); text-wrap: pretty; }
 .eyebrow { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-muted); }
 
+/* ---- story sections ----------------------------------------------------
+   Ask / Taste / Friends / Pay are all the same shell: one full-bleed screen,
+   exactly one viewport tall, with a Boldonse headline and a 24px lede. These
+   three classes are that shell; each component keeps only what makes it
+   different (its columns, art and breakpoints). */
+/* `:where()` holds these at zero specificity, so a component's own rule always
+   wins no matter which stylesheet the bundler happens to inject first — e.g.
+   `.pay { padding-bottom: 0 }` or a `@media` override. Without it these would be
+   a specificity tie decided by file order, which is not something to rely on. */
+:where(.section-screen) {
+  position: relative;
+  margin-inline: calc(50% - 50vw); /* break out of .page's max-width */
+  width: 100vw;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 0;
+  background: var(--page-bg);
+  overflow: hidden;
+}
+
+/* Capped against both axes so a section still fits one viewport on short
+   screens. Must be declared AFTER `.display`, which also sets line-height:
+   equal specificity, so source order is what lands the design's 1.6. */
+.section-title {
+  font-size: clamp(34px, min(5.4vw, 7.4vh), 84px);
+  line-height: 1.6;
+  color: var(--ds-black);
+  margin: 0;
+}
+/* zero specificity too, so per-section `@media` size overrides always land */
+:where(.section-lede) {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ds-black);
+  max-width: 620px;
+  margin: 0;
+  text-wrap: pretty;
+}
+
 /* buttons live in components/Button.css */
 
 /* shell */

@@ -270,7 +270,7 @@
   display: flex; align-items: center; justify-content: center;
   filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.15));
 }
-.ph-round img { width: 20px; height: 20px; }
+.ph-round img { width: auto; height: 20px; }
 
 .ph__bottom {
   position: absolute; bottom: 0; left: 0;

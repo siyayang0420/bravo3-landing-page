@@ -122,7 +122,7 @@ export default function PhoneAiScreen({
                     </div>
                     <div className="ai__friend-quote">
                       <img className="ai__quote-mark" src={quote} alt="" />
-                      <p>What a great place to be, I like their foie gras on rice and the drinks are amaizng</p>
+                      <p>What a great place to be, I like their foie gras on rice and the drinks are amazing</p>
                     </div>
                   </div>
 

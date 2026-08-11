@@ -54,7 +54,7 @@ const AXES = [
 
 export default function Taste() {
   return (
-    <section className="taste" id="taste">
+    <section className="section-screen taste" id="taste">
       <div className="taste__inner">
         {/* art column — mirrors .ask, which puts its stage on the right */}
         <div className="taste__stage" aria-hidden="true">
@@ -138,8 +138,8 @@ export default function Taste() {
         </div>
 
         <div className="taste__copy">
-          <h2 className="display taste__title">Taste Is Your<br />New Identity</h2>
-          <p className="taste__lede">
+          <h2 className="display section-title taste__title">Taste Is Your<br />New Identity</h2>
+          <p className="section-lede taste__lede">
             Beyond points and payments, Bravo learns what makes your dining style
             unique, and helps you discover what’s next.
           </p>

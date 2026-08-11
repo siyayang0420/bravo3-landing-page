@@ -28,6 +28,7 @@ import navUsers from '../assets/app/nav-users.svg';
 import navQr from '../assets/app/nav-qr.svg';
 import navStar from '../assets/app/nav-star.svg';
 import PhoneAiScreen from './PhoneAiScreen.jsx';
+import { usePhoneScreenScale } from '../lib/usePhoneScreenScale.js';
 import './InPhoneApp.css';
 
 /* Exported heart vector (Figma node I5796:4975). Recoloured for the two states
@@ -87,29 +88,11 @@ function flyHeart(el, { drift, rise, spin, waves, dur }) {
 }
 
 export default function InPhoneApp() {
-  const screenRef = useRef(null);
+  const { ref: screenRef, scale, frameHeight: frameH, frameStyle } = usePhoneScreenScale(DESIGN_W, 874);
   const burstRef = useRef(null);
-  const [scale, setScale] = useState(1);
-  const [frameH, setFrameH] = useState(874);
   const [progress, setProgress] = useState(0);
   const [liked, setLiked] = useState(false);
   const likedRef = useRef(false);
-
-  /* Scale the 402px design frame to the phone glass width, and derive the frame
-     height from the glass too. The glass is proportionally shorter than the
-     874px design frame, so a fixed height would crop the bottom chrome and eat
-     the nav bar's 18px of breathing room. */
-  useEffect(() => {
-    const el = screenRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([e]) => {
-      const s = e.contentRect.width / DESIGN_W;
-      setScale(s);
-      setFrameH(e.contentRect.height / s);
-    });
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
 
   const burst = () => {
     const host = burstRef.current;
@@ -171,7 +154,7 @@ export default function InPhoneApp() {
         className="ph__layer"
         style={{ transform: `translateX(${-100 * slide}%)`, opacity: 1 - slide }}
       >
-      <div className="ph__frame" style={{ transform: `scale(${scale})`, height: `${frameH}px` }}>
+      <div className="ph__frame" style={frameStyle}>
 
         {/* ---------- scrolling feed ---------- */}
         <div
@@ -181,7 +164,9 @@ export default function InPhoneApp() {
           {/* heading + card are one group (Figma 5796:3404, gap 16) inside the
               feed's gap-32 stack — otherwise the two spacings compound */}
           <div className="ph__group">
-          <h3 className="ph__h3">In Progress Challenge</h3>
+          {/* a <p>, not a heading: this is UI inside a decorative mockup and
+              would otherwise inject an H3 between the page's H1 and its H2s */}
+          <p className="ph__h3">In Progress Challenge</p>
 
           <div className="ph-card">
             <div className="ph-card__row">

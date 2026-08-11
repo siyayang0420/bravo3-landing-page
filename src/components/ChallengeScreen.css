@@ -193,7 +193,8 @@
 .chal__merchant-stack img { width: 25px; height: 25px; border-radius: 999px; margin-right: -8px; }
 .chal__merchant-stack img:last-child { margin-right: 0; }
 .chal__merchants-label { font-size: 14px; line-height: 1.2; white-space: nowrap; }
-.chal__merchants-chevron { width: 16px; height: 16px; }
+/* preserveAspectRatio="none" export — pin one axis so it can't stretch */
+.chal__merchants-chevron { width: auto; height: 16px; }
 
 @media (prefers-reduced-motion: reduce) {
   /* the idle drift is the part that has to go; the burst is brief and only ever

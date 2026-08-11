@@ -1,19 +1,7 @@
 /* "Taste is your new identity" — Figma 5831:7952. Same one-viewport shell as
    .ask and .pay, but mirrored: art on the left, copy on the right. */
-.taste {
-  position: relative;
-  margin-inline: calc(50% - 50vw);
-  width: 100vw;
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px 0;
-  background: var(--page-bg);
-  overflow: hidden;
-}
-
+/* shell, headline and lede come from .section-screen / .section-title /
+   .section-lede in global.css */
 .taste__inner {
   display: flex;
   align-items: center;
@@ -86,7 +74,7 @@
 .taste__rank-name { display: flex; flex-direction: column; gap: 3.24cqw; }
 .taste__rank-since { font-size: 3.24cqw; line-height: 1.2; }
 .taste__rank-title { font-family: var(--font-display); font-size: 3.78cqw; line-height: 1.2; }
-.taste__rank-share { width: 3.78cqw; height: 3.78cqw; flex-shrink: 0; }
+.taste__rank-share { width: auto; height: 3.78cqw; flex-shrink: 0; }
 
 .taste__stats { display: flex; align-items: center; justify-content: space-between; }
 .taste__stat { display: flex; flex-direction: column; gap: 1.62cqw; }
@@ -157,21 +145,6 @@
   flex: 0 1 671px;
 }
 
-/* `.display` also sets line-height, so the extra class keeps the design's 1.6 */
-.taste .taste__title {
-  font-size: clamp(34px, min(5.4vw, 7.4vh), 84px);
-  line-height: 1.6;
-  color: var(--ds-black);
-  margin: 0;
-}
-.taste__lede {
-  font-size: 24px;
-  line-height: 1.2;
-  color: var(--ds-black);
-  max-width: 620px;
-  margin: 0;
-  text-wrap: pretty;
-}
 .taste__cta { flex-shrink: 0; }
 
 @media (max-width: 1100px) {

@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
+import { usePhoneScreenScale } from '../lib/usePhoneScreenScale.js';
 import BravoCoin from './BravoCoin.jsx';
 import cellular from '../assets/app/cellular.svg';
 import wifi from '../assets/app/wifi.svg';
@@ -58,7 +59,9 @@ function QrScreen() {
         </span>
       </span>
 
-      <h3 className="pay-qr__h">Bravo balance</h3>
+      {/* <p>, not a heading — see InPhoneApp: mockup chrome must stay out of
+          the document outline */}
+      <p className="pay-qr__h">Bravo balance</p>
 
       <div className="pay-qr__col">
         <div className="pay-qr__group">
@@ -129,7 +132,7 @@ function SuccessScreen({ coinPlaying }) {
 
       {/* <p className="pay-ok__was">$110.50</p> */}
       <p className="pay-ok__now">$97.62</p>
-      <p className="pay-ok__title">Paid Successful</p>
+      <p className="pay-ok__title">Payment successful</p>
       <p className="pay-ok__link">View order details</p>
 
       <BravoCoin className="pay-ok__coin" play={coinPlaying} />
@@ -138,24 +141,8 @@ function SuccessScreen({ coinPlaying }) {
 }
 
 export default function PayPhoneApp() {
-  const screenRef = useRef(null);
-  const [scale, setScale] = useState(1);
-  const [frameH, setFrameH] = useState(852);
+  const { ref: screenRef, frameStyle } = usePhoneScreenScale(DESIGN_W, 852);
   const [paid, setPaid] = useState(false);
-
-  /* Scale the 393px design frame to the phone glass, deriving the frame height
-     from the glass so nothing is cropped — same approach as InPhoneApp. */
-  useEffect(() => {
-    const el = screenRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([e]) => {
-      const s = e.contentRect.width / DESIGN_W;
-      setScale(s);
-      setFrameH(e.contentRect.height / s);
-    });
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
 
   /* Run the sequence when the phone is actually on screen, and rearm when it
      leaves — otherwise it would play out long before anyone scrolled here. */
@@ -173,9 +160,7 @@ export default function PayPhoneApp() {
     );
     io.observe(el);
     return () => { io.disconnect(); clearTimeout(timer); };
-  }, []);
-
-  const frameStyle = { transform: `scale(${scale})`, height: `${frameH}px` };
+  }, [screenRef]);
 
   return (
     <div className="pay-ph phone-mockup__screen" ref={screenRef}>
