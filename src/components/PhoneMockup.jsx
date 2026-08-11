@@ -44,9 +44,19 @@ const LAYERS = [
   { src: camGlint,   pos: [58.041, 3.851, 0.563, 0.273], blend: 'screen' },
 ];
 
-export default function PhoneMockup({ className = '', children, ...props }) {
+/*
+ * `role="img"` is deliberate. The screens inside are an illustration of the
+ * product, not page content — without it, assistive tech walks ~1200 characters
+ * of fake app chrome ("9:41", "Invited: 3/3", the on-screen keyboard) and reads
+ * it as though it were copy. role="img" + a label collapses the whole subtree to
+ * one described image, so callers must pass an `aria-label`.
+ *
+ * `loading` is forwarded so below-the-fold mockups can defer their bezel layers
+ * (16 images each) instead of competing with the hero for bandwidth.
+ */
+export default function PhoneMockup({ className = '', children, loading, ...props }) {
   return (
-    <div className={`phone-mockup ${className}`.trim()} {...props}>
+    <div className={`phone-mockup ${className}`.trim()} role="img" {...props}>
       {children}
       {LAYERS.map(({ src, pos: [l, t, w, h], blend }, i) => (
         <img
@@ -54,6 +64,8 @@ export default function PhoneMockup({ className = '', children, ...props }) {
           className="phone-mockup__layer"
           src={src}
           alt=""
+          loading={loading}
+          decoding="async"
           style={{
             left: `${l}%`, top: `${t}%`, width: `${w}%`, height: `${h}%`,
             mixBlendMode: blend,

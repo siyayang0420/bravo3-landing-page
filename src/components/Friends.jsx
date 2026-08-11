@@ -21,7 +21,11 @@ export default function Friends() {
           </Button>
         </div>
 
-        <PhoneMockup className="friends__phone" aria-label="Bravo group challenge on iPhone">
+        <PhoneMockup
+          className="friends__phone"
+          loading="lazy"
+          aria-label="The Bravo app showing a group dining challenge leaderboard, with four friends ranked by spend"
+        >
           <ChallengeScreen />
         </PhoneMockup>
       </div>

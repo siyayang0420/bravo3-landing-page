@@ -9,11 +9,11 @@ import back from '../assets/challenge/back.svg';
 import coinBg from '../assets/challenge/coin-bg.svg';
 import coinIn from '../assets/challenge/coin-in.svg';
 import chevron from '../assets/challenge/chevron.svg';
-import emma from '../assets/challenge/emma.png';
-import crown from '../assets/challenge/crown.png';
-import coco from '../assets/challenge/coco.png';
-import yvon from '../assets/challenge/yvon.png';
-import you from '../assets/challenge/you.png';
+import emma from '../assets/challenge/emma.webp';
+import crown from '../assets/challenge/crown.webp';
+import coco from '../assets/challenge/coco.webp';
+import yvon from '../assets/challenge/yvon.webp';
+import you from '../assets/challenge/you.webp';
 import m1 from '../assets/challenge/m1.png';
 import m2 from '../assets/challenge/m2.png';
 import m3 from '../assets/challenge/m3.png';
@@ -110,6 +110,9 @@ export default function ChallengeScreen() {
               className={`chal__player${burst ? ' is-bursting' : ''}`}
               key={name}
               aria-label={`Cheer ${name}`}
+              /* see BravoCoin: decorative toy inside a role="img" mockup, so it
+                 stays pointer-only rather than becoming an undescribed tab stop */
+              tabIndex={-1}
               onClick={() => pop(name)}
               style={{
                 left: `${l}px`, top: `${t}px`, width: `${w}px`,
@@ -117,7 +120,7 @@ export default function ChallengeScreen() {
               }}
             >
               <span className="chal__avatar" style={{ width: `${w}px`, height: `${h}px` }}>
-                <img src={src} alt="" />
+                <img src={src} alt="" loading="lazy" decoding="async" />
                 {crowned && <img className="chal__crown" src={crown} alt="" />}
                 {burst && (
                   <span className="chal__burst" key={burst.key} aria-hidden="true">

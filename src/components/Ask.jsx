@@ -5,9 +5,9 @@ import iconPlus from '../assets/app/plus.svg';
 import iconMic from '../assets/app/mic.svg';
 import iconAudioLines from '../assets/app/audio.svg';
 /* Same file the in-phone answer uses — they morph into one another on scroll. */
-import face1 from '../assets/app/ans-emma.png';
-import face2 from '../assets/ask-face-2.png';
-import face3 from '../assets/ask-face-3.png';
+import face1 from '../assets/app/ans-emma.webp';
+import face2 from '../assets/ask-face-2.webp';
+import face3 from '../assets/ask-face-3.webp';
 import { APP_STORE_URL, EXTERNAL_LINK } from '../lib/links.js';
 import './Ask.css';
 
@@ -74,7 +74,7 @@ export default function Ask() {
               className="ask__face float"
               style={{ left: `${l}%`, top: `${t}%`, width: `${w}%`, height: `${h}%`, '--dur': dur }}
             >
-              <img src={src} alt={alt} />
+              <img src={src} alt={alt} loading="lazy" decoding="async" />
             </span>
           ))}
           {BUBBLES.map(({ text, pos: [l, t], dur }, i) => (

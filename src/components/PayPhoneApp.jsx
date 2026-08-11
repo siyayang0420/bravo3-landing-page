@@ -67,7 +67,7 @@ function QrScreen() {
         <div className="pay-qr__group">
           <div className="pay-qr__card">
             <div className="pay-qr__code">
-              <img className="pay-qr__img" src={qr} alt="Payment QR code" />
+              <img className="pay-qr__img" src={qr} alt="" loading="lazy" decoding="async" />
               <span className="pay-qr__more">
                 <img className="pay-qr__more-bg" src={moreBg} alt="" />
                 <img className="pay-qr__more-dots" src={moreDots} alt="" />

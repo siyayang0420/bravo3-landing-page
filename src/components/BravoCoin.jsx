@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import coinFront from '../assets/pay/coin-front.png';
-import coinBack from '../assets/pay/coin-back.png';
+import coinFront from '../assets/pay/coin-front.webp';
+import coinBack from '../assets/pay/coin-back.webp';
 import './BravoCoin.css';
 
 /*
@@ -115,7 +115,11 @@ export default function BravoCoin({ play = false, value = '$5', className = '' }
           '--glare-x': `${glareX}%`,
         }}
         role="button"
-        tabIndex={play ? 0 : -1}
+        /* Out of the tab order on purpose: the coin lives inside a role="img"
+           mockup, so assistive tech never describes it. A focus stop that
+           screen readers can't explain is worse than no focus stop — it stays
+           fully interactive by pointer. */
+        tabIndex={-1}
         aria-label="Flip the Bravo coin"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
@@ -124,11 +128,11 @@ export default function BravoCoin({ play = false, value = '$5', className = '' }
         onKeyDown={onKeyDown}
       >
         <span className="coin__face coin__face--front">
-          <img src={coinFront} alt="" draggable="false" />
+          <img src={coinFront} alt="" draggable="false" loading="lazy" decoding="async" />
           <span className="coin__glare" />
         </span>
         <span className="coin__face coin__face--back">
-          <img src={coinBack} alt="" draggable="false" />
+          <img src={coinBack} alt="" draggable="false" loading="lazy" decoding="async" />
           {/* The reward figure is struck on the reverse. Set as live text, not
               baked into the art, so the amount can change. */}
           <span className="coin__value">{value}</span>

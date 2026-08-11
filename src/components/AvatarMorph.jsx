@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import emma from '../assets/app/ans-emma.png';
+import emma from '../assets/app/ans-emma.webp';
 import './AvatarMorph.css';
 
 /*

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Single-page site: one canonical URL. The in-page sections (#ask, #taste,
+     #friends, #get) are not separate documents and must not be listed here —
+     duplicate-content signals for the same page hurt more than they help. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://bravoapp.ai/</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+</urlset>

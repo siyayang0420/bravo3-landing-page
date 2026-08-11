@@ -19,7 +19,11 @@ export default function Pay() {
           <Button size="reg" className="pay__cta" href={APP_STORE_URL} {...EXTERNAL_LINK}>Get Started</Button>
         </div>
 
-        <PhoneMockup className="pay__phone">
+        <PhoneMockup
+          className="pay__phone"
+          loading="lazy"
+          aria-label="The Bravo app paying a bill by QR code, then confirming the payment and the reward earned"
+        >
           <PayPhoneApp />
         </PhoneMockup>
       </div>

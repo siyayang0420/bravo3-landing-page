@@ -24,7 +24,11 @@ export default function Hero() {
         </div>
       </div>
 
-      <PhoneMockup className="hero__phone" aria-label="Bravo app on iPhone">
+      {/* no lazy loading here — this is the LCP element */}
+      <PhoneMockup
+        className="hero__phone"
+        aria-label="The Bravo app showing a friends feed of restaurant posts, then asking bravo AI where to eat"
+      >
         <InPhoneApp />
       </PhoneMockup>
     </header>

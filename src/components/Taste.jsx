@@ -1,5 +1,5 @@
 import Button from './Button.jsx';
-import avatar from '../assets/taste/avatar.png';
+import avatar from '../assets/taste/avatar.webp';
 import iconShare from '../assets/taste/share.svg';
 import iconStore from '../assets/taste/store.svg';
 import iconUtensils from '../assets/taste/utensils.svg';
@@ -61,7 +61,7 @@ export default function Taste() {
           <div className="taste__rank">
             <div className="taste__rank-top">
               <div className="taste__rank-who">
-                <span className="taste__rank-av"><img src={avatar} alt="" /></span>
+                <span className="taste__rank-av"><img src={avatar} alt="" loading="lazy" decoding="async" /></span>
                 <div className="taste__rank-name">
                   <span className="taste__rank-since">Past 30 Days</span>
                   <span className="taste__rank-title">Top 32% Diner</span>

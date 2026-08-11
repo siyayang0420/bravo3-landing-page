@@ -3,26 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--
+      Canonical, og:url and og:image are absolute on purpose: crawlers and
+      link-preview scrapers do not resolve relative paths. If the site ever moves
+      or gains a www redirect, these plus /robots.txt and /sitemap.xml are the
+      three places the host name lives.
+
+      STILL MISSING: /og-image.jpg (1200x630). The tag below points at it, and a
+      referenced-but-absent image makes scrapers render a broken card.
+    -->
     <title>Bravo — The place where dining begins</title>
     <meta
       name="description"
       content="One app for the whole night out — ask your friends where to go, pay the bill, and earn something back every time."
     />
+    <link rel="canonical" href="https://bravoapp.ai/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#ffffff" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
 
     <!-- Link previews -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Bravo" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://bravoapp.ai/" />
     <meta property="og:title" content="Bravo — The place where dining begins" />
     <meta
       property="og:description"
       content="One app for the whole night out — ask your friends where to go, pay the bill, and earn something back every time."
     />
+    <meta property="og:image" content="https://bravoapp.ai/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Friends around a table at a restaurant, with the Bravo wordmark" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Bravo — The place where dining begins" />
+    <meta
+      name="twitter:description"
+      content="One app for the whole night out — ask your friends where to go, pay the bill, and earn something back every time."
+    />
+    <meta name="twitter:image" content="https://bravoapp.ai/og-image.jpg" />
 
+    <!-- Fonts. preconnect shaves a round trip off the render-blocking CSS
+         request; the URL already carries display=swap so text paints in Inter's
+         fallback rather than staying invisible while Boldonse loads. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inter:opsz,wght@14..32,300..900&display=swap" rel="stylesheet" />
+
+    <!-- Structured data. SoftwareApplication is the type Google uses for app
+         rich results; Organization ties the wordmark and store link together. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://bravoapp.ai/#organization",
+            "name": "Bravo",
+            "url": "https://bravoapp.ai/",
+            "logo": "https://bravoapp.ai/favicon.svg"
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://bravoapp.ai/#website",
+            "url": "https://bravoapp.ai/",
+            "name": "Bravo",
+            "publisher": { "@id": "https://bravoapp.ai/#organization" },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "SoftwareApplication",
+            "name": "Bravo Rewards",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "iOS, Android",
+            "url": "https://apps.apple.com/ca/app/bravo-rewards/id6477488926",
+            "description": "One app for the whole night out — ask your friends where to go, pay the bill, and earn something back every time.",
+            "publisher": { "@id": "https://bravoapp.ai/#organization" },
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

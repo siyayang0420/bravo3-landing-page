@@ -10,10 +10,10 @@ import audio from '../assets/app/audio.svg';
 /* Canonical Emma avatar. The Ask section imports this exact file too — the two
    are one shared element that morphs on scroll, so they must be byte-identical
    rather than merely similar crops. */
-import ansEmma from '../assets/app/ans-emma.png';
-import ansVenue from '../assets/app/ans-venue.png';
-import ansPhoto1 from '../assets/app/ans-photo1.png';
-import ansPhoto2 from '../assets/app/ans-photo2.png';
+import ansEmma from '../assets/app/ans-emma.webp';
+import ansVenue from '../assets/app/ans-venue.webp';
+import ansPhoto1 from '../assets/app/ans-photo1.webp';
+import ansPhoto2 from '../assets/app/ans-photo2.webp';
 import quote from '../assets/app/quote.svg';
 import bookmark from '../assets/app/bookmark.svg';
 import Orb from './Orb.jsx';

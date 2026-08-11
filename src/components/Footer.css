@@ -1,48 +1,28 @@
-/* Full-bleed sign-off. Design frame is 1728 × 1000 (Figma 5835:8659); the
-   fixed sizes below are that frame's px, the horizontal ones are relative so
-   the photo, sheet and wash keep spanning the viewport.
+/* Full-bleed sign-off. Design frame is 1728 × 1000 (Figma 5821:7396); the fixed
+   sizes below are that frame's px, the horizontal ones are relative so the sheet
+   and wash keep spanning the viewport.
    Paint order is DOM order (every layer is positioned, z-index auto):
-   photo -> wash -> sheet -> content. */
+   wash -> sheet -> content. */
 .footer {
   position: relative;
   margin-inline: calc(50% - 50vw);
   width: 100vw;
-  overflow: hidden; /* clips the photo and wash, both wider/taller than the frame */
+  overflow: hidden; /* clips the wash, which is wider and taller than the frame */
   background: var(--ds-white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* sheet (187 visible) + 108 = content at y 295, per the design */
-  gap: 108px;
+  /* sheet (231) + 64 = content at y 295, per the design */
+  gap: 64px;
   padding-bottom: 143px;
 }
 
-/* Room full of people, thrown slightly out of focus so the card stays legible.
-   Overhangs on three sides so the blur's own soft edge falls outside the
-   footer; the top edge is hidden behind the white sheet. */
-.footer__photo {
-  position: absolute;
-  left: -5.7%;
-  right: -5.7%;
-  top: 65px;
-  bottom: -24px;
-  filter: blur(9.15px);
-  pointer-events: none;
-}
-.footer__photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.footer__photo::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, .3); /* holds the photo back so white type reads */
-}
-
 /* Brand ramp — the same cyan -> yellow -> red as the prompt box ring, blurred
-   until it is just a wash of colour across the bottom. */
+   until it is just a wash of colour behind the sign-off. */
 .footer__wash {
   position: absolute;
   left: -7.2%;
-  bottom: -244px;
+  bottom: -89px;
   width: 114.4%;
   height: 408px;
   background: linear-gradient(93.67deg, #4af3ff 0.17%, #fee160 50%, #f94f4f 99.83%);
@@ -55,8 +35,7 @@
 .footer__sheet {
   position: relative;
   width: 100%;
-  /* 231 tall in Figma but pulled 44px above the frame, so 187 of it shows */
-  height: 187px;
+  height: 231px;
   border-radius: 0 0 80px 80px;
   background: var(--ds-white);
   box-shadow: 0 0 106.1px -4px rgba(0, 0, 0, .25);
@@ -73,8 +52,7 @@
   padding: 0 64px;
 }
 
-/* white now — the wordmark sits on the photo, not on the white sheet */
-.footer__mark { display: block; width: 198px; height: auto; color: var(--ds-white); }
+.footer__mark { display: block; width: 198px; height: auto; color: var(--ds-black); }
 
 .footer__stack { display: flex; flex-direction: column; align-items: center; gap: 32px; }
 
@@ -111,13 +89,10 @@
 .footer__badge:hover { opacity: .85; }
 
 @media (max-width: 900px) {
-  .footer { gap: 72px; padding-bottom: 96px; }
+  .footer { gap: 48px; padding-bottom: 96px; }
   .footer__sheet { height: 140px; border-radius: 0 0 48px 48px; }
   .footer__inner { gap: 48px; padding: 0 24px; }
-  .footer__wash { bottom: -200px; }
-  /* the sheet is shorter here, so the photo has to start higher to stay tucked
-     behind it rather than showing a blurred edge below the curve */
-  .footer__photo { top: 48px; }
+  .footer__wash { bottom: -140px; }
 }
 
 @media (max-width: 420px) {
