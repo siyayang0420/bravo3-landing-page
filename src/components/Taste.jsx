@@ -142,7 +142,7 @@ export default function Taste() {
             unique, and helps you discover what’s next.
           </p>
           <Button size="reg" className="taste__cta" href={APP_STORE_URL} {...EXTERNAL_LINK}>
-            Start building identify
+            Start building identity
           </Button>
         </div>
       </div>

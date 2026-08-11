@@ -2,7 +2,7 @@ import InPhoneApp from './InPhoneApp.jsx';
 import PhoneMockup from './PhoneMockup.jsx';
 import badgeAppStore from '../assets/badge-appstore.svg';
 import badgeGooglePlay from '../assets/badge-googleplay.svg';
-import { APP_STORE_URL, EXTERNAL_LINK } from '../lib/links.js';
+import { APP_STORE_URL, PLAY_STORE_URL, EXTERNAL_LINK } from '../lib/links.js';
 import './Hero.css';
 
 export default function Hero() {
@@ -18,7 +18,7 @@ export default function Hero() {
           <a className="hero__badge" href={APP_STORE_URL} {...EXTERNAL_LINK} aria-label="Download on the App Store">
             <img src={badgeAppStore} alt="" />
           </a>
-          <a className="hero__badge" href={APP_STORE_URL} {...EXTERNAL_LINK} aria-label="Get it on Google Play">
+          <a className="hero__badge" href={PLAY_STORE_URL} {...EXTERNAL_LINK} aria-label="Get it on Google Play">
             <img src={badgeGooglePlay} alt="" />
           </a>
         </div>

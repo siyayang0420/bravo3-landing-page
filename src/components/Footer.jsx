@@ -3,7 +3,7 @@ import badgeAppStore from '../assets/badge-appstore.svg';
 import badgeGooglePlay from '../assets/badge-googleplay.svg';
 import qrRewards from '../assets/footer/qr-rewards.png';
 import bgTable from '../assets/footer/bg-table.png';
-import { APP_STORE_URL, EXTERNAL_LINK } from '../lib/links.js';
+import { APP_STORE_URL, PLAY_STORE_URL, EXTERNAL_LINK } from '../lib/links.js';
 import './Footer.css';
 
 /* Footer — Figma node 5835:8659. The page ends on a white sheet with rounded
@@ -34,7 +34,7 @@ export default function Footer() {
             <a className="footer__badge" href={APP_STORE_URL} {...EXTERNAL_LINK} aria-label="Download on the App Store">
               <img src={badgeAppStore} alt="" />
             </a>
-            <a className="footer__badge" href={APP_STORE_URL} {...EXTERNAL_LINK} aria-label="Get it on Google Play">
+            <a className="footer__badge" href={PLAY_STORE_URL} {...EXTERNAL_LINK} aria-label="Get it on Google Play">
               <img src={badgeGooglePlay} alt="" />
             </a>
           </div>
