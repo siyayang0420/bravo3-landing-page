@@ -30,8 +30,11 @@
   --display-leading: 1.34;
 
   --page-w: 1480px;
-  /* scroll distance the hero stays pinned for while the phone animation plays */
-  --hero-budget: 210vh;
+  /* Scroll distance the hero stays pinned for while the phone animation plays.
+     Every phase is keyed to a fraction of this, so it is the single sensitivity
+     dial: raising it means more scrolling per beat. 210vh -> 248vh is ~18% less
+     sensitive. */
+  --hero-budget: 248vh;
   --gutter: 52px;
   --radius-card: 18px;
   --radius-phone: 34px;

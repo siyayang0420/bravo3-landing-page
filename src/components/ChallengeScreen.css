@@ -62,17 +62,55 @@
 .chal__invited { margin-left: auto; }
 
 /* ---------- players ---------- */
-/* Absolutely placed at Figma coordinates — the scatter is the design. */
+/* Absolutely placed at Figma coordinates — the scatter is the design. Each is a
+   real button: tapping one throws confetti. */
+@keyframes chal-bob {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50%      { transform: translate3d(0, calc(var(--bob, 7px) * -1), 0); }
+}
 .chal__player {
   position: absolute;
   display: flex; flex-direction: column; align-items: center;
   z-index: 1;
+  margin: 0; padding: 0; border: 0;
+  background: none; color: inherit; font: inherit; text-align: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  animation: chal-bob var(--dur, 5s) ease-in-out var(--bob-delay, 0s) infinite;
 }
+/* lift the one that's celebrating above its neighbours */
+.chal__player.is-bursting { z-index: 4; }
+.chal__player:focus-visible { outline: 2px solid var(--ds-black); outline-offset: 4px; border-radius: 16px; }
+
 .chal__avatar {
   position: relative;
+  display: block;
   border-radius: 148px;
   overflow: visible;
   flex-shrink: 0;
+  /* `transform` on the player is spoken for by the bob, so the press lives here */
+  transition: transform .18s ease;
+}
+.chal__player:active .chal__avatar { transform: scale(.94); }
+
+/* ---------- confetti ---------- */
+/* Negative z puts the emoji behind the photo, so they appear to fly out from
+   behind the avatar. `.chal__player` has z-index 1 and so owns a stacking
+   context — that keeps them from sinking behind the screen's background too. */
+.chal__burst { position: absolute; inset: 0; pointer-events: none; z-index: -1; }
+.chal__spark {
+  position: absolute;
+  left: 50%; top: 50%;
+  line-height: 1;
+  will-change: transform, opacity;
+  animation: chal-spark var(--life, 1s) cubic-bezier(.18, .7, .32, 1) var(--sdelay, 0ms) both;
+}
+/* out fast, then drift on and fall */
+@keyframes chal-spark {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(.2) rotate(0deg); }
+  15%  { opacity: 1; }
+  55%  { transform: translate(-50%, -50%) translate(var(--x), var(--y)) scale(1.1) rotate(var(--rot)); }
+  100% { opacity: 0; transform: translate(-50%, -50%) translate(calc(var(--x) * 1.18), calc(var(--y) + 18px)) scale(.8) rotate(var(--rot)); }
 }
 .chal__avatar img:first-child {
   width: 100%; height: 100%;
@@ -156,3 +194,20 @@
 .chal__merchant-stack img:last-child { margin-right: 0; }
 .chal__merchants-label { font-size: 14px; line-height: 1.2; white-space: nowrap; }
 .chal__merchants-chevron { width: 16px; height: 16px; }
+
+@media (prefers-reduced-motion: reduce) {
+  /* the idle drift is the part that has to go; the burst is brief and only ever
+     happens because someone tapped, so it stays — just without the flight */
+  .chal__player { animation: none; }
+  .chal__avatar { transition: none; }
+  .chal__player:active .chal__avatar { transform: none; }
+  .chal__spark { animation-name: chal-spark-still; }
+}
+@keyframes chal-spark-still {
+  0%        { opacity: 0; }
+  20%, 65%  { opacity: 1; }
+  100%      { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .chal__spark { transform: translate(-50%, -50%) translate(var(--x), var(--y)); }
+}

@@ -15,9 +15,9 @@ import './Taste.css';
 
 /* Stat row of the "Top 32% Diner" card. */
 const STATS = [
-  { value: '5', icon: iconStore, label: 'restaurants' },
-  { value: '5', icon: iconUtensils, label: 'cuisines' },
-  { value: '5', icon: iconPosts, label: 'Posts' },
+  { value: '16', icon: iconStore, label: 'restaurants' },
+  { value: '10', icon: iconUtensils, label: 'cuisines' },
+  { value: '18', icon: iconPosts, label: 'Posts' },
 ];
 
 /*
@@ -43,7 +43,9 @@ const PLOT_POS = [35.39, 34.09, 27.69, 31.78];
 /* [left%, top%, width%] + cross-axis alignment */
 const AXES = [
   { name: 'Connoisseur', value: '42', pos: [40.30, 0, 22.70], align: 'center' },
-  { name: 'Regular', value: '30', pos: [86.43, 22.67, 13.50], align: 'flex-start' },
+  /* nudged 2px (0.63% of the chart) off the right edge — "Night Owl" is the
+     widest label on that side and was sitting flush against it */
+  { name: 'Night Owl', value: '30', pos: [85.80, 22.67, 13.50], align: 'flex-start' },
   { name: 'Regular', value: '35', pos: [86.43, 67.33, 13.50], align: 'flex-start' },
   { name: 'Connector', value: '42', pos: [40.30, 90.09, 22.70], align: 'center' },
   { name: 'Loyalist', value: '58', pos: [1.53, 68.53, 15.34], align: 'flex-end' },
