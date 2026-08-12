@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
-import { POSTS, postUrl } from '../lib/posts.js';
+import { POSTS, CATEGORIES, postUrl } from '../lib/posts.js';
 import './Blog.css';
+
+/* "All" plus only those categories that actually have a post, so an empty
+   filter can never be shown. */
+const ALL = 'All';
+const FILTERS = [ALL, ...CATEGORIES.filter((c) => POSTS.some((p) => p.category === c))];
 
 /* Blog index — Figma node 5870:16211.
    Posts flow into rows of up to three, and the last (short) row stretches its
@@ -16,6 +22,9 @@ const toRows = (items) => {
 };
 
 export default function BlogIndex() {
+  const [filter, setFilter] = useState(ALL);
+  const visible = filter === ALL ? POSTS : POSTS.filter((p) => p.category === filter);
+
   return (
     <>
       <main className="page blog">
@@ -26,8 +35,24 @@ export default function BlogIndex() {
           <p className="blog__lede">What’s happening in Bravo</p>
         </header>
 
+        {/* Filtering is client-side over an already-rendered list — every post
+            stays in the HTML for crawlers, and each has its own indexed page. */}
+        <div className="blog__filters" role="group" aria-label="Filter posts by category">
+          {FILTERS.map((name) => (
+            <button
+              type="button"
+              key={name}
+              className="blog__filter"
+              aria-pressed={filter === name}
+              onClick={() => setFilter(name)}
+            >
+              {name}
+            </button>
+          ))}
+        </div>
+
         <div className="blog__rows">
-          {toRows(POSTS).map((row, ri) => (
+          {toRows(visible).map((row, ri) => (
             <div className="blog__row" key={ri}>
               {row.map((post, ci) => (
                 <a className="blog-card" href={postUrl(post.slug)} key={post.slug}>
