@@ -24,6 +24,8 @@ export default defineConfig({
         home: page('./index.html'),
         blog: page('./blog/index.html'),
         'blog-ai-sessions-3': page('./blog/bravo-ai-sessions-vol-3/index.html'),
+        'blog-ai-sessions-2': page('./blog/bravo-ai-sessions-vol-2/index.html'),
+        'blog-ellipsis': page('./blog/ellipsis-opens-at-nine/index.html'),
       },
     },
   },
