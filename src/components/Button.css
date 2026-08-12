@@ -18,8 +18,9 @@
 .button--mid { height: 41px; padding: 0 20px; border-radius: var(--radius-xl); font-size: 16px; }
 .button--reg { height: 48px; padding: 0 28px; border-radius: var(--radius-xl); font-size: 16px; }
 
-/* variants */
-.button--primary { background: var(--ds-black); color: var(--ds-white); font-weight: 700; }
+/* variants — primary carries the design-system "accent-default" inner shadow
+   (Figma 5798:5103), so every primary Button on the page picks it up. */
+.button--primary { background: var(--ds-black); color: var(--ds-white); font-weight: 700; box-shadow: var(--accent-inset); }
 .button--ghost   { background: transparent; color: var(--ds-black); border-color: var(--ds-black); font-weight: 400; }
 
 /* Figma only specifies the default state; these keep the page's existing lift. */

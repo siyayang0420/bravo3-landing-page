@@ -3,7 +3,18 @@ import Footer from './Footer.jsx';
 import { POSTS, postUrl } from '../lib/posts.js';
 import './Blog.css';
 
-/* Blog index — Figma node 5852:14661. */
+/* Blog index — Figma node 5870:16211.
+   Posts flow into rows of up to three, and the last (short) row stretches its
+   cards to fill the width: 1 post = full-bleed, 2 = halves, 3 = thirds. Chunking
+   into explicit flex rows is what makes the last-row stretch work — a normal
+   grid would leave a short final row aligned left instead. */
+const ROW_SIZE = 3;
+const toRows = (items) => {
+  const rows = [];
+  for (let i = 0; i < items.length; i += ROW_SIZE) rows.push(items.slice(i, i + ROW_SIZE));
+  return rows;
+};
+
 export default function BlogIndex() {
   return (
     <>
@@ -15,24 +26,29 @@ export default function BlogIndex() {
           <p className="blog__lede">What’s happening in Bravo</p>
         </header>
 
-        <ul className="blog__list">
-          {POSTS.map((post) => (
-            <li key={post.slug}>
-              <a className="blog-card" href={postUrl(post.slug)}>
-                <img
-                  className="blog-card__img"
-                  src={post.hero}
-                  alt={post.heroAlt}
-                  width="484"
-                  height="363"
-                  decoding="async"
-                />
-                <time className="blog-card__date" dateTime={post.date}>{post.dateLabel}</time>
-                <h2 className="blog-card__title">{post.title}</h2>
-              </a>
-            </li>
+        <div className="blog__rows">
+          {toRows(POSTS).map((row, ri) => (
+            <div className="blog__row" key={ri}>
+              {row.map((post, ci) => (
+                <a className="blog-card" href={postUrl(post.slug)} key={post.slug}>
+                  <img
+                    className="blog-card__img"
+                    src={post.hero}
+                    alt={post.heroAlt}
+                    /* the very first card is the blog page's LCP; the rest defer */
+                    loading={ri === 0 && ci === 0 ? undefined : 'lazy'}
+                    decoding="async"
+                  />
+                  <div className="blog-card__meta">
+                    <time className="blog-card__date" dateTime={post.date}>{post.dateLabel}</time>
+                    <h2 className="blog-card__title">{post.title}</h2>
+                    <p className="blog-card__excerpt">{post.excerpt}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
           ))}
-        </ul>
+        </div>
       </main>
 
       <Footer />

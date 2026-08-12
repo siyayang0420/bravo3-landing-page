@@ -23,16 +23,16 @@ export const POSTS = [
     heroAlt:
       'The Bravo team and guests gathered for a group photo at Bravo AI Sessions Vol. 3',
     /*
-     * `aspect` is the frame Figma gives each photo, which is not always the
-     * photo's own ratio — p3 and p5 are portrait sources shown in shorter
-     * frames, so they crop. `focus` shifts that crop: p5's frame in the design
-     * shows the lower ~78% of the image, whose midpoint sits at 61%.
+     * `aspect` is the frame Figma gives each photo at the 980px column width
+     * (node 5870:16257). p2/p3/p4 match their sources' native ratios, so they
+     * fill without cropping; p5 is a taller source shown in a shorter frame, so
+     * `focus` pins its crop to the bottom, as the design does.
      */
     gallery: [
-      { src: p2, alt: 'Guests talking around cafe tables during the session', aspect: '800 / 599' },
-      { src: p3, alt: 'The Wren Cafe room filled with attendees seated at tables', aspect: '800 / 599' },
-      { src: p4, alt: 'A speaker demonstrating Bravo AI to attendees at the counter', aspect: '800 / 1067' },
-      { src: p5, alt: 'Attendees trying the app together after the talk', aspect: '800 / 833', focus: '50% 61%' },
+      { src: p2, alt: 'Guests talking around cafe tables during the session', aspect: '980 / 735' },
+      { src: p3, alt: 'The Wren Cafe room filled with attendees seated at tables', aspect: '980 / 1307' },
+      { src: p4, alt: 'A speaker demonstrating Bravo AI to attendees at the counter', aspect: '980 / 1307' },
+      { src: p5, alt: 'Attendees trying the app together after the talk', aspect: '980 / 1070', focus: '50% 100%' },
     ],
   },
 ];

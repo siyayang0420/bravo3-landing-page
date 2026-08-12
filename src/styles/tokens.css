@@ -18,6 +18,10 @@
   --ds-black: #202020;
   --ds-black-wash: rgba(32, 32, 32, .06);
   --ds-white: #FFFFFF;
+  /* "accent-default" (Figma effect style): a top white highlight over a bottom
+     dark inner shadow that gives dark surfaces their embossed, glossy look.
+     Used on the in-phone audio button and now the primary button. */
+  --accent-inset: inset 0 1px 5px rgba(255, 255, 255, .6), inset 0 -4px 4px #000;
   --heart-red: #C51F1F;
   --heart-red-glow: rgba(197, 31, 31, .3);
 
