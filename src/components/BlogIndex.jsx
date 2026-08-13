@@ -1,13 +1,21 @@
 import { useState } from 'react';
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
-import { POSTS, CATEGORIES, postUrl } from '../lib/posts.js';
+import { POSTS, CATEGORIES, postUrl, categorySlug, categoryUrl } from '../lib/posts.js';
 import './Blog.css';
 
 /* "All" plus only those categories that actually have a post, so an empty
    filter can never be shown. */
 const ALL = 'All';
 const FILTERS = [ALL, ...CATEGORIES.filter((c) => POSTS.some((p) => p.category === c))];
+
+/* A post's breadcrumb links here as /blog/?category=<slug>, so the filter has
+   to be readable from the URL as well as writable to it. Unknown or missing
+   slugs fall back to "All" rather than showing an empty page. */
+const filterFromUrl = () => {
+  const slug = new URLSearchParams(window.location.search).get('category');
+  return FILTERS.find((f) => f !== ALL && categorySlug(f) === slug) ?? ALL;
+};
 
 /* Blog index — Figma node 5870:16211.
    Posts flow into rows of up to three, and the last (short) row stretches its
@@ -22,8 +30,15 @@ const toRows = (items) => {
 };
 
 export default function BlogIndex() {
-  const [filter, setFilter] = useState(ALL);
+  const [filter, setFilter] = useState(filterFromUrl);
   const visible = filter === ALL ? POSTS : POSTS.filter((p) => p.category === filter);
+
+  /* replaceState, not pushState: filtering is a view control, so it shouldn't
+     make the back button walk through every chip the reader tried. */
+  const choose = (name) => {
+    setFilter(name);
+    window.history.replaceState(null, '', name === ALL ? '/blog/' : categoryUrl(name));
+  };
 
   return (
     <>
@@ -44,7 +59,7 @@ export default function BlogIndex() {
               key={name}
               className="blog__filter"
               aria-pressed={filter === name}
-              onClick={() => setFilter(name)}
+              onClick={() => choose(name)}
             >
               {name}
             </button>

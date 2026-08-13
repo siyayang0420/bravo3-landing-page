@@ -13,6 +13,10 @@
   /* brand accent — used sparingly */
   --yellow: #FFD400;
   --on-yellow: #141210;
+  /* softer yellow used only behind text as a marker-pen highlight, never as a
+     surface (Figma node 5893:16639) — the accent rule still bars it from
+     backing a section. */
+  --yellow-highlight: #FEE160;
 
   /* design system core (Figma: Bravo Design System — Core) */
   --ds-black: #202020;
@@ -23,6 +27,8 @@
      Used on the in-phone audio button and now the primary button. */
   --accent-inset: inset 0 1px 5px rgba(255, 255, 255, .6), inset 0 -4px 4px #000;
   --heart-red: #C51F1F;
+  /* grays/border/subtle — hairline rules and quiet control outlines */
+  --border-subtle: #E5E5EA;
   --heart-red-glow: rgba(197, 31, 31, .3);
 
   /* type */
@@ -39,6 +45,8 @@
      dial: raising it means more scrolling per beat. 210vh -> 248vh is ~18% less
      sensitive. */
   --hero-budget: 248vh;
+  /* scroll the Ask section stays pinned for while its stage swaps states */
+  --ask-budget: 120vh;
   --gutter: 52px;
   --radius-card: 18px;
   --radius-phone: 34px;

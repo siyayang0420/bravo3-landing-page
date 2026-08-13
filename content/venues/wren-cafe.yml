@@ -1,0 +1,12 @@
+name: Wren Cafe
+logo: images/wren-cafe-logo.webp
+bravoUrl: https://www.bravoup.ca/store/wren-cafe
+street: 280 Nelson St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/search/?api=1&query=Wren%20Cafe%2C%20280%20Nelson%20St%2C%20Vancouver%2C%20BC
+site: wrencafe.ca
+siteUrl: https://wrencafe.ca
+schema:
+  type: Place
+  region: BC
+  country: CA

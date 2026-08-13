@@ -1,0 +1,13 @@
+name: Ellipsis
+logo: images/ellipsis-logo.webp
+street: "1540 W 2nd Ave #205"
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/ellipsis+vancouver/data=!4m2!3m1!1s0x548673006a1b8583:0xd97d3ad2eeddd1d6
+site: ellipsis.ca
+siteUrl: https://ellipsis.ca
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Coffee, Cocktails]
+  openingHours: Mo-Su 09:00-23:00
