@@ -10,4 +10,3 @@ schema:
   region: BC
   country: CA
   servesCuisine: [Coffee, Cocktails]
-  openingHours: Mo-Su 09:00-23:00

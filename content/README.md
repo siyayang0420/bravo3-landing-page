@@ -238,12 +238,37 @@ schema:
   region: BC
   country: CA
   servesCuisine: [Coffee, Cocktails]   # optional, Restaurant only
-  openingHours: Mo-Su 09:00-23:00      # optional, Restaurant only
 ```
 
 `mapUrl` is **required**: every venue's address links to its own Google Maps location, so
 the credit block reads the same everywhere. Use the venue's own place URL. `bravoUrl` is
 the only optional link — a venue with no Bravo page yet renders that half as plain text.
+
+### Do not publish venue opening hours
+
+**Bravo Magazine does not store, generate or publish venue opening hours.** This is a
+deliberate editorial policy, not an omission.
+
+Hours are dynamic operational data. They change without notice, and a magazine article is
+the wrong place to assert them — a stale claim in structured data is worse than no claim,
+because search engines will surface it as fact. Bravo Magazine is not the authoritative
+source for a venue's hours; the venue is.
+
+If you are writing or researching a post:
+
+- **Do not research a venue's opening hours for publication.**
+- **Do not add `openingHours`** — or `hours`, `businessHours`, `opening_hours`,
+  `openingHoursSpecification` — to a venue file or to post frontmatter. The build
+  **rejects** these fields with an explanation; they are not silently ignored.
+- **Do not generate opening-hours structured data** anywhere.
+- **`mapUrl` is the answer.** Readers follow the venue's Google Maps link for current
+  hours and operational status, which is always up to date.
+
+**Event times are different and remain supported.** A start or end time for a specific
+event, and prose describing when something happened, are editorial content about a moment
+in time, not a standing claim about a business. Ellipsis's article says the room "runs
+from nine in the morning until eleven at night" in its copy — that is reporting, and it
+stays. The prohibition is on *structured venue hours*, not on writing about time.
 
 Quote any value containing a `#`, e.g. `street: "1540 W 2nd Ave #205"` — unquoted, YAML
 reads `#` as the start of a comment.
@@ -322,3 +347,4 @@ Each error names the file, the line where one applies, and what to fix.
 | Unsupported Markdown (lists, tables, `###`, blockquotes, code blocks, raw HTML) | Would be dropped or published as visible characters. |
 | Malformed YAML frontmatter | Usually an unquoted colon in a title. |
 | Missing social card | `npm run images`. |
+| `openingHours` (or `hours`/`businessHours`/…) on a venue or post | Bravo Magazine does not publish venue opening hours — see §7. |

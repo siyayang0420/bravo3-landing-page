@@ -92,7 +92,11 @@ function venueNode(post) {
     name: v.name,
     url: v.siteUrl,
     servesCuisine: s.servesCuisine,
-    openingHours: s.openingHours,
+    /* No opening hours, by policy. Hours are dynamic operational data that goes
+       stale, and Bravo Magazine does not maintain them as an authoritative
+       source — readers follow the venue's `mapUrl` for current hours. The
+       content build rejects `openingHours` outright so this cannot creep back
+       in via a venue file. */
     address: {
       '@type': 'PostalAddress',
       streetAddress: v.street,

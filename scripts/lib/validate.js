@@ -18,6 +18,11 @@ const required = (value, field, where) => {
 export function validatePost(post, { categories, venues }) {
   const { slug, file, frontmatter: fm } = post;
 
+  /* also guarded on the post, in case hours are attached to the article rather
+     than to the venue record */
+  rejectOpeningHours(fm, file, '');
+  rejectOpeningHours(fm.seo, file, ' under "seo"');
+
   if (!SLUG.test(slug)) {
     throw new Error(`content/posts/${slug}/: directory name must be lower-case words joined by hyphens`);
   }
@@ -58,8 +63,33 @@ export function validatePost(post, { categories, venues }) {
   return { ...post, date };
 }
 
+/*
+ * Bravo Magazine deliberately does not publish venue opening hours: they are
+ * dynamic operational data that goes stale, and the magazine is not their
+ * authoritative source. Rejecting the field rather than ignoring it means a
+ * future agent that researches and adds hours gets told why, instead of quietly
+ * having the work dropped — or worse, silently reintroducing the claim.
+ */
+const HOURS_FIELDS = ['openingHours', 'opening_hours', 'hours', 'businessHours', 'openingHoursSpecification'];
+
+function rejectOpeningHours(record, where, scope) {
+  for (const field of HOURS_FIELDS) {
+    if (record?.[field] !== undefined) {
+      throw new Error(
+        `${where}: "${field}"${scope} is not supported — Bravo Magazine does not publish venue opening hours.\n` +
+          `    Hours are dynamic operational data we do not maintain as an authoritative source, so they are\n` +
+          `    never stored or emitted as structured data. Remove the field; readers get current hours from\n` +
+          `    the venue's "mapUrl" (its Google Maps location). Event start/end times in article copy are a\n` +
+          `    separate thing and remain fine.`,
+      );
+    }
+  }
+}
+
 export function validateVenue(venue) {
   const where = `content/venues/${venue.key}.yml`;
+  rejectOpeningHours(venue, where, '');
+  rejectOpeningHours(venue.schema, where, ' under "schema"');
   /* mapUrl is required, not optional: every venue's address links to its own
      Google Maps location, so the credit block is the same shape everywhere. A
      venue added without one would silently render a dead-looking plain address. */
