@@ -1,0 +1,16 @@
+name: Pinche Taco Shop
+logo: images/pinche-taco-shop-logo.webp
+bravoUrl: https://www.bravoup.ca/store/pinche-taco-shop
+street: 367 Seymour St
+locality: Vancouver
+# Google's canonical place URL was not available to verify; this is Google's
+# documented search-by-name-and-address form, which resolves to the same pin.
+# Swap in the /maps/place/… URL when convenient, as Ellipsis has.
+mapUrl: https://www.google.com/maps/search/?api=1&query=Pinche+Taco+Shop%2C+367+Seymour+St%2C+Vancouver
+site: lataqueria.com
+siteUrl: https://www.lataqueria.com/pinchetaco
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Mexican]

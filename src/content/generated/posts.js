@@ -5,6 +5,9 @@
  * Regenerate with:            npm run content   (or just run dev/build)
  */
 import img_posts_bravo_ai_sessions_vol_2_images_hero from '../../../content/posts/bravo-ai-sessions-vol-2/images/hero.webp';
+import img_posts_bravo_ai_sessions_vol_2_images_p1 from '../../../content/posts/bravo-ai-sessions-vol-2/images/p1.webp';
+import img_posts_bravo_ai_sessions_vol_2_images_p2 from '../../../content/posts/bravo-ai-sessions-vol-2/images/p2.webp';
+import img_posts_bravo_ai_sessions_vol_2_images_p3 from '../../../content/posts/bravo-ai-sessions-vol-2/images/p3.webp';
 import img_posts_bravo_ai_sessions_vol_3_images_hero from '../../../content/posts/bravo-ai-sessions-vol-3/images/hero.webp';
 import img_posts_bravo_ai_sessions_vol_3_images_p1 from '../../../content/posts/bravo-ai-sessions-vol-3/images/p1.webp';
 import img_posts_bravo_ai_sessions_vol_3_images_p2 from '../../../content/posts/bravo-ai-sessions-vol-3/images/p2.webp';
@@ -17,6 +20,7 @@ import img_posts_ellipsis_opens_at_nine_images_p3 from '../../../content/posts/e
 import img_posts_ellipsis_opens_at_nine_images_p4 from '../../../content/posts/ellipsis-opens-at-nine/images/p4.webp';
 import img_posts_ellipsis_opens_at_nine_images_p5 from '../../../content/posts/ellipsis-opens-at-nine/images/p5.webp';
 import img_venues_images_ellipsis_logo from '../../../content/venues/images/ellipsis-logo.webp';
+import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
 
 export const POSTS = [
@@ -273,21 +277,174 @@ export const POSTS = [
   {
     "slug": "bravo-ai-sessions-vol-2",
     "category": "AI Event",
-    "draft": true,
     "title": "Bravo AI Sessions Vol. 2",
     "crumb": "Bravo AI Sessions Vol. 2",
     "date": "2026-07-10",
     "dateLabel": "July 10, 2026",
-    "excerpt": "Bravo AI Session Vol. 2 spent an evening at Pinche Taco Shop imagining an agent that finds the restaurant, gets the reservation and picks the company. The evening it was discussed at had been put together the older way.",
+    "excerpt": "At Pinche Taco Shop, a free taco turned an AI dining assistant from an idea into something guests could try for themselves.",
     "hero": img_posts_bravo_ai_sessions_vol_2_images_hero,
-    "heroAlt": "Two guests at Pinche Taco Shop holding a Bravo card offering a free taco during Bravo AI Sessions Vol. 2",
+    "heroAlt": "A guest in a handwritten name tag pointing at the free-taco card he is holding up at Pinche Taco Shop",
+    "venue": {
+      "name": "Pinche Taco Shop",
+      "logo": img_venues_images_pinche_taco_shop_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/pinche-taco-shop",
+      "street": "367 Seymour St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=Pinche+Taco+Shop%2C+367+Seymour+St%2C+Vancouver",
+      "site": "lataqueria.com",
+      "siteUrl": "https://www.lataqueria.com/pinchetaco"
+    },
     "content": [
       {
         "type": "p",
         "inline": [
           {
             "t": "text",
-            "v": "Placeholder copy. The recap for this session has not been written yet."
+            "v": "“Talk to me to get a FREE TACO,” the card said. Underneath: a QR code, a WhatsApp mark, the words "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Meet Your Personal Dining Assistant"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": ", and a secret word, "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "besttaco"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": "."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "One stood on every table at Pinche Taco Shop, propped up and waiting, before a single guest arrived on July 10."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_bravo_ai_sessions_vol_2_images_p1,
+        "alt": "Long shared tables at Pinche Taco Shop before the event, a free-taco card standing on each one",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What guests did with it was this. You messaged the assistant and typed the secret word. It sent back a QR code. You walked up to the counter and showed it to someone, and they gave you a taco. A second card on the same tables handled the other end of it: "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Got a taco? USE IT HERE."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That is a small loop, and on the night it was the part that actually ran."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The larger version was the one being talked about. Bravo AI Sessions Vol. 2 was billed as an evening on how artificial intelligence is changing real-world commerce, the ordinary kind conducted in rooms with counters and menus. Writing about it afterwards, Bravo asked people to imagine an agent that could find you a restaurant, secure a table at the sort of place that doesn’t have one free, and then work out who you ought to eat with. That one is a proposition, not a product. A standee by the door named the shorter ambition instead: FROM PROMPT TO PLATE."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "By the time the room was full, people were standing in the aisles between the long tables and sitting along them in roughly equal numbers, phones out, canvas totes printed with "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Scan. Pay. Earn."
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " hooked over the backs of stools, plates of tacos arriving among the water glasses and the bottles of hot sauce. Daylight came in off Seymour Street through two storeys of glass."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_bravo_ai_sessions_vol_2_images_p2,
+        "alt": "Guests standing and seated along the shared tables with tacos, phones and Bravo tote bags, daylight coming through two storeys of glass",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Pinche Taco Shop is La Taqueria’s original counter concept, revived. It spent sixteen years on West Hastings before the building came down, and reopened in November on Seymour over two floors, under a Mexican flag hung from the staircase. You order at a counter there, and the tables are long and shared, so guests sat along them in rows rather than in separate parties."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_bravo_ai_sessions_vol_2_images_p3,
+        "alt": "The room mid-event, with a “from prompt to plate” standee by the window onto Seymour Street",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The last step is the part worth noticing. The loop did not close on a screen. It closed with a person behind a counter looking at a phone and then handing over something to eat."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Everyone in the room was wearing a name tag, written out in marker."
           }
         ]
       }
