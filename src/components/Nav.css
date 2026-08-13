@@ -3,8 +3,13 @@
 /* 30% up from 20px. width stays auto so the wordmark keeps its own ratio. */
 .nav__mark { display: block; height: 26px; width: auto; color: var(--ink); }
 
-/* Figma puts 64px between the Blog link and the CTA (5852:14717) */
-.nav__right { display: flex; align-items: center; gap: 64px; }
+/* Figma puts 64px between the Blog link and the CTA (5852:14717).
+   `min-height` matches `.button--mid`, the CTA's height, so the bar is the same
+   height whether or not the button is rendered. Without it the nav collapses to
+   the wordmark on pages that pass `cta={false}`, and since the row is
+   centre-aligned the wordmark and "About" ride 8px higher than on every other
+   page. */
+.nav__right { display: flex; align-items: center; gap: 64px; min-height: 41px; }
 .nav__link {
   font-size: 16px;
   font-weight: 700;
@@ -14,7 +19,13 @@
 }
 .nav__link:hover { opacity: .6; }
 
-@media (max-width: 600px) { .nav__right { gap: 24px; } }
+/* Below 600px the header collapses to the wordmark and one menu control: the
+   store button moves inside the menu panel (see NavAbout.css), so it is dropped
+   from the bar rather than duplicated. */
+@media (max-width: 600px) {
+  .nav__right { gap: 24px; }
+  .nav__right > .button { display: none; }
+}
 
 /* The nav shares one viewport with the hero, so every pixel it gives back is a
    pixel the phone mockup can use. */

@@ -40,6 +40,7 @@ function blogContent() {
           rollupOptions: {
             input: {
               home: page('./index.html'),
+              'coming-soon': page('./coming-soon/index.html'),
               blog: page('./blog/index.html'),
               ...blogEntries(),
             },

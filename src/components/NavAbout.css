@@ -1,0 +1,249 @@
+/* "About" menu — Figma node 5948:17100 */
+.navabout { position: relative; }
+
+/* the trigger inherits .nav__link's type; this only resets button chrome */
+.navabout__trigger {
+  display: flex;
+  align-items: center;
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ds-black);
+  cursor: pointer;
+}
+/* the icon only exists below 600px — see the mobile block at the end */
+.navabout__burger { display: none; }
+
+/* Hangs below the trigger, right-aligned so it never runs off the viewport. */
+.navabout__panel {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 30;
+  margin-top: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 12px 36px 12px 12px;
+  border: 1px solid #fff;
+  border-radius: 16px;
+  /*
+   * Frosted glass, same treatment at every width.
+   * The alpha is deliberately high rather than relying on the blur alone:
+   * backdrop-filter does not paint when an ancestor establishes a containing
+   * block (the nav sits inside the hero's sticky, transformed wrapper), and at
+   * a lower alpha the hero headline read straight through the mobile sheet.
+   * At .97 the panel stays legible whether or not the blur lands — which also
+   * covers browsers without backdrop-filter — and the blur softens the little
+   * that does show through.
+   */
+  background: rgba(255, 255, 255, .97);
+  backdrop-filter: blur(64px) saturate(1.4);
+  -webkit-backdrop-filter: blur(64px) saturate(1.4);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, .14);
+  animation: navabout-in .16s ease-out;
+}
+/*
+ * The 12px offset above is a *visual* gap, but it belonged to neither the
+ * trigger nor the panel — so moving the pointer down to the panel left the
+ * wrapper, fired mouseleave, and closed the menu before it could be clicked.
+ * This transparent strip spans the gap so the travel stays inside the wrapper,
+ * without altering the panel's own painted box.
+ */
+.navabout__panel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -12px;
+  height: 12px;
+}
+
+/* `hidden` is overridden by the panel's `display: flex`, so restore it */
+.navabout__panel[hidden] { display: none; }
+
+@keyframes navabout-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* --- gradient tile ------------------------------------------------------- */
+.navabout__tile {
+  position: relative;
+  flex-shrink: 0;
+  width: 203px;
+  height: 156px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* an oversized, heavily blurred ramp bleeding past the tile's bottom edge */
+.navabout__wash {
+  position: absolute;
+  left: 50%;
+  bottom: -34px;
+  width: 415px;
+  height: 196px;
+  transform: translateX(-50%);
+  filter: blur(40px);
+  background: linear-gradient(91.61deg, #4af3ff 0.17%, #fee160 50%, #f94f4f 99.83%);
+}
+/* No bottom margin: the tile centres its text with flex, and a margin there
+   would offset it upward by half its value rather than centring. */
+.navabout__tile-text {
+  position: relative;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--ds-white);
+  text-shadow: 0 0 15px rgba(0, 0, 0, .1);
+}
+
+/* --- right column -------------------------------------------------------- */
+.navabout__col {
+  height: 156px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+/*
+ * The links carry their own padding so the hover background has room around the
+ * text; the container's negative margin takes that padding back out of the
+ * layout, and the gap drops by twice the vertical padding, so the panel's
+ * spacing is unchanged from the design.
+ *
+ * `stretch` makes every pill the full width of the column rather than the width
+ * of its own label, so "Blog" and "Coming Soon" highlight identically instead of
+ * the shorter word getting a visibly shorter pill.
+ */
+.navabout__links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  margin: -8px -12px;
+}
+.navabout__link {
+  padding: 8px 12px;
+  border-radius: var(--radius-xl);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #000;
+  white-space: nowrap;
+  transition: background-color .15s ease;
+}
+/* `opacity: 1` overrides the global a:hover fade, which would wash out the
+   label and its new background together */
+.navabout__link:hover { background: var(--ds-black-wash); opacity: 1; }
+/* the tile is a link to the same place as the "Coming Soon" item beside it */
+.navabout__tile:hover { opacity: .9; }
+/* only shown below 600px, where the store button moves out of the nav bar */
+.navabout__cta { display: none; }
+
+.navabout__store { display: flex; flex-direction: column; gap: 4px; }
+.navabout__note { margin: 0; font-size: 12px; line-height: 1.2; color: #737373; white-space: nowrap; }
+.navabout__badges { display: flex; gap: 6.17px; }
+.navabout__badge { display: block; height: 30.1px; }
+.navabout__badge img { display: block; height: 100%; width: auto; }
+.navabout__badge:hover { opacity: .85; }
+
+/*
+ * Below 600px the header has room for the wordmark and one control, so the
+ * trigger becomes a menu icon and this panel becomes the menu: it takes in the
+ * store button that no longer fits in the bar, and stacks the tile above the
+ * links instead of beside them. Every element from the wide layout is still
+ * here — tile, Blog, Coming Soon, the availability note, both store badges —
+ * only the arrangement changes.
+ */
+@media (max-width: 600px) {
+  /* the word is still the control's accessible name; only its pixels go */
+  .navabout__word {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .navabout__burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    /* 44px keeps the tap target at the accessible minimum */
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    margin-right: -10px;
+  }
+  .navabout__burger > span {
+    display: block;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ds-black);
+    transition: transform .18s ease, opacity .12s ease;
+  }
+  /*
+   * Open: the two outer bars slide to the centre and cross, the middle one
+   * fades — so the control shows a close icon while the menu is up. Driven off
+   * the button's own aria-expanded rather than a second class, so what is drawn
+   * and what is announced cannot disagree.
+   * 6px = one bar (2px) + one gap (4px), the distance to the middle bar.
+   */
+  .navabout__trigger[aria-expanded='true'] .navabout__burger > span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .navabout__trigger[aria-expanded='true'] .navabout__burger > span:nth-child(2) {
+    opacity: 0;
+  }
+  .navabout__trigger[aria-expanded='true'] .navabout__burger > span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /*
+   * A sheet spanning the screen, still positioned like the desktop dropdown.
+   * Deliberately NOT `position: fixed`: the nav sits inside the hero's sticky,
+   * transformed wrapper, which becomes the containing block for a fixed child
+   * and stops backdrop-filter sampling the page — the sheet lost its blur and
+   * the hero headline read through it. Anchored to the trigger's right edge
+   * with a viewport-derived width, it lands on the opposite gutter exactly.
+   * Background, blur and shadow are inherited, so it is the same frosted glass.
+   */
+  .navabout__panel {
+    width: calc(100vw - 2 * var(--gutter));
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 16px;
+    max-height: calc(100svh - 96px);
+    overflow-y: auto;
+  }
+
+  .navabout__tile { width: 100%; height: 128px; }
+  .navabout__col { height: auto; gap: 16px; }
+  /* roomier padding here so each row is a ~44px touch target; the gap goes to
+     zero because the padding itself now supplies the separation */
+  .navabout__links { align-self: stretch; gap: 0; margin: -12px; }
+  .navabout__link { align-self: stretch; padding: 12px; font-size: 16px; }
+  /* pushes the availability note and its badges clear of the links above */
+  .navabout__store { margin-top: 128px; }
+  .navabout__badge { height: 30px; }
+  .navabout__cta { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navabout__panel { animation: none; }
+  .navabout__burger > span,
+  .navabout__link { transition: none; }
+}

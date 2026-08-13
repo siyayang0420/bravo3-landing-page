@@ -1,0 +1,118 @@
+/* Coming-soon page — Figma node 5937:16907 ("Pre Launch") */
+
+/* The design is one full screen with its rows pushed apart, so the headline
+   sits optically centred and the signup below it. `svh` rather than `vh` so
+   mobile browser chrome can't push the last row out of view. */
+.coming-soon {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+}
+.coming-soon > * { width: 100%; }
+
+/* --- headline ------------------------------------------------------------ */
+/*
+ * 128px in a 1728px frame. The width is what actually constrains it — the
+ * longer line is ~10x the font size — so it scales with the viewport and caps
+ * at the design size rather than being clamped by height.
+ *
+ * Leading comes from --display-leading (1.34), not the design's 1.2: the brand
+ * floor for Boldonse is 1.3. Because the two lines are separate elements with
+ * their own gap, this only changes the block's height, not the words' spacing.
+ */
+.coming-soon__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0 var(--gutter);
+  font-size: clamp(30px, 8.2vw, 128px);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--ds-black);
+}
+/* Scoped to beat `.display`, which sets -.02em and — being in global.css, which
+   loads after component CSS — wins any same-specificity tie. This node is drawn
+   at normal tracking, worth ~29px on the longer line at 128px. Line-height is
+   left to `.display` so the Boldonse floor (1.34) still applies. */
+.coming-soon .coming-soon__title { letter-spacing: normal; }
+.coming-soon__line { display: block; white-space: nowrap; }
+
+/* --- signup -------------------------------------------------------------- */
+/* The block is centred; its contents stay left-aligned, as in the design.
+   Its width is the row's (530.5 field + 16 gap + 183 button = 729.5), not
+   `fit-content` — that would size the block to the label above and squeeze the
+   field to about 300px. */
+.coming-soon__signup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  max-width: calc(730px + 2 * var(--gutter));
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+.coming-soon__label {
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ds-black);
+}
+.coming-soon__row {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+}
+.coming-soon__input {
+  flex: 1 1 530px;
+  min-width: 0;
+  height: 67px;
+  padding: 0 18px;
+  border: 1px solid #d9d9d9;
+  border-radius: 16px;
+  background: var(--ds-white);
+  font-family: var(--font-ui);
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--ds-black);
+}
+.coming-soon__input::placeholder { color: #a3a3a3; }
+.coming-soon__input:focus-visible {
+  outline: 2px solid var(--ds-black);
+  outline-offset: 2px;
+  border-color: transparent;
+}
+/* taller and larger than any stock Button size, but otherwise the design
+   system's primary button — it keeps the shared inner-shadow treatment */
+.coming-soon__submit {
+  flex-shrink: 0;
+  height: 67px;
+  padding: 0 32px;
+  font-size: 20px;
+}
+
+/* Stands in for the design's zero-opacity bottom row, which balances the
+   column. Matches that row's height so the spacing above it is unchanged. */
+.coming-soon__spacer { height: 51px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .coming-soon__label { font-size: 20px; }
+  .coming-soon__input { height: 56px; font-size: 18px; }
+  .coming-soon__submit { height: 56px; font-size: 16px; padding: 0 24px; }
+  .coming-soon__title { gap: 20px; }
+  .coming-soon__spacer { height: 24px; }
+}
+
+@media (max-width: 600px) {
+  /* the field and button no longer fit side by side at phone widths */
+  .coming-soon__row { flex-direction: column; align-items: stretch; }
+  .coming-soon__signup { width: 100%; }
+  .coming-soon__input { flex: 1 1 auto; width: 100%; }
+  .coming-soon__submit { width: 100%; }
+  .coming-soon__title { gap: 12px; }
+}
