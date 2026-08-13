@@ -1,12 +1,75 @@
-# Authoring a Bravo blog post
+# Bravo Magazine — publishing contract
 
-**This file is the complete specification.** You can write, validate and publish a post
-using only this document, your approved copy and your images. You do not need to read
-the build scripts, the React components, the templates or any existing article's HTML.
+**This file is the complete specification for turning an approved story into a website
+page.** You can prepare, validate and publish a post using only this document, your
+approved copy and your images. You do not need to read the build scripts, the React
+components, the templates or any existing article's HTML.
 
 A post is **one Markdown file plus its images**. Everything else — the HTML page, the
 `<head>` tags, JSON-LD, breadcrumbs, the sitemap row, the blog-index card and the build
 entry — is derived from that file.
+
+---
+
+## 0. Where this fits
+
+This `content/` directory is the **website publishing layer**. It is *not* the Bravo
+Magazine editorial workspace.
+
+Editorial production happens in a **separate local Bravo Magazine system**, normally
+operated through Claude Cowork. That workspace holds the things this directory
+deliberately does not: research, story IDs, restaurant and event dossiers, angle
+exploration, `ARTICLE.md` drafts, editorial review, QA, the content calendar, and status
+such as READY_TO_PUBLISH / PUBLISHED. It has its own README and its own commands.
+
+**Only the approved publishing artifact belongs here.**
+
+```
+Editorial ARTICLE.md          (local Bravo Magazine workspace)
+        │  approval
+        ▼
+Publishing index.md           (this directory)
+        │
+        ▼
+Content generator             (npm run content, or dev/build)
+        │
+        ▼
+Website
+```
+
+`ARTICLE.md` and `index.md` serve different purposes on purpose. `ARTICLE.md` may carry
+rich editorial and workflow metadata — story ID, sources, review notes, status, angle.
+`index.md` carries **only** the fields in this contract; anything else is either ignored
+or rejected. Do not try to make one file do both jobs.
+
+> **Generating a page does not publish it.** These commands only write files in this
+> repository. The article is live only after the repo's normal deployment process runs —
+> see the root [`README.md`](../README.md).
+
+### The publishing package
+
+An approved story is handed over as exactly this:
+
+```
+content/posts/<slug>/
+    index.md
+    images/
+        hero.webp
+        p1.webp
+        p2.webp
+        …
+```
+
+plus, only when the story credits a venue that has no record yet:
+
+```
+content/venues/<venue>.yml
+content/venues/images/<logo>.webp
+```
+
+Venue records are **reusable and shared**. A venue's name, address, map link, site and
+logo live in its `.yml` once and are referenced by every post that credits it — never
+copied into a post's frontmatter. Two posts at the same venue reference the same file.
 
 ---
 
@@ -33,14 +96,25 @@ Slug rules: lower-case letters, digits and single hyphens (`^[a-z0-9]+(-[a-z0-9]
 ## 2. Publishing
 
 ```bash
-npm run images     # builds the post's 1200×630 social card from its hero
-npm run content    # validates and regenerates everything (optional — dev/build do it)
-npm run dev        # or: npm run build
+npm run content:check   # validate only — writes nothing
+npm run images          # build the 1200×630 social card from the hero (required)
+npm run content         # validate AND rewrite the generated website files
+npm run dev             # or: npm run build — both also regenerate
 ```
 
-`npm run content` is the validator. It exits non-zero and prints the file, the line
-where possible, and what to fix. `npm run content:check` additionally fails if the
-committed generated files are out of date.
+| Command | Validates | Writes files |
+|---|---|---|
+| `npm run content:check` | yes | **no** — also fails if committed generated files are stale |
+| `npm run content` | yes | yes |
+| `npm run dev` / `npm run build` | yes | yes |
+| `npm run images` | — | only social cards that don't exist yet |
+
+**Use `content:check` to verify a handoff.** It runs every rule in this document and
+writes nothing, so it is safe to run against a package you are not ready to commit. Use
+`npm run content` when you actually want the generated files updated.
+
+All of them exit non-zero on the first problem and print the file, the line where one
+applies, and what to fix.
 
 A new post directory needs a dev-server restart to appear, because the page list is read
 once at startup. Edits to an existing post hot-reload.
@@ -49,10 +123,13 @@ once at startup. Edits to an existing post hot-reload.
 
 ## 3. Frontmatter
 
-Keys must appear in this order. **Only `title`, `date`, `category`, `hero`, `heroAlt` and
-`seo.description` are required** — omit anything that does not apply. Do not add a key
-just to make files look alike; an omitted optional key and a key set to its default mean
-the same thing, and the omitted form is correct.
+**Required (6):** `title`, `date`, `category`, `hero`, `heroAlt`, `seo.description`.
+Everything else is optional — omit anything that does not apply. Do not add a key just to
+make files look alike; an omitted optional key and a key set to its default mean the same
+thing, and the omitted form is correct.
+
+The key order below is a **house convention, not a validated rule** — the build accepts
+any order. Follow it anyway so posts diff cleanly against each other.
 
 ```yaml
 ---
@@ -95,7 +172,7 @@ Apostrophes, em dashes and accented characters need no quoting and are preserved
 | `date` | required | `YYYY-MM-DD`. Drives `<time>`, `datePublished`, the sitemap row, and index order. The printed form ("August 8, 2026") is derived — never write it. |
 | `category` | required | Must be one of §4. Sets the breadcrumb's middle level, `articleSection`, and which filter chip shows the post. |
 | `venue` | optional | Filename in `content/venues/` without `.yml` (`venue: wren-cafe`). Renders the venue credit block under the hero and adds a schema.org `Place`/`Restaurant` as `contentLocation`. Omit and neither appears. |
-| `venueIsSubject` | conditional | Only meaningful with `venue`. `true` adds schema.org `about` as well as `contentLocation` — use when the article is *about* the venue (Ellipsis), not merely *held at* it (an event at Wren Cafe). Omit otherwise. |
+| `venueIsSubject` | conditional | Requires `venue`. `true` adds schema.org `about` alongside `contentLocation` — use when the article is *about* the venue (Ellipsis), not merely *held at* it (an event at Wren Cafe). Omit otherwise. Without `venue` it is silently ignored rather than rejected, so do not rely on it alone. |
 | `draft` | optional | Omit to publish. `true` keeps the post out of `sitemap.xml` and the blog-index JSON-LD, and sets `robots: noindex, follow`. The page still builds and still shows on the blog index, so you can review it. Publishing = deleting this line. |
 | `hero` | required | Always `images/hero.webp`. Displayed in a fixed 980×599 frame and centre-cropped, so faces near the edges may be trimmed. |
 | `heroAlt` | required | Describes the hero photo. Also the default `og:image:alt`. |
@@ -240,6 +317,24 @@ schema:
   servesCuisine: [Coffee, Cocktails]   # optional, Restaurant only
 ```
 
+**Required (7):** `name`, `logo`, `street`, `locality`, `mapUrl`, `site`, `siteUrl`.
+Missing any one of them fails the build.
+
+| Field | Kind | Behaviour |
+|---|---|---|
+| `name` | required | Shown twice in the credit line, and the schema.org `name`. |
+| `logo` | required | Path relative to `content/venues/` — by convention `images/<venue>-logo.webp`. Rendered in an 81×81 box. |
+| `street`, `locality` | required | The address line. Also `streetAddress` / `addressLocality` in `PostalAddress`. |
+| `mapUrl` | required | This venue's own Google Maps location. The address line links here. |
+| `site`, `siteUrl` | required | The label shown, and where it links. `siteUrl` is also the schema.org `url`. |
+| `bravoUrl` | optional | The venue's page on Bravo. Omit and the highlighted half renders as plain text instead of a link — the only optional link in the block. |
+| `schema.type` | optional | `Place` or `Restaurant`. Defaults to `Place`. |
+| `schema.region`, `schema.country` | optional | `addressRegion` / `addressCountry`. |
+| `schema.servesCuisine` | optional | Restaurant only. A list, e.g. `[Coffee, Cocktails]`. |
+
+Values under `schema` are passed through to structured data as given; only the
+opening-hours fields below are rejected.
+
 `mapUrl` is **required**: every venue's address links to its own Google Maps location, so
 the credit block reads the same everywhere. Use the venue's own place URL. `bravoUrl` is
 the only optional link — a venue with no Bravo page yet renders that half as plain text.
@@ -286,11 +381,19 @@ blog/index.html
 public/sitemap.xml
 ```
 
-From your Markdown, the build derives: the page and its `<head>`; `<title>`, description,
-canonical, `robots`; all `og:`/`twitter:` tags; the JSON-LD graph (`BlogPosting`,
-`Place`/`Restaurant`, `BreadcrumbList`); breadcrumbs; the printed date; the blog-index
-card and its JSON-LD entry; the sitemap row; the Vite build entry; and every image's
-aspect ratio, `width`/`height`, lazy-loading and decoding attributes.
+> **Never hand-edit a generated file to publish or fix an article.** Publishing always
+> originates in `content/`. An edit made downstream is silently discarded the next time
+> anyone runs dev, build or `npm run content` — and until then the site and its source
+> disagree, which `npm run content:check` will flag as out of date.
+
+| Authored by you | Derived by the build |
+|---|---|
+| `title`, `crumb`, `date`, `category` | canonical URL, `<title>`, printed date ("August 8, 2026"), breadcrumbs, `articleSection` |
+| `seo.*`, `heroAlt` | `<meta name="description">`, every `og:` and `twitter:` tag, `og:image:width`/`height` |
+| `venue` reference | the venue credit block, the `Place`/`Restaurant` JSON-LD node, `contentLocation` (and `about` with `venueIsSubject`) |
+| `draft` | `robots`, sitemap inclusion, blog-index JSON-LD inclusion |
+| Markdown body and image files | the page HTML, block order, each image's aspect ratio, `width`/`height`, `loading` and `decoding` |
+| — | the JSON-LD graph (`BlogPosting`, `Place`/`Restaurant`, `BreadcrumbList`), the sitemap row, the blog-index card and its JSON-LD entry, the Vite build entry |
 
 Index order is **newest first by `date`**. The first card loads eagerly as the page's
 largest image; the rest lazy-load. You do not control this and should not try to.
@@ -348,3 +451,23 @@ Each error names the file, the line where one applies, and what to fix.
 | Malformed YAML frontmatter | Usually an unquoted colon in a title. |
 | Missing social card | `npm run images`. |
 | `openingHours` (or `hours`/`businessHours`/…) on a venue or post | Bravo Magazine does not publish venue opening hours — see §7. |
+
+---
+
+## 11. If publishing fails
+
+Run `npm run content:check` first — it reports the same errors without writing anything.
+
+| Symptom | Where to look |
+|---|---|
+| `category "X" is not in CATEGORIES` | The authoritative list is `src/lib/categories.js`. Adding a value is a code change — ask before inventing one. |
+| `no such image` | Check `content/posts/<slug>/images/`. Names are strict: `hero.webp`, then `p1.webp`, `p2.webp`… in document order, no gaps. |
+| `has no alt text` | Every `![](…)` needs a description inside the brackets. |
+| `"X" is not supported` (Markdown) | §5. Lists, tables, blockquotes, code blocks, `###`, `---` rules and raw HTML all fail by design. |
+| `frontmatter is not valid YAML` | Usually an unquoted colon. Quote the whole value: `title: "Name: Subtitle"`. The error prints a caret at the offending character. |
+| Venue error (`"mapUrl" is required`, unknown venue) | Check `content/venues/<key>.yml` against §7. The `venue:` key in frontmatter is the filename without `.yml`. |
+| `og:image … is missing` | Run `npm run images`. It only creates cards that don't exist. |
+| Social card is wrong/outdated | Existing cards are never overwritten. Rebuild deliberately: `node scripts/optimize-images.js --force`. |
+| `Generated files are out of date` from `content:check` | Someone changed `content/` without regenerating. Run `npm run content` and commit the result. |
+| Page builds but the article isn't live | Generation is not deployment. See the root [`README.md`](../README.md). |
+| New post doesn't appear in `npm run dev` | Restart the dev server — the page list is read once at startup. |
