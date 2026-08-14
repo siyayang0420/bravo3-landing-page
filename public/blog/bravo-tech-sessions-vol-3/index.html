@@ -9,9 +9,11 @@
       Redirect stub. This post used to live at /blog/bravo-tech-sessions-vol-3/
       before "Bravo Tech Sessions" was renamed to "Bravo AI Sessions".
 
-      This lives in public/ so it is copied verbatim into the build — the real
-      fix is a 301 in nginx (see deploy/nginx-redirects.conf), which is instant
-      and transfers ranking cleanly. This stands in until that is in place.
+      The real fix — a 301 — now exists in vercel.json, and Vercel evaluates
+      redirects before it looks at the filesystem, so in normal operation this
+      page is never reached. It stays as the fallback: it lives in public/ and is
+      copied verbatim into the build, so the URL still resolves on any static
+      host and cannot become a dead end if the redirect rule is ever dropped.
 
       Deliberately NOT noindex: `noindex` would tell search engines to drop this
       URL outright, which throws away the very link equity the redirect exists to
