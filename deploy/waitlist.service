@@ -1,0 +1,49 @@
+# Waitlist API — systemd unit.
+#
+# Install on the bravoapp.ai host:
+#   sudo cp deploy/waitlist.service /etc/systemd/system/bravo-waitlist.service
+#   sudo systemctl daemon-reload
+#   sudo systemctl enable --now bravo-waitlist
+#   systemctl status bravo-waitlist
+#
+# Adjust WorkingDirectory/User below to wherever the repo actually lives.
+
+[Unit]
+Description=Bravo waitlist API
+# Wants network to be genuinely reachable, not merely configured — the pool
+# opens a TLS connection to Neon on first request.
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/bravoapp.ai
+
+# DATABASE_URL lives here, NOT in this file — this file is in version control.
+# Create it on the server, readable only by the service user:
+#   sudo install -o www-data -g www-data -m 600 /dev/null /etc/bravo/waitlist.env
+#   sudo -u www-data tee /etc/bravo/waitlist.env >/dev/null <<'EOF'
+#   DATABASE_URL=postgresql://…-pooler…/neondb?sslmode=require
+#   WAITLIST_PORT=8787
+#   EOF
+EnvironmentFile=/etc/bravo/waitlist.env
+
+ExecStart=/usr/bin/node server/waitlist.mjs
+Restart=on-failure
+RestartSec=3
+
+# --- hardening: the process needs the network and nothing else ---------------
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_INET AF_INET6
+# no write access anywhere; it only talks to Postgres and stdout
+ReadWritePaths=
+
+[Install]
+WantedBy=multi-user.target
