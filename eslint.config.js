@@ -6,9 +6,10 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   { ignores: ['dist', 'node_modules'] },
   {
-    /* Build config and the content scripts run in Node, not the browser —
-       without this, Node globals and `import.meta` read as undefined. */
-    files: ['*.config.js', 'scripts/**/*.js'],
+    /* Build config, the content scripts and the Vercel functions run in Node,
+       not the browser — without this, Node globals and `import.meta` read as
+       undefined. */
+    files: ['*.config.js', 'scripts/**/*.js', 'api/**/*.js'],
     languageOptions: { globals: globals.node },
   },
   {

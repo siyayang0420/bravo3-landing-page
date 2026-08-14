@@ -84,24 +84,16 @@ function blogEntries() {
   );
 }
 
+/*
+ * No /api proxy here on purpose. The waitlist lives in api/waitlist.js, which
+ * Vercel serves from the same origin as the site — so the page posts to a
+ * relative path and there is nothing to route around. Locally that origin is
+ * reproduced by `npx vercel dev`, which runs this Vite server and the api/
+ * functions together; plain `npm run dev` serves the site only, and a signup
+ * submitted under it will 404. See the README.
+ */
 export default defineConfig({
   plugins: [blogContent(), react()],
-  /*
-   * In production nginx proxies /api/ to the waitlist service, so the page can
-   * post to a same-origin path (see deploy/nginx-waitlist.conf). This mirrors
-   * that locally, so the front-end code is identical in dev and prod — no
-   * environment switch, no absolute URL, no CORS.
-   *
-   * Run the API alongside the dev server:  npm run dev:api
-   */
-  server: {
-    proxy: {
-      '/api': {
-        target: `http://127.0.0.1:${process.env.WAITLIST_PORT ?? 8787}`,
-        changeOrigin: false,
-      },
-    },
-  },
   build: {
     /*
      * Vite inlines any asset under 4 KB as a base64 data URI. That is right for

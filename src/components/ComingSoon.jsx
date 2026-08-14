@@ -17,9 +17,9 @@ import './ComingSoon.css';
  */
 
 /*
- * Same-origin, so the browser never learns a database host exists: nginx
- * proxies this path to the waitlist service (see deploy/nginx-waitlist.conf),
- * which is the only thing holding the Neon credentials.
+ * Same-origin, so the browser never learns a database host exists: this path is
+ * the Vercel Function in api/waitlist.js, which is the only thing holding the
+ * Neon credentials. Relative on purpose — no environment switch, no CORS.
  */
 const SIGNUP_ENDPOINT = '/api/waitlist';
 
