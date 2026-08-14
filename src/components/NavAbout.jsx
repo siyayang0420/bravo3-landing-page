@@ -8,8 +8,13 @@ import './NavAbout.css';
 const COMING_SOON_URL = '/coming-soon/';
 
 /*
- * "About" nav item — Figma node 5948:17100. Opens on hover and on click, so it
+ * Popup nav item — Figma node 5948:17100. Opens on hover and on click, so it
  * works for pointers, touch (which has no hover) and keyboard alike.
+ *
+ * `triggerLabel` keeps the original About treatment reusable: pass "About" to
+ * restore the old nav label without touching the popup structure or styles.
+ * When the label is "Blog", the item is a plain link to /blog/ and the popup is
+ * not mounted.
  *
  * It is a <button> rather than a link: it goes nowhere on its own, and the real
  * destinations live inside the panel.
@@ -20,7 +25,15 @@ const COMING_SOON_URL = '/coming-soon/';
  * mirrors <Nav>'s prop so the coming-soon page doesn't gain a store button in
  * the menu that it deliberately drops from the bar.
  */
-export default function NavAbout({ cta = true }) {
+export default function NavAbout({ cta = true, triggerLabel = 'About' }) {
+  if (triggerLabel === 'Blog') {
+    return <a className="nav__link" href="/blog/">Blog</a>;
+  }
+
+  return <NavAboutPopup cta={cta} triggerLabel={triggerLabel} />;
+}
+
+function NavAboutPopup({ cta, triggerLabel }) {
   const [open, setOpen] = useState(false);
   const wrap = useRef(null);
   const id = useId();
@@ -75,7 +88,7 @@ export default function NavAbout({ cta = true }) {
         {/* The word stays in the accessibility tree at every width — it is the
             control's name, and a menu icon alone would leave it unnamed. Only
             its visual presentation swaps for the icon on small screens. */}
-        <span className="navabout__word">About</span>
+        <span className="navabout__word">{triggerLabel}</span>
         <span className="navabout__burger" aria-hidden="true">
           <span /><span /><span />
         </span>

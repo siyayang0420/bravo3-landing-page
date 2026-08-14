@@ -28,7 +28,10 @@ export default function Nav({ markHref, cta = true }) {
         : <BravoMark className="nav__mark" />}
 
       <div className="nav__right">
-        <NavAbout cta={cta} />
+        {/* The popup was originally labelled "About"; NavAbout keeps that as
+            its default so the old treatment can be restored by dropping this
+            prop. For now the popup lives under Blog. */}
+        <NavAbout cta={cta} triggerLabel="Blog" />
         {cta && (
           <Button size="mid" href={APP_STORE_URL} {...EXTERNAL_LINK}>
             Get the App
