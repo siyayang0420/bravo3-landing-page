@@ -83,6 +83,8 @@ npm run dev
 | `npm run content` | Runs the content generator: validates `content/` and rewrites the generated files. | **Yes** |
 | `npm run content:check` | Validates `content/` and fails if the committed generated files are out of date. | **No — read-only** |
 | `npm run images` | Builds any missing 1200×630 social card from each post's hero. Skips cards that already exist. | **Yes** — only *new* cards |
+| `npm run test:waitlist` | Tests the waitlist endpoint's rules. No network, no credentials. | No |
+| `npm run db:migrate` | Applies `server/schema.sql` to the database in `.env`. Run by hand. | Writes to the **database** |
 
 **The distinction that matters for editorial handoff:**
 
@@ -104,20 +106,67 @@ post has no card, which is the reminder to run it.
 
 ## Deployment
 
-There is no CI/CD configuration in this repository. The site is served by **nginx (1.18.0,
-Ubuntu)** — see [`deploy/nginx-redirects.conf`](deploy/nginx-redirects.conf), which holds
-the checked-in redirect and cache rules that must be applied on the server by hand
-(`sudo nginx -t && sudo systemctl reload nginx`).
+The site runs on **Vercel**, with the apex domain attached there. Deploys come from the
+Git integration — push, and Vercel runs `npm run build` and serves `dist/`. Framework and
+output directory are auto-detected, so they are deliberately not restated in
+`vercel.json`.
 
-Deployment itself is a separate manual step: build, then publish `dist/` by whatever
-process the server currently uses. **Check the current deployment configuration before
-assuming a hosting provider, branch or pipeline** — none is declared here.
+[`vercel.json`](vercel.json) holds the two things the platform will not infer:
+
+- **Redirects.** `/blog/bravo-tech-sessions-vol-3` (both slash forms) and the post's old
+  social image `301` to their renamed counterparts, so the rename keeps its search
+  ranking. `statusCode: 301` is written out rather than `"permanent": true`, which emits
+  a **308** — a different status than the one already published.
+- **A `Cache-Control` header on `/favicon.svg`.** Vite fingerprints JS and CSS, but files
+  in `public/` are copied verbatim, so without this an icon change takes the default 30
+  days to reach returning visitors. A day is short enough to iterate.
+
+`npm run images` stays out of the build (see above), so the social cards must be committed
+— Vercel's Linux builder has no `sips` and cannot generate them.
+
+### The waitlist API
+
+The coming-soon form posts to `/api/waitlist`, which is
+[`api/waitlist.js`](api/waitlist.js) — a Vercel Function on the same origin as the site.
+The browser never talks to Neon, and never learns a database exists.
+
+- The connection string is the **Environment Variable `DATABASE_URL`** on the Vercel
+  project (set for Production, Preview and Development). It is not in the repo, and `.env*`
+  is gitignored.
+- Use Neon's **pooled** connection string — the host containing `-pooler`.
+- The function uses `@neondatabase/serverless`, whose `neon()` is a single HTTPS round
+  trip. A `pg.Pool` would assume a process that outlives the request; a function instance
+  does not have one.
+- Schema changes are still applied by hand from a laptop: `npm run db:migrate` reads
+  `.env` and applies [`server/schema.sql`](server/schema.sql).
+
+**Locally**, `npm run dev` serves the site but not the function — a signup submitted under
+it will 404. To exercise the whole thing on one origin, use the Vercel CLI:
+
+```bash
+npx vercel dev
+```
+
+The endpoint's rules live in [`server/lib/signup.mjs`](server/lib/signup.mjs), separate
+from the function so they can be tested with no credentials and no network:
+`npm run test:waitlist`.
+
+**Rate limiting is not implemented.** The obvious in-process counter is worse than
+nothing here: each function instance would keep its own, so the real ceiling would be
+`limit × instances`. The two honest options, when it is worth adding:
+
+- **Vercel WAF rate limiting** (Pro plan) — configured in the dashboard, runs at the edge,
+  no code.
+- **Upstash Redis / Vercel KV with `@upstash/ratelimit`** — a counter shared across
+  instances; adds a service and a second environment variable.
 
 ## Project structure
 
 ```
+api/                Vercel Functions. Every file here is a URL — api/waitlist.js is /api/waitlist.
 content/            Bravo Magazine source — posts and venues. See content/README.md.
 scripts/            Content generator and validator; the image/social-card script.
+server/             Waitlist rules + schema + migration. Runtime-agnostic; api/ imports from it.
 blog/               GENERATED per-post HTML shells. Do not edit by hand.
 src/
   components/       Page sections and visual components (one .css per component)
@@ -126,7 +175,7 @@ src/
   styles/tokens.css Shared colour, spacing and typography tokens
   assets/           Landing-page imagery and store badges
 public/             Copied verbatim — favicon, robots.txt, sitemap.xml, social cards
-deploy/             Server config that must be applied by hand
+vercel.json         Redirects and cache headers — the only hosting config in the repo
 ```
 
 `CLAUDE.md` holds the brand and code constraints for this repo (fonts, colour rules, the
