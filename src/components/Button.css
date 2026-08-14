@@ -28,6 +28,10 @@
 .button--ghost:hover { background: var(--ds-black-wash); }
 .button:active { transform: translateY(0); }
 .button:focus-visible { outline: 2px solid var(--ds-black); outline-offset: 3px; }
+/* in-flight or finished: dimmed, and the hover lift is withdrawn so the control
+   stops reading as pressable */
+.button:disabled { opacity: .55; cursor: default; }
+.button:disabled:hover { transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   .button { transition: none; }

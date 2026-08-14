@@ -1,0 +1,85 @@
+/* Cursor trail — Figma nodes 5939:17056 / 17055 / 17004 */
+
+/* Fixed and clipped so a tile dropped near an edge can never extend the page
+   or raise a scrollbar. `pointer-events: none` is what keeps the form and the
+   nav underneath fully clickable. */
+.trail {
+  position: fixed;
+  inset: 0;
+  z-index: 25;   /* under the nav menu's 30 — the trail never covers the menu */
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/*
+ * One tile. Size and angle arrive per-instance as custom properties so the
+ * transform can be composed here and reused by the entry keyframes — a
+ * transform written inline would be overwritten by the animation.
+ * The radius is a percentage (26/111) so it tracks whatever size a tile gets.
+ */
+.trail__tile {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: var(--trail-size);
+  height: var(--trail-size);
+  border-radius: 23.4%;
+  overflow: hidden;
+  transform: translate(-50%, -50%) rotate(var(--trail-rot));
+  /* Figma effect style "sm" on node 5939:17004 */
+  box-shadow: 0 0 25px -4px rgba(0, 0, 0, .15);
+  transition: opacity .25s linear;
+  animation: trail-in .18s ease-out;
+  will-change: transform, opacity;
+}
+
+/*
+ * Scale only — opacity is deliberately left out of the keyframes so it comes
+ * from the inline value alone. Animating it from 0 made a tile's visibility
+ * depend on the animation finishing, and animation clocks stop while a tab is
+ * hidden: a tile created just before the visitor switched away would sit at
+ * zero until they came back. The pop-in reads as an entrance on its own.
+ */
+@keyframes trail-in {
+  from { transform: translate(-50%, -50%) rotate(var(--trail-rot)) scale(.4); }
+  to   { transform: translate(-50%, -50%) rotate(var(--trail-rot)) scale(1); }
+}
+
+/* --- variants ------------------------------------------------------------ */
+/* 5939:17056 — crimson to yellow, white wordmark */
+.trail__tile--sunset {
+  background: linear-gradient(16.17deg, #c8365b 7.68%, #fbe360 90.92%);
+  color: var(--ds-white);
+}
+/* 5939:17055 — flat brand yellow, dark wordmark */
+.trail__tile--yellow {
+  background: #fee160;
+  color: var(--ds-black);
+}
+/* 5939:17004 — white tile under a blurred rainbow wash, white wordmark */
+.trail__tile--wash {
+  background: var(--ds-white);
+  color: var(--ds-white);
+}
+.trail__wash {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  /* 169 x 111 at the design's 111px tile, and a 30px blur — expressed against
+     --trail-size so the wash scales with the tile instead of overwhelming a
+     small one */
+  width: 152%;
+  height: 100%;
+  transform: translateX(-50%);
+  filter: blur(calc(var(--trail-size) * .27));
+  background: linear-gradient(91.16deg, #4af3ff .17%, #fee160 50%, #f94f4f 99.83%);
+}
+
+/* 83.41% wide and centred, from the artwork's insets; `currentColor` inside
+   BravoMark picks up each variant's wordmark colour */
+.trail__mark {
+  position: relative;
+  display: block;
+  width: 83.41%;
+  height: auto;
+}

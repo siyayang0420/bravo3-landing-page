@@ -86,6 +86,22 @@ function blogEntries() {
 
 export default defineConfig({
   plugins: [blogContent(), react()],
+  /*
+   * In production nginx proxies /api/ to the waitlist service, so the page can
+   * post to a same-origin path (see deploy/nginx-waitlist.conf). This mirrors
+   * that locally, so the front-end code is identical in dev and prod — no
+   * environment switch, no absolute URL, no CORS.
+   *
+   * Run the API alongside the dev server:  npm run dev:api
+   */
+  server: {
+    proxy: {
+      '/api': {
+        target: `http://127.0.0.1:${process.env.WAITLIST_PORT ?? 8787}`,
+        changeOrigin: false,
+      },
+    },
+  },
   build: {
     /*
      * Vite inlines any asset under 4 KB as a base64 data URI. That is right for

@@ -44,7 +44,7 @@
 
 /* --- signup -------------------------------------------------------------- */
 /* The block is centred; its contents stay left-aligned, as in the design.
-   Its width is the row's (530.5 field + 16 gap + 183 button = 729.5), not
+   Its width is the row's (530.5 field + 16 gap + 147 button = 694), not
    `fit-content` — that would size the block to the label above and squeeze the
    field to about 300px. */
 .coming-soon__signup {
@@ -53,12 +53,12 @@
   align-items: flex-start;
   gap: 8px;
   width: 100%;
-  max-width: calc(730px + 2 * var(--gutter));
+  max-width: calc(694px + 2 * var(--gutter));
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
 .coming-soon__label {
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.2;
   color: var(--ds-black);
 }
@@ -71,13 +71,13 @@
 .coming-soon__input {
   flex: 1 1 530px;
   min-width: 0;
-  height: 67px;
-  padding: 0 18px;
+  height: 45px;
+  padding: 0 12px;
   border: 1px solid #d9d9d9;
-  border-radius: 16px;
+  border-radius: 12px;
   background: var(--ds-white);
   font-family: var(--font-ui);
-  font-size: 24px;
+  font-size: 16px;
   line-height: 1.2;
   color: var(--ds-black);
 }
@@ -87,23 +87,52 @@
   outline-offset: 2px;
   border-color: transparent;
 }
-/* taller and larger than any stock Button size, but otherwise the design
-   system's primary button — it keeps the shared inner-shadow treatment */
+/*
+ * Between the stock `mid` (41px) and `reg` (48px) sizes, so the height is set
+ * here; everything else is the design system's primary button, including the
+ * shared inner-shadow treatment.
+ *
+ * Figma reports 45.056px tall with 12.87px text and a 9.655px radius. Those are
+ * a scaled component instance (~0.8 of a 56px button), not intended values, so
+ * they are rounded to whole pixels — a 9.655px radius would also break with the
+ * 12px on the field beside it, which the design clearly means to match.
+ */
 .coming-soon__submit {
   flex-shrink: 0;
-  height: 67px;
-  padding: 0 32px;
-  font-size: 20px;
+  height: 45px;
+  /* the design's 147px, held as a minimum rather than a fixed width: it keeps
+     the field beside it at its own 530px, and stops the row resizing when the
+     label swaps to "Adding…" mid-submit */
+  min-width: 147px;
+  padding: 0 26px;
+  font-size: 13px;
+  border-radius: 12px;
 }
+
+/*
+ * Result line. Reserves its own height at all times so the rows below never
+ * shift when a message appears — the design is unchanged, the space was always
+ * part of the block's 8px gap rhythm.
+ */
+.coming-soon__status {
+  margin: 0;
+  min-height: 1.3em;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--ds-black);
+}
+.coming-soon__status.is-error { color: var(--heart-red); }
+
+.coming-soon__input:disabled { opacity: .6; }
 
 /* Stands in for the design's zero-opacity bottom row, which balances the
    column. Matches that row's height so the spacing above it is unchanged. */
 .coming-soon__spacer { height: 51px; flex-shrink: 0; }
 
+/* The field and button are compact enough at their design size to carry down
+   unchanged — 45px still clears the 44px touch-target minimum — so only the
+   headline rhythm tightens here. */
 @media (max-width: 900px) {
-  .coming-soon__label { font-size: 20px; }
-  .coming-soon__input { height: 56px; font-size: 18px; }
-  .coming-soon__submit { height: 56px; font-size: 16px; padding: 0 24px; }
   .coming-soon__title { gap: 20px; }
   .coming-soon__spacer { height: 24px; }
 }
