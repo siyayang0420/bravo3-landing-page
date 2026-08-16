@@ -85,6 +85,7 @@ npm run dev
 | `npm run images` | Builds any missing 1200×630 social card from each post's hero. Skips cards that already exist. | **Yes** — only *new* cards |
 | `npm run test:waitlist` | Tests the waitlist endpoint's rules. No network, no credentials. | No |
 | `npm run test:reviews` | Tests the Google reviews endpoint's rules. No network, no API key. | No |
+| `npm run place:find -- "<name>" "<address>"` | Looks up a venue's Google Place ID for the venue record. Prints candidates only. | **No** — never writes |
 | `npm run db:migrate` | Applies `server/schema.sql` to the database in `.env`. Run by hand. | Writes to the **database** |
 
 **The distinction that matters for editorial handoff:**

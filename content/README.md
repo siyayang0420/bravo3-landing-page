@@ -376,16 +376,36 @@ rejects a `googlePlaceId` that is a URL or a CID pair.
 
 #### Obtaining one
 
-It must come from a **verified Google Places result** — either Google's
+Use the repo's own lookup, which is the supported mechanism:
+
+```bash
+npm run place:find -- "Sprezzatura Restaurant" "265 Kingsway, Vancouver"
+```
+
+Give the venue's name **and its full street address** — a name alone will happily match
+another branch of the same business. It prints each candidate with its name, address,
+website, category and Place ID, and marks one a **strong match** only when both the name
+and the street number agree.
+
+It **never writes anything**. You read the candidates, confirm the identity, and add the
+line to the venue file yourself. That separation is deliberate: confirming which business
+this is, is a judgement, not a lookup.
+
+Google's
 [Place ID Finder](https://developers.google.com/maps/documentation/places/web-service/place-id)
-or a Places API Text Search. Either way: search the venue's name **and full address**, then
-confirm the returned name and address match the venue record before accepting the ID.
+does the same job in a browser if you prefer.
+
+**Verify before accepting.** Check the returned name, address *and website* against the
+venue record. The website is often the decisive field: a brand with several locations
+carries the same name on every listing, and only the site or the street number separates
+them.
 
 **If more than one plausible candidate comes back, or you cannot confirm the match, leave
-the field out and flag it for a human.** Never invent a Place ID, never guess one, and never
-infer one from an unrelated Maps identifier. A wrong ID silently attaches **another
-business's reviews** to the article — which is worse than having no reviews, because
-nothing about the page looks broken.
+the field out and flag it for a human.** Never invent a Place ID, never guess one, and
+never derive one from a Maps CID, a Knowledge Graph ID, or the internals of a Maps URL —
+those identify a place to Maps, not to the Places API, and are not convertible. A wrong ID
+silently attaches **another business's reviews** to the article, which is worse than having
+no reviews, because nothing about the page looks broken.
 
 #### Reviews are never authored
 
@@ -403,8 +423,9 @@ live in this directory and the review content may not.
 
 1. Create or identify the canonical venue in `content/venues/`.
 2. Verify the venue's identity — name and address.
-3. Obtain and verify its `googlePlaceId` if you confidently can; otherwise flag it.
-4. Write that one field into the venue record.
+3. Run `npm run place:find -- "<name>" "<full address>"` and confirm the candidate is
+   genuinely this business. If it is ambiguous, flag it and stop.
+4. Write that one field, `googlePlaceId`, into the venue record by hand.
 5. Write the article normally, referencing only `venue: <key>`.
 
 The shared template does the rest. There is no review step, no review file, and nothing

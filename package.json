@@ -13,7 +13,8 @@
     "images": "node scripts/optimize-images.js",
     "db:migrate": "node --env-file=.env server/migrate.mjs",
     "test:waitlist": "node --test server/*.test.mjs",
-    "test:reviews": "node --test server/reviews.test.mjs"
+    "test:reviews": "node --test server/reviews.test.mjs",
+    "place:find": "node --env-file=.env scripts/find-place.js"
   },
   "engines": {
     "node": ">=20.6"
