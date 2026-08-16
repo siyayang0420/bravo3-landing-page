@@ -6,6 +6,10 @@ locality: Vancouver
 mapUrl: https://www.google.com/maps/search/?api=1&query=Wren%20Cafe%2C%20280%20Nelson%20St%2C%20Vancouver%2C%20BC
 site: wrencafe.ca
 siteUrl: https://wrencafe.ca
+# Identifies the venue to the Google Places API — see content/README.md.
+# Verified 2026-08-14 via Text Search: one candidate, "Wren Cafe",
+# 280 Nelson St, Vancouver — an exact match to the record above.
+googlePlaceId: ChIJPVtgMgBzhlQRMJ3LT4cv2gs
 schema:
   type: Place
   region: BC

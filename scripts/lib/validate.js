@@ -96,5 +96,26 @@ export function validateVenue(venue) {
   for (const field of ['name', 'logo', 'street', 'locality', 'mapUrl', 'site', 'siteUrl']) {
     required(venue[field], field, where);
   }
+
+  /*
+   * Optional: a venue without it simply renders no reviews section. But a
+   * malformed one would fail silently at request time and look like "this venue
+   * has no reviews", so the shape is checked here where the message can name the
+   * file. It must be the Places ID (a "ChIJ…"-style token), not the CID pair
+   * from a Maps URL and not a URL — those identify a place to Maps, not to the
+   * Places API, and are not interchangeable.
+   */
+  if (venue.googlePlaceId !== undefined) {
+    const id = String(venue.googlePlaceId).trim();
+    if (!/^[A-Za-z0-9_-]{10,255}$/.test(id)) {
+      throw new Error(
+        `${where}: "googlePlaceId" is not a Google Place ID — got "${id}".\n` +
+          `    Expected an opaque token such as ChIJg4UbagBzhlQR1tHd7tI6fdk, not a URL and not the\n` +
+          `    "0x…:0x…" pair from mapUrl. Resolve it with Google's Place ID Finder:\n` +
+          `    https://developers.google.com/maps/documentation/places/web-service/place-id`,
+      );
+    }
+  }
+
   return venue;
 }

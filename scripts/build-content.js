@@ -5,6 +5,7 @@ import { validatePost, validateVenue } from './lib/validate.js';
 import { parseMarkdown, inlineToText } from './lib/markdown.js';
 import { resolveFigure, assertOgCard, measure } from './lib/images.js';
 import { emitPosts } from './lib/emit-posts.js';
+import { emitVenues } from './lib/emit-venues.js';
 import { emitPostHtml, emitIndexHtml } from './lib/emit-html.js';
 import { emitSitemap } from './lib/emit-sitemap.js';
 /* scripts/ may read src/, never the reverse — categories.js is plain JS with no
@@ -82,6 +83,7 @@ export function buildContent({ silent = false } = {}) {
 
   const changed = [];
   write(path.join(ROOT, 'src/content/generated/posts.js'), emitPosts(posts, venues), changed);
+  write(path.join(ROOT, 'src/content/generated/venues.js'), emitVenues(venues), changed);
   for (const post of posts) {
     write(path.join(ROOT, 'blog', post.slug, 'index.html'), emitPostHtml(post), changed);
   }

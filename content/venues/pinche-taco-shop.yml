@@ -9,6 +9,13 @@ locality: Vancouver
 mapUrl: https://www.google.com/maps/search/?api=1&query=Pinche+Taco+Shop%2C+367+Seymour+St%2C+Vancouver
 site: lataqueria.com
 siteUrl: https://www.lataqueria.com/pinchetaco
+# Identifies the venue to the Google Places API — see content/README.md.
+# Verified 2026-08-14 via Text Search on the name and street above: one
+# candidate, matching on street (367 Seymour St), website
+# (lataqueria.com/pinchetaco) and cuisine. A wider search for the La Taqueria
+# family returns two siblings — COMEDOR on Yukon St and La Taqueria Brentwood in
+# Burnaby — which this ID is deliberately NOT: both differ in address and site.
+googlePlaceId: ChIJC0TUZABxhlQR67ZNMmVof_4
 schema:
   type: Restaurant
   region: BC

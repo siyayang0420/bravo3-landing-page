@@ -37,6 +37,11 @@ Content generator             (npm run content, or dev/build)
 Website
 ```
 
+An article's frontmatter names its venue and nothing more about it. Restaurant identity —
+address, links, and the Google `googlePlaceId` — belongs to the canonical venue record, so
+two articles at the same venue cannot disagree and a venue's details are corrected in one
+place. Never put `googlePlaceId`, reviews, or venue detail in an article.
+
 `ARTICLE.md` and `index.md` serve different purposes on purpose. `ARTICLE.md` may carry
 rich editorial and workflow metadata — story ID, sources, review notes, status, angle.
 `index.md` carries **only** the fields in this contract; anything else is either ignored
@@ -322,6 +327,7 @@ Missing any one of them fails the build.
 
 | Field | Kind | Behaviour |
 |---|---|---|
+| `googlePlaceId` | optional | Enables the Google reviews section for every article at this venue — see below. Omit it and no reviews section renders. |
 | `name` | required | Shown twice in the credit line, and the schema.org `name`. |
 | `logo` | required | Path relative to `content/venues/` — by convention `images/<venue>-logo.webp`. Rendered in an 81×81 box. |
 | `street`, `locality` | required | The address line. Also `streetAddress` / `addressLocality` in `PostalAddress`. |
@@ -338,6 +344,71 @@ opening-hours fields below are rejected.
 `mapUrl` is **required**: every venue's address links to its own Google Maps location, so
 the credit block reads the same everywhere. Use the venue's own place URL. `bravoUrl` is
 the only optional link — a venue with no Bravo page yet renders that half as plain text.
+
+### Google reviews — `googlePlaceId`
+
+**Optional.** One field on the venue, and nothing else, anywhere:
+
+```yaml
+name: Wren Cafe
+street: 280 Nelson St
+locality: Vancouver
+mapUrl: https://…            # the clickable address
+siteUrl: https://wrencafe.ca
+googlePlaceId: ChIJPVtgMgBzhlQRMJ3LT4cv2gs   # optional — enables reviews
+```
+
+Add it and **every** article for that venue gains the reviews section automatically —
+current articles and future ones, with no code change and no per-article setup. Omit it and
+the venue is still completely valid: the article renders normally, with no reviews section
+and no error for the reader. It is not required, and most venues will not have one.
+
+#### The two Google fields are not interchangeable
+
+| Field | Purpose | Looks like |
+|---|---|---|
+| `mapUrl` | the clickable address in the venue credit — a destination for a human | a Maps URL, often containing `0x…:0x…` |
+| `googlePlaceId` | identifies the venue to the Places **API** — a key for a machine | an opaque token, e.g. `ChIJPVtg…` |
+
+**Neither can be derived from the other.** The `0x…:0x…` pair inside a `mapUrl` is a
+different identifier and is not convertible. Keep both; they do different jobs. The build
+rejects a `googlePlaceId` that is a URL or a CID pair.
+
+#### Obtaining one
+
+It must come from a **verified Google Places result** — either Google's
+[Place ID Finder](https://developers.google.com/maps/documentation/places/web-service/place-id)
+or a Places API Text Search. Either way: search the venue's name **and full address**, then
+confirm the returned name and address match the venue record before accepting the ID.
+
+**If more than one plausible candidate comes back, or you cannot confirm the match, leave
+the field out and flag it for a human.** Never invent a Place ID, never guess one, and never
+infer one from an unrelated Maps identifier. A wrong ID silently attaches **another
+business's reviews** to the article — which is worse than having no reviews, because
+nothing about the page looks broken.
+
+#### Reviews are never authored
+
+No `index.md` and no venue file contains review text, author names, ratings or quotes — not
+copied, not paraphrased, not summarised, not hand-written. Do not select, rank, reorder or
+edit reviews; the shared system renders exactly what Google returns, in Google's own
+relevance order, and says so on the page.
+
+Review content is fetched live at page load and is deliberately **not** stored in Markdown,
+venue YAML, generated files, the database, or any cache. Google's Places policy exempts only
+the *place ID* from its caching restrictions — which is precisely why that one value may
+live in this directory and the review content may not.
+
+#### The workflow, end to end
+
+1. Create or identify the canonical venue in `content/venues/`.
+2. Verify the venue's identity — name and address.
+3. Obtain and verify its `googlePlaceId` if you confidently can; otherwise flag it.
+4. Write that one field into the venue record.
+5. Write the article normally, referencing only `venue: <key>`.
+
+The shared template does the rest. There is no review step, no review file, and nothing
+about reviews in an article.
 
 ### Do not publish venue opening hours
 

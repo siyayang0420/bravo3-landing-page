@@ -1,10 +1,16 @@
 name: Ellipsis
 logo: images/ellipsis-logo.webp
+bravoUrl: https://www.bravoup.ca/store/ellipsis
 street: "1540 W 2nd Ave #205"
 locality: Vancouver
 mapUrl: https://www.google.com/maps/place/ellipsis+vancouver/data=!4m2!3m1!1s0x548673006a1b8583:0xd97d3ad2eeddd1d6
 site: ellipsis.ca
 siteUrl: https://ellipsis.ca
+# Identifies the venue to the Google Places API. Verified 2026-08-14 via Text
+# Search: one candidate, "ELLIPSIS", 1540 W 2nd Ave #205 — an exact match.
+# Place IDs are the one piece of Places content Google exempts from its caching
+# restrictions and permits storing indefinitely; no review content is stored.
+googlePlaceId: ChIJg4UbagBzhlQR1tHd7tI6fdk
 schema:
   type: Restaurant
   region: BC

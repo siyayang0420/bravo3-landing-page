@@ -84,6 +84,7 @@ npm run dev
 | `npm run content:check` | Validates `content/` and fails if the committed generated files are out of date. | **No — read-only** |
 | `npm run images` | Builds any missing 1200×630 social card from each post's hero. Skips cards that already exist. | **Yes** — only *new* cards |
 | `npm run test:waitlist` | Tests the waitlist endpoint's rules. No network, no credentials. | No |
+| `npm run test:reviews` | Tests the Google reviews endpoint's rules. No network, no API key. | No |
 | `npm run db:migrate` | Applies `server/schema.sql` to the database in `.env`. Run by hand. | Writes to the **database** |
 
 **The distinction that matters for editorial handoff:**
@@ -150,6 +151,34 @@ npx vercel dev
 The endpoint's rules live in [`server/lib/signup.mjs`](server/lib/signup.mjs), separate
 from the function so they can be tested with no credentials and no network:
 `npm run test:waitlist`.
+
+### The Google reviews API
+
+Restaurant articles show Google reviews for their venue. The venue's
+`googlePlaceId` in `content/venues/<key>.yml` is the only thing that enables it —
+see [`content/README.md`](content/README.md).
+
+The page calls `/api/reviews?venue=<key>`, which is
+[`api/reviews.js`](api/reviews.js) — a Vercel Function that resolves the key to a Place ID
+and calls **Place Details (New)**. The **`GOOGLE_PLACES_API_KEY`** Environment Variable
+lives on the Vercel project (Production, Preview and Development) and never reaches the
+browser: the client sees only normalized JSON from its own origin.
+
+The venue *key* is the parameter, not a Place ID, so the endpoint cannot be used to run
+arbitrary Place Details lookups against our billing.
+
+**Nothing is cached.** Google's Places policy exempts only the place ID from its caching
+restrictions — there is no published allowance for review content — so responses are
+`no-store` and reviews are never written to Markdown, venue YAML, generated files, Neon,
+or a CDN. Every page view is one Place Details call, which bills at the Enterprise +
+Atmosphere SKU. That is a deliberate v1 trade of cost for a policy position that needs no
+interpretation; revisit it if traffic makes it expensive.
+
+Unlike the waitlist, **`npm run dev` does serve this endpoint** (a small middleware in
+`vite.config.js` runs the same handler), because an unreachable reviews endpoint is
+indistinguishable from a venue that simply has no reviews — the section just never
+appears. The rules are in [`server/lib/reviews.mjs`](server/lib/reviews.mjs) and testable
+with no key: `npm run test:reviews`.
 
 **Rate limiting is not implemented.** The obvious in-process counter is worse than
 nothing here: each function instance would keep its own, so the real ceiling would be

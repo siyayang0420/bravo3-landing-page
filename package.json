@@ -12,7 +12,8 @@
     "content:check": "node scripts/build-content.js --check",
     "images": "node scripts/optimize-images.js",
     "db:migrate": "node --env-file=.env server/migrate.mjs",
-    "test:waitlist": "node --test server/*.test.mjs"
+    "test:waitlist": "node --test server/*.test.mjs",
+    "test:reviews": "node --test server/reviews.test.mjs"
   },
   "engines": {
     "node": ">=20.6"
