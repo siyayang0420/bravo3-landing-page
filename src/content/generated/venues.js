@@ -10,6 +10,7 @@
 export const VENUE_PLACES = {
   "ellipsis": { name: "Ellipsis", googlePlaceId: "ChIJg4UbagBzhlQR1tHd7tI6fdk" },
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
+  "sprezzatura": { name: "Sprezzatura Restaurant", googlePlaceId: "ChIJCU7GmHVzhlQRVCX3eeeGIqo" },
   "wren-cafe": { name: "Wren Cafe", googlePlaceId: "ChIJPVtgMgBzhlQRMJ3LT4cv2gs" },
 };
 

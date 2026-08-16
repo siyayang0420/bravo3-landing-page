@@ -19,8 +19,14 @@ import img_posts_ellipsis_opens_at_nine_images_p2 from '../../../content/posts/e
 import img_posts_ellipsis_opens_at_nine_images_p3 from '../../../content/posts/ellipsis-opens-at-nine/images/p3.webp';
 import img_posts_ellipsis_opens_at_nine_images_p4 from '../../../content/posts/ellipsis-opens-at-nine/images/p4.webp';
 import img_posts_ellipsis_opens_at_nine_images_p5 from '../../../content/posts/ellipsis-opens-at-nine/images/p5.webp';
+import img_posts_sprezzatura_hundred_hour_dough_images_hero from '../../../content/posts/sprezzatura-hundred-hour-dough/images/hero.webp';
+import img_posts_sprezzatura_hundred_hour_dough_images_p1 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p1.webp';
+import img_posts_sprezzatura_hundred_hour_dough_images_p2 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p2.webp';
+import img_posts_sprezzatura_hundred_hour_dough_images_p3 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p3.webp';
+import img_posts_sprezzatura_hundred_hour_dough_images_p4 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p4.webp';
 import img_venues_images_ellipsis_logo from '../../../content/venues/images/ellipsis-logo.webp';
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
+import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
 
 export const POSTS = [
@@ -274,6 +280,142 @@ export const POSTS = [
         "focus": "50% 100%",
         "width": 980,
         "height": 1070
+      }
+    ]
+  },
+  {
+    "slug": "sprezzatura-hundred-hour-dough",
+    "category": "Restaurant",
+    "title": "The Hundred-Hour Dough Behind an Effortless Name",
+    "crumb": "The Hundred-Hour Dough Behind an Effortless Name",
+    "date": "2026-07-17",
+    "dateLabel": "July 17, 2026",
+    "excerpt": "Sprezzatura means looking like you didn’t try. The kitchen behind the name has been trying very hard since 2019.",
+    "hero": img_posts_sprezzatura_hundred_hour_dough_images_hero,
+    "heroAlt": "A mortadella pizza on a dark wooden board, folded slices of mortadella with pistachios, pesto and sliced yellow peppers",
+    "venue": {
+      "key": "sprezzatura",
+      "name": "Sprezzatura Restaurant",
+      "logo": img_venues_images_sprezzatura_logo,
+      "street": "265 Kingsway",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/sprezzatura+vancouver/data=!4m2!3m1!1s0x5486737598c64e09:0xaa2286e779f72554",
+      "site": "sprezzatura.ca",
+      "siteUrl": "https://sprezzatura.ca"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Sprezzatura"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " is an old Italian word for a particular kind of showing off: the art of making something difficult look as though it cost you nothing. The restaurant on Kingsway that took the name defines it on its own website as “the art of effortless style. A balance of studied nonchalance and refined hospitality.”"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That is a large thing to hang above a door. It also invites the obvious question, which is what exactly is being concealed."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Quite a lot, as it turns out. Sprezzatura opened in the summer of 2019 around a custom-built oven that runs to 900 degrees at the deck and a thousand in the dome, and a dough made with “00” flour and left to ferment for a hundred hours — the standard laid down by the Associazione Verace Pizza Napoletana. The oven’s mouth was made deliberately small, so the toppings stay moist while the base crisps. The pizzaiolo trained in Naples."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_sprezzatura_hundred_hour_dough_images_p1,
+        "alt": "A cook in a cap at the open mouth of a Wood Stone pizza oven, flames rising at the back against white subway tile",
+        "aspect": "980 / 1307",
+        "width": 980,
+        "height": 1307
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "None of that reaches a table. That is the entire point of the word. Four days of fermentation arrive as a base thin enough to fold, blistered and charred at the rim, under a few folds of mortadella and a scatter of pistachios. The work is meant to be inaudible."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The room performs the same trick. Sophie Burke designed it, and it is full of decisions that do not announce themselves: dark teal walls hung with framed pictures and mirrors, green factory lamps brought from the Netherlands, a glass panel salvaged from Rockefeller Center and bought from an antiques dealer in Surrey. There is also a power outlet and a USB port at every seat, which is the least romantic detail in the building and possibly the most considered."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_sprezzatura_hundred_hour_dough_images_p2,
+        "alt": "The dining room at Sprezzatura, with a dark teal wall hung with framed pictures, a wooden banquette and plants along the window",
+        "aspect": "980 / 1307",
+        "width": 980,
+        "height": 1307
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Kingsway is not the obvious address for any of this. The restaurant sits at East 11th, in the base of the Duke, and its patio looks across the traffic at a Honda dealership. Orange umbrellas, red gingham, rosemary in the planters, a Mount Pleasant banner on the lamp post. It is a determinedly unglamorous corner, and the room behaves as though it were not."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_sprezzatura_hundred_hour_dough_images_p3,
+        "alt": "Guests laughing at a table on the patio under orange umbrellas, with gingham tablecloths and planters along the sidewalk",
+        "aspect": "980 / 1307",
+        "width": 980,
+        "height": 1307
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Pizza is only half of what the kitchen does. The other half is Italian roasts and braises, which is cooking whose hours are just as invisible by the time anything reaches a plate: short rib over polenta, the sauce dark enough to read as a full day’s reduction, a scatter of herbs on top and no explanation offered."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_sprezzatura_hundred_hour_dough_images_p4,
+        "alt": "A braised short rib served over soft polenta with a dark sauce and fresh herbs",
+        "aspect": "980 / 1222",
+        "width": 980,
+        "height": 1222
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Seven years is a long time to keep up an act of not trying. Sprezzatura joined Bravo in July, alongside restaurants across Metro Vancouver."
+          }
+        ]
       }
     ]
   },

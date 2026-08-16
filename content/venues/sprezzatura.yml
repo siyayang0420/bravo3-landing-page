@@ -1,0 +1,18 @@
+name: Sprezzatura Restaurant
+logo: images/sprezzatura-logo.webp
+street: 265 Kingsway
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/sprezzatura+vancouver/data=!4m2!3m1!1s0x5486737598c64e09:0xaa2286e779f72554
+site: sprezzatura.ca
+siteUrl: https://sprezzatura.ca
+# Identifies the venue to the Google Places API. Resolved by Siya on
+# name + full street address, 2026-08-16, and grepped against every existing
+# venue record before being written — an earlier candidate turned out to be
+# Pinche Taco Shop's live ID. Place IDs are unique per place; a collision means
+# the ID is wrong. No review content is stored, only the ID.
+googlePlaceId: ChIJCU7GmHVzhlQRVCX3eeeGIqo
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Italian, Pizza]
