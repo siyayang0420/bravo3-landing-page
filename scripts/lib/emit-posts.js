@@ -53,6 +53,10 @@ export function emitPosts(posts, venues) {
   const venueValue = (key) => {
     const v = venues[key];
     return {
+      /* the content/venues/ filename. Carried through so the app can key
+         venue-scoped data — reviews today — off the same relationship the
+         article already declares, instead of matching on a display name. */
+      key,
       name: v.name,
       logo: importFor(v.logoPath),
       bravoUrl: v.bravoUrl,

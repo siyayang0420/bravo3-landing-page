@@ -1,0 +1,276 @@
+/* Venue reviews — Figma node 5984:17197.
+   Sits between the venue credit and the rule that opens the article, so it
+   reads as the last part of "who this place is" rather than as body copy. */
+.vreviews {
+  /* the design's card text column; one variable so the rail, the card and the
+     breakpoints below can never disagree about the width */
+  --review-w: 317px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.vreviews__title {
+  display: flex;
+  align-items: flex-end;   /* the wordmark's baseline sits on the text's */
+  gap: 4px;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--ds-black);
+}
+/* explicit box, so the logo cannot shift the line while it loads */
+.vreviews__google {
+  display: block;
+  width: 62px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Below 1100px the arrows are gone, so this is a plain wrapper and the rail
+   inside it full-bleeds. From 1100px up it becomes the three-column row the
+   design draws — see the desktop block at the bottom of this file. */
+.vreviews__viewport { display: flex; align-items: center; }
+
+/*
+ * Touch/tablet rail. It full-bleeds out of the 980px article column so the
+ * cards that don't fit run toward the viewport edge instead of stopping at an
+ * invisible boundary, and a swipe is the way through them. The padding puts the
+ * first card back on the column's left edge: `50vw - 490px` is the gap between
+ * the viewport and that column, and `--gutter` takes over once the viewport is
+ * narrower than the column.
+ */
+.vreviews__rail {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 0;
+  margin-inline: calc(50% - 50vw);
+  padding: 0;
+  padding-inline: max(var(--gutter), calc(50vw - 490px));
+  list-style: none;
+  overflow-x: auto;
+  /* keeps a horizontal swipe inside the rail rather than triggering the
+     browser's back gesture once it reaches the end */
+  overscroll-behavior-x: contain;
+  /* No scrollbar at any width — a horizontal bar under the cards reads as
+     browser chrome sitting in the middle of the article. Scrolling is
+     unaffected: wheel, trackpad and drag all still work, and the rail stays
+     keyboard-focusable with the visible focus ring below. */
+  scrollbar-width: none;
+}
+.vreviews__rail::-webkit-scrollbar { display: none; }
+/* focusable for keyboard scrolling — show that focus, but only for keyboards */
+.vreviews__rail:focus-visible {
+  outline: 2px solid var(--ds-black);
+  outline-offset: 4px;
+}
+
+/* Arrows — Figma node 5988:17382. Hidden by default and switched on at the
+   desktop breakpoint, so the touch layout never pays for markup it won't show. */
+.vreviews__arrow { display: none; }
+
+.vreviews__card {
+  flex: 0 0 var(--review-w);   /* never stretches: one review stays one column */
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.vreviews__who { display: flex; align-items: flex-start; gap: 8px; min-width: 0; }
+
+.vreviews__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+/* the design's own avatar: a flat disc. Also what a reviewer with no photo gets. */
+.vreviews__avatar--blank { display: block; background: var(--ds-placeholder); }
+
+/* 42px tall to match the avatar, with the name at the top and the stars at the
+   bottom — which is what `justify-content: space-between` is doing in the design */
+.vreviews__ident {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+  min-width: 0;
+}
+.vreviews__author {
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--ds-black);
+  /* a long display name should not push the stars out of the card */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vreviews__stars { display: flex; align-items: flex-start; color: var(--star-filled); }
+/* Figma's geometry: a 20px box with the glyph inset, which is what spaces the
+   stars without a gap on the row */
+.vreviews__star {
+  display: block;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  padding: 1.667px 1.667px 2.44px;
+}
+.vreviews__star svg { display: block; width: 100%; height: 100%; }
+/* The design only ever draws five filled stars, so the sub-5 case has no
+   treatment there. Grey keeps the denominator readable without inventing a
+   second glyph. */
+.vreviews__star--empty { color: var(--ds-placeholder); }
+
+/* Clamped to three lines, so a long review is cut off rather than running the
+   card far past its neighbours — real Google reviews have no length limit.
+   Shorter reviews still make shorter cards; this caps the tallest, it does not
+   equalise them. Same -webkit-box idiom as the blog cards; it is what every
+   current browser implements, prefix included. */
+.vreviews__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--ds-black);
+  text-wrap: pretty;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/*
+ * The quote is a link to the source review on Google Maps — Google's rule that
+ * readers can always reach the original, which also gives the three-line clamp
+ * somewhere to lead. Styled to look exactly like the approved paragraph: no
+ * underline, inherited colour, and the affordance carried by the muted line
+ * beneath rather than by decorating the quote itself.
+ */
+.vreviews__quote {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: inherit;
+  text-decoration: none;
+}
+.vreviews__meta {
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--ds-muted);
+}
+.vreviews__quote:hover .vreviews__more,
+.vreviews__quote:focus-visible .vreviews__more { text-decoration: underline; }
+.vreviews__quote:focus-visible {
+  outline: 2px solid var(--ds-black);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* The author's name links to their Google Maps profile (required attribution);
+   it must not start looking like body-copy link. */
+a.vreviews__author { text-decoration: none; }
+a.vreviews__author:hover { text-decoration: underline; }
+
+/* Required ordering/filtering notice. Deliberately the quietest thing in the
+   block — a statement of fact, not a legal panel. */
+.vreviews__note {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.2;
+  color: var(--ds-muted);
+}
+
+/*
+ * Desktop only. The design lays the row out as 42 + 32 + 832 + 32 + 42 = 980:
+ * an arrow at each edge of the article column with the rail between them. So
+ * above this breakpoint the rail stops full-bleeding and is bounded by the
+ * arrows; below it, the arrows are gone and swiping the full-bleed rail is the
+ * gesture, which is why this is the one place the two layouts differ.
+ */
+@media (min-width: 1101px) {
+  .vreviews__rail {
+    margin-inline: 0;
+    padding-inline: 0;
+    /* the arrows are the affordance now; the scrollbar would only add noise */
+    scrollbar-width: none;
+  }
+  .vreviews__rail::-webkit-scrollbar { display: none; }
+
+  .vreviews__arrow {
+    display: grid;
+    place-items: center;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--ds-white);
+    box-shadow: var(--shadow-float);
+    cursor: pointer;
+    /* the glyph must not spill while the button is collapsing to zero width */
+    overflow: hidden;
+    /* The 32px separation is a margin on each arrow rather than a `gap` on the
+       row, because a gap belongs to the container and cannot be animated per
+       item — and this one has to collapse along with the arrow it follows. */
+    transition:
+      opacity .2s ease-in,
+      width .26s ease-in,
+      flex-basis .26s ease-in,
+      margin .26s ease-in,
+      transform .18s ease;
+  }
+  .vreviews__arrow--prev { margin-right: 32px; }
+  .vreviews__arrow--next { margin-left: 32px; }
+
+  /*
+   * The asset is 7.8x13.8 and carries preserveAspectRatio="none", so it stretches
+   * to whatever box it is given — a 24x24 box made it visibly fat. Sizing it at
+   * its own dimensions is also exactly the design: a 24px icon box whose vector
+   * is inset to 6x12, which is this path (6 + 1.8 stroke = 7.8, 12 + 1.8 = 13.8).
+   */
+  .vreviews__arrow img { display: block; width: 7.8px; height: 13.8px; }
+  /* the one asset points right; the left arrow is the same glyph turned round */
+  .vreviews__arrow--prev img { transform: rotate(180deg); }
+
+  .vreviews__arrow:hover { transform: scale(1.06); }
+  .vreviews__arrow:focus-visible { outline: 2px solid var(--ds-black); outline-offset: 3px; }
+
+  /*
+   * Collapsed, not merely transparent: the button gives up its width AND its
+   * 32px margin, so an idle rail starts flush with the article column instead of
+   * holding a gap for a control that is not there. Width and margin animate
+   * alongside the fade, so the arrow eases into place rather than appearing and
+   * shoving the cards sideways in one frame.
+   */
+  .vreviews__arrow.is-hidden {
+    opacity: 0;
+    width: 0;
+    flex-basis: 0;
+    margin: 0;
+    pointer-events: none;
+    transform: none;
+  }
+}
+
+/* Tablet and below: the card narrows with the viewport but never past a width
+   where a review stops being readable, so the rail keeps scrolling rather than
+   squeezing three columns into slivers. */
+@media (max-width: 1100px) {
+  .vreviews { --review-w: min(317px, 74vw); }
+}
+
+@media (max-width: 600px) {
+  .vreviews { --review-w: min(317px, 82vw); gap: 12px; }
+  .vreviews__rail { gap: 16px; }
+  .vreviews__title { font-size: 18px; }
+  /* the logo is a fixed-size brand asset — scale the box, not just the image */
+  .vreviews__google { width: 56px; height: 18px; }
+}

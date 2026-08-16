@@ -1,6 +1,7 @@
 import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
 import BravoMark from './BravoMark.jsx';
+import VenueReviews from './VenueReviews.jsx';
 import chevron from '../assets/blog/chevron.svg';
 import { EXTERNAL_LINK } from '../lib/links.js';
 import { categoryUrl } from '../lib/posts.js';
@@ -106,9 +107,14 @@ export default function BlogPost({ post }) {
             decoding="async"
           />
 
+          {/* Everything the venue block knows about the place, then the rule
+              that opens the article. <VenueReviews> renders nothing when the
+              venue has no reviews, so this group is unchanged for the venues
+              and post types that never have any. */}
           {post.venue && (
             <>
               <Venue venue={post.venue} />
+              <VenueReviews venue={post.venue} />
               <hr className="post__rule" />
             </>
           )}

@@ -35,8 +35,10 @@ export const POSTS = [
     "hero": img_posts_ellipsis_opens_at_nine_images_hero,
     "heroAlt": "Guests carrying Bravo tote bags walking into the lit triangular entrance of Ellipsis at night",
     "venue": {
+      "key": "ellipsis",
       "name": "Ellipsis",
       "logo": img_venues_images_ellipsis_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/ellipsis",
       "street": "1540 W 2nd Ave #205",
       "locality": "Vancouver",
       "mapUrl": "https://www.google.com/maps/place/ellipsis+vancouver/data=!4m2!3m1!1s0x548673006a1b8583:0xd97d3ad2eeddd1d6",
@@ -179,6 +181,7 @@ export const POSTS = [
     "hero": img_posts_bravo_ai_sessions_vol_3_images_hero,
     "heroAlt": "The Bravo team and guests gathered for a group photo at Bravo AI Sessions Vol. 3",
     "venue": {
+      "key": "wren-cafe",
       "name": "Wren Cafe",
       "logo": img_venues_images_wren_cafe_logo,
       "bravoUrl": "https://www.bravoup.ca/store/wren-cafe",
@@ -285,6 +288,7 @@ export const POSTS = [
     "hero": img_posts_bravo_ai_sessions_vol_2_images_hero,
     "heroAlt": "A guest in a handwritten name tag pointing at the free-taco card he is holding up at Pinche Taco Shop",
     "venue": {
+      "key": "pinche-taco-shop",
       "name": "Pinche Taco Shop",
       "logo": img_venues_images_pinche_taco_shop_logo,
       "bravoUrl": "https://www.bravoup.ca/store/pinche-taco-shop",
