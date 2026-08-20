@@ -5,10 +5,15 @@ locality: Vancouver
 mapUrl: https://www.google.com/maps/place/Bar+Bravo/data=!4m2!3m1!1s0x54867519a08d2007:0x147fd647a0e47100
 site: bravovancouver.com
 siteUrl: https://www.bravovancouver.com
-# googlePlaceId deliberately OMITTED — not attempted, no Places API access in the
-# authoring workspace. The supplied Maps URL carries a CID pair and a /g/ id, neither
-# convertible. To fill it: npm run place:find -- "Bar Bravo" "4194 Fraser St, Vancouver"
-# then grep the result against every existing venue record before writing it.
+# Identifies the venue to the Google Places API. Resolved by Siya via
+# `npm run place:find`, 2026-08-20. Checked three ways before being written:
+#   1. grepped against every existing venue record — no collision
+#   2. decoded, and it encodes exactly the CID pair in the Maps URL Siya supplied
+#      (0x54867519a08d2007:0x147fd647a0e47100) — so it points at the same listing,
+#      not at the Barnacle sibling at Oakridge or at another business named Bravo
+#   3. name and street number confirmed against 4194 Fraser St
+# No review content is stored — only the ID.
+googlePlaceId: ChIJByCNoBl1hlQRAHHkoEfWfxQ
 schema:
   type: Restaurant
   region: BC

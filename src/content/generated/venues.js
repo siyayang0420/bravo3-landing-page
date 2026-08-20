@@ -8,6 +8,7 @@
  * of asset imports and of anything browser-specific.
  */
 export const VENUE_PLACES = {
+  "bar-bravo": { name: "Bar Bravo", googlePlaceId: "ChIJByCNoBl1hlQRAHHkoEfWfxQ" },
   "ellipsis": { name: "Ellipsis", googlePlaceId: "ChIJg4UbagBzhlQR1tHd7tI6fdk" },
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
   "sprezzatura": { name: "Sprezzatura Restaurant", googlePlaceId: "ChIJCU7GmHVzhlQRVCX3eeeGIqo" },
