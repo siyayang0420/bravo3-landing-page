@@ -1,0 +1,20 @@
+name: Folke
+logo: images/folke-logo.webp
+bravoUrl: https://www.bravoup.ca/store/folke-restaurant
+street: 2585 W Broadway
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/Folke/data=!4m2!3m1!1s0x548673e80f836083:0x8c61bfaba5d317e9
+site: folkerestaurant.com
+siteUrl: https://www.folkerestaurant.com
+# Identifies the venue to the Google Places API. Supplied by Siya at intake,
+# 2026-08-20, and checked twice before being written:
+#   1. grepped against every existing venue record — no collision
+#   2. decoded: contains 0x548673e80f836083 and 0x8c61bfaba5d317e9 little-endian,
+#      exactly the CID pair in the Maps URL supplied — so it is the same listing
+# No review content is stored — only the ID.
+googlePlaceId: ChIJg2CDD-hzhlQR6RfTpau_YYw
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Vegan, Plant-based]
