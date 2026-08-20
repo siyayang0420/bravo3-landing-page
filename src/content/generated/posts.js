@@ -49,6 +49,7 @@ export const POSTS = [
       "key": "bar-bravo",
       "name": "Bar Bravo",
       "logo": img_venues_images_bar_bravo_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/bar-bravo",
       "street": "4194 Fraser St",
       "locality": "Vancouver",
       "mapUrl": "https://www.google.com/maps/place/Bar+Bravo/data=!4m2!3m1!1s0x54867519a08d2007:0x147fd647a0e47100",
