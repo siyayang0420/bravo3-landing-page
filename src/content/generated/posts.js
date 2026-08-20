@@ -4,6 +4,10 @@
  * Edit the Markdown instead:  content/posts/<slug>/index.md
  * Regenerate with:            npm run content   (or just run dev/build)
  */
+import img_posts_bar_bravo_hundred_kilometres_from_water_images_hero from '../../../content/posts/bar-bravo-hundred-kilometres-from-water/images/hero.webp';
+import img_posts_bar_bravo_hundred_kilometres_from_water_images_p1 from '../../../content/posts/bar-bravo-hundred-kilometres-from-water/images/p1.webp';
+import img_posts_bar_bravo_hundred_kilometres_from_water_images_p2 from '../../../content/posts/bar-bravo-hundred-kilometres-from-water/images/p2.webp';
+import img_posts_bar_bravo_hundred_kilometres_from_water_images_p3 from '../../../content/posts/bar-bravo-hundred-kilometres-from-water/images/p3.webp';
 import img_posts_bravo_ai_sessions_vol_2_images_hero from '../../../content/posts/bravo-ai-sessions-vol-2/images/hero.webp';
 import img_posts_bravo_ai_sessions_vol_2_images_p1 from '../../../content/posts/bravo-ai-sessions-vol-2/images/p1.webp';
 import img_posts_bravo_ai_sessions_vol_2_images_p2 from '../../../content/posts/bravo-ai-sessions-vol-2/images/p2.webp';
@@ -24,12 +28,163 @@ import img_posts_sprezzatura_hundred_hour_dough_images_p1 from '../../../content
 import img_posts_sprezzatura_hundred_hour_dough_images_p2 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p2.webp';
 import img_posts_sprezzatura_hundred_hour_dough_images_p3 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p3.webp';
 import img_posts_sprezzatura_hundred_hour_dough_images_p4 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p4.webp';
+import img_venues_images_bar_bravo_logo from '../../../content/venues/images/bar-bravo-logo.webp';
 import img_venues_images_ellipsis_logo from '../../../content/venues/images/ellipsis-logo.webp';
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
 import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
 
 export const POSTS = [
+  {
+    "slug": "bar-bravo-hundred-kilometres-from-water",
+    "category": "Restaurant",
+    "title": "A Hundred Kilometres From Water",
+    "crumb": "A Hundred Kilometres From Water",
+    "date": "2026-08-19",
+    "dateLabel": "August 19, 2026",
+    "excerpt": "Bar Bravo buys its wine by a rule that sounds like provenance and turns out to be something more interesting.",
+    "hero": img_posts_bar_bravo_hundred_kilometres_from_water_images_hero,
+    "heroAlt": "A table at Bar Bravo with a glass of white wine, a radicchio salad, a bowl of scallops and slices of raw fish in a bright red sauce",
+    "venue": {
+      "key": "bar-bravo",
+      "name": "Bar Bravo",
+      "logo": img_venues_images_bar_bravo_logo,
+      "street": "4194 Fraser St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/Bar+Bravo/data=!4m2!3m1!1s0x54867519a08d2007:0x147fd647a0e47100",
+      "site": "bravovancouver.com",
+      "siteUrl": "https://www.bravovancouver.com"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Bar Bravo buys wine by a rule. The winery has to be within a hundred kilometres of water."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "It has the shape of one of those provenance claims that get written on a chalkboard and never examined, and it collapses the moment you look at the list. The bottles come from the Willamette Valley in Oregon, from Greece, from Vancouver Island. Two of those are not local by any definition Vancouver would accept, and the third is a ferry ride. Whatever the rule is doing, it is not shortening the distance between the winery and Fraser Street."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "It is shortening the distance between the winery and the sea."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That is a different argument, and a better one. A restaurant that serves raw oysters, crudo and dry-aged fish is not looking for wine grown nearby. It is looking for wine grown in the same kind of air — coastal, cool, saline enough to sit beside shellfish without either one arguing. Read that way, Oregon and the Aegean and Vancouver Island stop being a scattered list and start being a single idea, applied three times."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The room applying it is small. Bar Bravo opened on Fraser Street in August 2023, sixty seats in fifteen hundred square feet that had been Ubuntu Canteen before it. Jonathan Merrill works the floor and Jonah Joffe cooks, and they met at an oyster event during the pandemic, which is either a coincidence or the least surprising origin story in the city."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_bar_bravo_hundred_kilometres_from_water_images_p1,
+        "alt": "A full dining room at Bar Bravo, guests seated on bentwood chairs and along the bar, bottles lined up on the shelf behind",
+        "aspect": "980 / 1141",
+        "width": 980,
+        "height": 1141
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The kitchen dry-ages its own fish, in a refrigerator with a glass front. That is a small decision with the same logic as the wine rule underneath it: ageing fish is the sort of work most kitchens do behind a door, and putting it in a lit case turns a technique into a statement about what the room is for."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The signature is Spencer Gulf hiramasa, which is a kingfish farmed in South Australia — roughly as far from a hundred kilometres of "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "this"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " water as a fish can be sent. It looks like a contradiction and it isn't. The rule was never about distance. It was about what belongs next to what, and a fish raised in cold clean water belongs next to wine grown in sight of it, whichever ocean either of them started in."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_bar_bravo_hundred_kilometres_from_water_images_p2,
+        "alt": "Slices of raw fish laid out in a shallow bowl of red broth dotted with green sauce, a cook's hand placing the last piece",
+        "aspect": "980 / 1146",
+        "width": 980,
+        "height": 1146
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "There is one deliberate exception, and it is the most hospitable thing on the menu: a pasta special, changed nightly, for whoever has been brought along by friends and does not eat seafood. A restaurant this committed to a single idea could reasonably decline to feed that person. This one cooks them something fresh instead."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_bar_bravo_hundred_kilometres_from_water_images_p3,
+        "alt": "An overhead view of a shared table — raw fish on a floral plate, toasts topped with cured fish, sliced sourdough and a bowl of prawns, with two people reaching in",
+        "aspect": "980 / 1119",
+        "width": 980,
+        "height": 1119
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The recognition has followed. Vancouver Magazine named it Best New Restaurant in 2024 and gave it gold for seafood in 2025, and the MICHELIN Guide lists it as Recommended. None of that changed the wine rule, which is the point of having one."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The room joined Bravo in August, alongside restaurants across Metro Vancouver."
+          }
+        ]
+      }
+    ]
+  },
   {
     "slug": "ellipsis-opens-at-nine",
     "category": "Restaurant",
