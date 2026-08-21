@@ -1,0 +1,21 @@
+name: Niwa
+logo: images/niwa-logo.webp
+bravoUrl: https://www.bravoup.ca/store/niwa-restaurant
+street: 1875 Powell St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/Niwa+Restaurant/data=!4m2!3m1!1s0x548671006862e6cd:0x8b36d9f6ccab3e77
+site: restaurantniwa.com
+siteUrl: https://www.restaurantniwa.com
+# Identifies the venue to the Google Places API. Supplied by Siya, 2026-08-20, and
+# checked two ways before being written: grepped against every existing venue
+# record (no collision), and decoded — it encodes exactly the CID pair in the
+# supplied Maps URL (0x548671006862e6cd:0x8b36d9f6ccab3e77), so it points at this
+# listing. No review content is stored, only the ID.
+googlePlaceId: ChIJzeZiaABxhlQRdz6rzPbZNos
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+# servesCuisine DELIBERATELY OMITTED. The article's whole argument is that the
+# owners decline a cuisine label; asserting one in structured data would
+# contradict the piece in a place no editorial check would look.

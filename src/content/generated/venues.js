@@ -11,6 +11,7 @@ export const VENUE_PLACES = {
   "bar-bravo": { name: "Bar Bravo", googlePlaceId: "ChIJByCNoBl1hlQRAHHkoEfWfxQ" },
   "ellipsis": { name: "Ellipsis", googlePlaceId: "ChIJg4UbagBzhlQR1tHd7tI6fdk" },
   "folke": { name: "Folke", googlePlaceId: "ChIJg2CDD-hzhlQR6RfTpau_YYw" },
+  "niwa": { name: "Niwa", googlePlaceId: "ChIJzeZiaABxhlQRdz6rzPbZNos" },
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
   "sprezzatura": { name: "Sprezzatura Restaurant", googlePlaceId: "ChIJCU7GmHVzhlQRVCX3eeeGIqo" },
   "wren-cafe": { name: "Wren Cafe", googlePlaceId: "ChIJPVtgMgBzhlQRMJ3LT4cv2gs" },
