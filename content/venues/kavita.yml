@@ -1,0 +1,27 @@
+name: Kavita
+logo: images/kavita-logo.webp
+street: 250 W 3rd Ave
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/Restaurant+Kavita/data=!4m2!3m1!1s0x548673c81e296bef:0x6b586749d3dffc92
+site: restaurantkavita.com
+siteUrl: https://www.restaurantkavita.com
+# no-bravoUrl: not a Bravo merchant (interview subject)
+# ^ machine-readable marker: the pre-deploy check skips the bravoUrl warning for
+#   any venue carrying this line, so a legitimate non-merchant does not look like
+#   the BM-004 defect. Remove it if the venue ever onboards.
+#
+# Kavita is not a Bravo merchant — it is an interview subject, not an
+# onboarded venue. The credit block's highlighted half renders as plain text, which
+# is correct here and is not the BM-004 defect. Do not add a store URL without one
+# existing.
+#
+# Identifies the venue to the Google Places API. Supplied by Siya, 2026-09-08,
+# checked two ways: grepped against every venue record (no collision), and decoded —
+# it encodes exactly the CID pair in the supplied Maps URL
+# (0x548673c81e296bef:0x6b586749d3dffc92). No review content is stored.
+googlePlaceId: ChIJ72spHshzhlQRkvzf00lnWGs
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Indian]

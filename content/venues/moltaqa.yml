@@ -1,0 +1,23 @@
+name: Moltaqa
+logo: images/moltaqa-logo.webp
+bravoUrl: https://www.bravoup.ca/store/moltaqa-moroccan-restaurant
+street: 1002 Mainland St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/Moltaqa+Moroccan+Restaurant/data=!4m2!3m1!1s0x5486717a1e7fb69d:0x881f4fe7ea11d062
+site: moltaqarestaurant.ca
+siteUrl: https://moltaqarestaurant.ca
+# Identifies the venue to the Google Places API. Supplied by Siya, 2026-08-20,
+# checked two ways: grepped against every venue record (no collision), and
+# decoded — it encodes exactly the CID pair in the supplied Maps URL
+# (0x5486717a1e7fb69d:0x881f4fe7ea11d062). No review content is stored.
+#
+# NOTE: the BM-008 brief file listed Niwa's website and Instagram by mistake.
+# siteUrl below is Moltaqa's own, taken from Siya's message and confirmed
+# against the live site. The build never fetches siteUrl, so a wrong one ships
+# silently — worth re-reading this line if the venue is ever edited.
+googlePlaceId: ChIJnbZ_HnpxhlQRYtAR6udPH4g
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Moroccan]
