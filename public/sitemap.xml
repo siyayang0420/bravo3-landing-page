@@ -18,6 +18,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://bravoapp.ai/blog/maxs-table-kavita-open-kitchen/</loc>
+    <lastmod>2026-09-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://bravoapp.ai/blog/bar-bravo-hundred-kilometres-from-water/</loc>
     <lastmod>2026-08-19</lastmod>
     <changefreq>yearly</changefreq>
@@ -56,6 +62,12 @@
   <url>
     <loc>https://bravoapp.ai/blog/niwa-everything-except-the-label/</loc>
     <lastmod>2026-05-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://bravoapp.ai/blog/moltaqa-name-is-the-menu/</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
