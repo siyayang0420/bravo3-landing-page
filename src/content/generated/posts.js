@@ -745,11 +745,11 @@ export const POSTS = [
   {
     "slug": "bravo-ai-sessions-vol-3",
     "category": "AI Event",
-    "title": "That’s a wrap on Bravo AI Sessions Vol. 3",
+    "title": "An Evening at Wren Cafe",
     "crumb": "Bravo AI Sessions Vol. 3",
     "date": "2026-08-08",
     "dateLabel": "August 8, 2026",
-    "excerpt": "An inspiring evening exploring how AI is moving beyond chat and into real-world commerce — from discovery and booking to ordering, paying, and earning.",
+    "excerpt": "Vol. 3 ran at Wren Cafe in Yaletown. The subject was AI moving out of the chat window and into the ordinary business of eating out.",
     "hero": img_posts_bravo_ai_sessions_vol_3_images_hero,
     "heroAlt": "The Bravo team and guests gathered for a group photo at Bravo AI Sessions Vol. 3",
     "venue": {
@@ -769,25 +769,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "An inspiring evening exploring how AI is moving beyond chat and into real-world commerce—from discovery and booking to ordering, paying, and earning."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "At Wren Cafe, we didn’t just talk about the future of agentic commerce—we experienced it firsthand with Bravo AI across a network of 500+ restaurants."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Special thanks to "
+            "v": "Vol. 3 ran at "
           },
           {
             "t": "a",
@@ -795,13 +777,13 @@ export const POSTS = [
             "inline": [
               {
                 "t": "text",
-                "v": "WREN CAFÉ"
+                "v": "Wren Café"
               }
             ]
           },
           {
             "t": "text",
-            "v": " for hosting us in their beautiful Yaletown space and keeping everyone fuelled with amazing coffee and food."
+            "v": " in Yaletown on August 8."
           }
         ]
       },
@@ -810,7 +792,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "From prompt to plate—for real. See you at the next Bravo AI Session!"
+            "v": "The subject was the one this series keeps circling: AI moving out of the chat window and into the ordinary business of eating out. Finding somewhere. Booking it. Ordering, paying, and getting something back for it."
           }
         ]
       },
@@ -821,6 +803,24 @@ export const POSTS = [
         "aspect": "980 / 735",
         "width": 980,
         "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The difference on the night was that people used it rather than heard about it. Bravo AI is the assistant that does those steps for you, across a network of more than 500 restaurants. The room tried it on their own phones instead of watching a slide about it."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The demo happened at the counter, not from a stage. That felt about right for an evening about ordinary commerce. Afterwards people stayed at the tables and worked through the app together, which is the part you can't stage."
+          }
+        ]
       },
       {
         "type": "figure",
@@ -839,6 +839,15 @@ export const POSTS = [
         "height": 1307
       },
       {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Wren Café hosted and fed everyone. That is not a small thing to ask of a café that also has to run a normal day."
+          }
+        ]
+      },
+      {
         "type": "figure",
         "src": img_posts_bravo_ai_sessions_vol_3_images_p4,
         "alt": "Attendees trying the app together after the talk",
@@ -846,6 +855,15 @@ export const POSTS = [
         "focus": "50% 100%",
         "width": 980,
         "height": 1070
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "From prompt to plate, for real. See you at the next one."
+          }
+        ]
       }
     ]
   },
@@ -1306,11 +1324,11 @@ export const POSTS = [
   {
     "slug": "bravo-ai-sessions-vol-2",
     "category": "AI Event",
-    "title": "Bravo AI Sessions Vol. 2",
-    "crumb": "Bravo AI Sessions Vol. 2",
+    "title": "Talk to Me to Get a Free Taco",
+    "crumb": "Talk to Me to Get a Free Taco",
     "date": "2026-07-10",
     "dateLabel": "July 10, 2026",
-    "excerpt": "At Pinche Taco Shop, a free taco turned an AI dining assistant from an idea into something guests could try for themselves.",
+    "excerpt": "At Pinche Taco Shop, a card on every table offered a free taco to anyone who messaged a dining assistant. Here's how the night actually ran.",
     "hero": img_posts_bravo_ai_sessions_vol_2_images_hero,
     "heroAlt": "A guest in a handwritten name tag pointing at the free-taco card he is holding up at Pinche Taco Shop",
     "venue": {
@@ -1330,7 +1348,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "“Talk to me to get a FREE TACO,” the card said. Underneath: a QR code, a WhatsApp mark, the words "
+            "v": "\"Talk to me to get a FREE TACO,\" the card said. Under that: a QR code, a WhatsApp mark, the words "
           },
           {
             "t": "em",
@@ -1343,7 +1361,7 @@ export const POSTS = [
           },
           {
             "t": "text",
-            "v": ", and a secret word, "
+            "v": ", and a secret word. "
           },
           {
             "t": "strong",
@@ -1353,10 +1371,6 @@ export const POSTS = [
                 "v": "besttaco"
               }
             ]
-          },
-          {
-            "t": "text",
-            "v": "."
           }
         ]
       },
@@ -1365,7 +1379,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "One stood on every table at Pinche Taco Shop, propped up and waiting, before a single guest arrived on July 10."
+            "v": "One stood on every table at Pinche Taco Shop on July 10, propped up and waiting, before a single guest walked in."
           }
         ]
       },
@@ -1378,11 +1392,20 @@ export const POSTS = [
         "height": 735
       },
       {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "How it worked"
+          }
+        ]
+      },
+      {
         "type": "p",
         "inline": [
           {
             "t": "text",
-            "v": "What guests did with it was this. You messaged the assistant and typed the secret word. It sent back a QR code. You walked up to the counter and showed it to someone, and they gave you a taco. A second card on the same tables handled the other end of it: "
+            "v": "You messaged the assistant and typed the secret word, which was printed on the card, so it wasn't much of a secret. It sent back a QR code. You walked up to the counter, showed it to someone behind it, and they handed you a taco. A second card on the same tables covered the other end of it: "
           },
           {
             "t": "em",
@@ -1400,7 +1423,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That is a small loop, and on the night it was the part that actually ran."
+            "v": "It's a small loop. Four steps, and every one of them worked on the night. On the night, this was the part that actually ran."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The bigger version was the one being talked about"
           }
         ]
       },
@@ -1409,7 +1441,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The larger version was the one being talked about. Bravo AI Sessions Vol. 2 was billed as an evening on how artificial intelligence is changing real-world commerce, the ordinary kind conducted in rooms with counters and menus. Writing about it afterwards, Bravo asked people to imagine an agent that could find you a restaurant, secure a table at the sort of place that doesn’t have one free, and then work out who you ought to eat with. That one is a proposition, not a product. A standee by the door named the shorter ambition instead: FROM PROMPT TO PLATE."
+            "v": "Vol. 2 was billed as an evening about how artificial intelligence is changing real-world commerce. The ordinary kind, in rooms with counters and menus."
           }
         ]
       },
@@ -1418,20 +1450,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "By the time the room was full, people were standing in the aisles between the long tables and sitting along them in roughly equal numbers, phones out, canvas totes printed with "
-          },
-          {
-            "t": "em",
-            "inline": [
-              {
-                "t": "text",
-                "v": "Scan. Pay. Earn."
-              }
-            ]
-          },
+            "v": "Writing about it afterwards, Bravo asked people to imagine an agent that could find you a restaurant. Then get you a table at the sort of place that never has one free. Then work out who you ought to be eating with."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
           {
             "t": "text",
-            "v": " hooked over the backs of stools, plates of tacos arriving among the water glasses and the bottles of hot sauce. Daylight came in off Seymour Street through two storeys of glass."
+            "v": "That agent doesn't exist yet. It's a proposition, not a product. The standee by the door named the shorter ambition instead: FROM PROMPT TO PLATE."
           }
         ]
       },
@@ -1448,14 +1476,54 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Pinche Taco Shop is La Taqueria’s original counter concept, revived. It spent sixteen years on West Hastings before the building came down, and reopened in November on Seymour over two floors, under a Mexican flag hung from the staircase. You order at a counter there, and the tables are long and shared, so guests sat along them in rows rather than in separate parties."
+            "v": "By the time the room filled, people were standing in the aisles and sitting along the long tables in roughly equal numbers. Phones out. Canvas totes printed "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Scan. Pay. Earn."
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " hooked over the backs of stools. Plates of tacos landing between the water glasses and the hot sauce. Daylight coming in off Seymour Street through two storeys of glass."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The room"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Pinche Taco Shop is La Taqueria's original counter concept, brought back after sixteen years on West Hastings and reopened in November on Seymour."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "You order at a counter there, and the tables are long and shared, so guests sat in rows rather than in separate parties. That suited the evening better than a room full of two-tops would have."
           }
         ]
       },
       {
         "type": "figure",
         "src": img_posts_bravo_ai_sessions_vol_2_images_p3,
-        "alt": "The room mid-event, with a “from prompt to plate” standee by the window onto Seymour Street",
+        "alt": "The room mid-event, with a \"from prompt to plate\" standee by the window onto Seymour Street",
         "aspect": "980 / 735",
         "width": 980,
         "height": 735
@@ -1465,7 +1533,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The last step is the part worth noticing. The loop did not close on a screen. It closed with a person behind a counter looking at a phone and then handing over something to eat."
+            "v": "The last step is the part worth noticing. The loop didn't close on a screen. It closed with a person behind a counter looking at a phone, and then handing over something to eat."
           }
         ]
       },
@@ -1474,7 +1542,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Everyone in the room was wearing a name tag, written out in marker."
+            "v": "Everyone in the room was wearing a name tag, written out by hand in marker."
           }
         ]
       }
