@@ -6,4 +6,4 @@
  * Adding a value here is what makes a new filter chip possible; a post naming a
  * category that isn't listed fails the build rather than silently vanishing.
  */
-export const CATEGORIES = ['AI Event', 'Restaurant'];
+export const CATEGORIES = ['AI Event', 'Restaurant', "Max's Table"];

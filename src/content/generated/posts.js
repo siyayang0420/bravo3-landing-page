@@ -27,6 +27,15 @@ import img_posts_folke_no_tipping_kitsilano_images_hero from '../../../content/p
 import img_posts_folke_no_tipping_kitsilano_images_p1 from '../../../content/posts/folke-no-tipping-kitsilano/images/p1.webp';
 import img_posts_folke_no_tipping_kitsilano_images_p2 from '../../../content/posts/folke-no-tipping-kitsilano/images/p2.webp';
 import img_posts_folke_no_tipping_kitsilano_images_p3 from '../../../content/posts/folke-no-tipping-kitsilano/images/p3.webp';
+import img_posts_maxs_table_kavita_open_kitchen_images_hero from '../../../content/posts/maxs-table-kavita-open-kitchen/images/hero.webp';
+import img_posts_maxs_table_kavita_open_kitchen_images_p1 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p1.webp';
+import img_posts_maxs_table_kavita_open_kitchen_images_p2 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p2.webp';
+import img_posts_maxs_table_kavita_open_kitchen_images_p3 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p3.webp';
+import img_posts_maxs_table_kavita_open_kitchen_images_p4 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p4.webp';
+import img_posts_moltaqa_name_is_the_menu_images_hero from '../../../content/posts/moltaqa-name-is-the-menu/images/hero.webp';
+import img_posts_moltaqa_name_is_the_menu_images_p1 from '../../../content/posts/moltaqa-name-is-the-menu/images/p1.webp';
+import img_posts_moltaqa_name_is_the_menu_images_p2 from '../../../content/posts/moltaqa-name-is-the-menu/images/p2.webp';
+import img_posts_moltaqa_name_is_the_menu_images_p3 from '../../../content/posts/moltaqa-name-is-the-menu/images/p3.webp';
 import img_posts_niwa_everything_except_the_label_images_hero from '../../../content/posts/niwa-everything-except-the-label/images/hero.webp';
 import img_posts_niwa_everything_except_the_label_images_p1 from '../../../content/posts/niwa-everything-except-the-label/images/p1.webp';
 import img_posts_niwa_everything_except_the_label_images_p2 from '../../../content/posts/niwa-everything-except-the-label/images/p2.webp';
@@ -39,12 +48,168 @@ import img_posts_sprezzatura_hundred_hour_dough_images_p4 from '../../../content
 import img_venues_images_bar_bravo_logo from '../../../content/venues/images/bar-bravo-logo.webp';
 import img_venues_images_ellipsis_logo from '../../../content/venues/images/ellipsis-logo.webp';
 import img_venues_images_folke_logo from '../../../content/venues/images/folke-logo.webp';
+import img_venues_images_kavita_logo from '../../../content/venues/images/kavita-logo.webp';
+import img_venues_images_moltaqa_logo from '../../../content/venues/images/moltaqa-logo.webp';
 import img_venues_images_niwa_logo from '../../../content/venues/images/niwa-logo.webp';
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
 import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
 
 export const POSTS = [
+  {
+    "slug": "maxs-table-kavita-open-kitchen",
+    "category": "Max's Table",
+    "title": "The Kitchen You Can Watch",
+    "crumb": "Kavita",
+    "date": "2026-09-06",
+    "dateLabel": "September 6, 2026",
+    "excerpt": "At Kavita, the cooking happens in front of you. Over lamb chops, that turned into an argument about who is supposed to be checking the machines.",
+    "hero": img_posts_maxs_table_kavita_open_kitchen_images_hero,
+    "heroAlt": "Chef Tushar Tondvalkar at the pass at Kavita, in an apron beside a ticket screen showing plated dishes, the bar and bottle shelves behind him",
+    "venue": {
+      "key": "kavita",
+      "name": "Kavita",
+      "logo": img_venues_images_kavita_logo,
+      "street": "250 W 3rd Ave",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/Restaurant+Kavita/data=!4m2!3m1!1s0x548673c81e296bef:0x6b586749d3dffc92",
+      "site": "restaurantkavita.com",
+      "siteUrl": "https://www.restaurantkavita.com"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Most restaurant kitchens are behind a door. There are good reasons for it: heat, noise, the fact that a busy service is not a performance. The effect is that the food arrives as a finished thing, with the work already over and out of sight."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Kavita, on West 3rd Avenue in Olympic Village, made the other choice. Forty-six seats, and the kitchen in view from them."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That was the detail Max So kept coming back to. So is Bravo’s chief executive, and he had brought Jacob Ung, chief operating officer of the Chinese Restaurant Awards, out to eat and to talk on camera for the first episode of this series. Neither of them is a restaurant critic. Both of them spend their working lives assessing other people’s operations, which turns out to be a more useful qualification than it sounds."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_maxs_table_kavita_open_kitchen_images_p1,
+        "alt": "Max So and Jacob Ung laughing at a banquette table at Kavita, plates of curry and flatbread in front of them and a camera at the edge of the frame",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "An open kitchen is not really about the view. It is a decision to be watched. Everything that would normally be absorbed behind a door, the timing and the correction and the plate that gets sent back before it leaves the pass, happens where a stranger can see it. A room that arranges itself that way is making a claim about its own standards, and then has to meet it in front of an audience, five nights a week."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_maxs_table_kavita_open_kitchen_images_p2,
+        "alt": "Guests seated along the counter at Kavita while a cook in an apron works in front of them, pendant lights and curved bottle shelves behind",
+        "aspect": "980 / 1307",
+        "width": 980,
+        "height": 1307
+      },
+      {
+        "type": "figure",
+        "src": img_posts_maxs_table_kavita_open_kitchen_images_p3,
+        "alt": "Two tandoor-cooked lamb chops on a pale plate with salad leaves, edible flowers and two dots of green purée",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The tandoor is where that gets sharpest. Chef and owner Tushar Tondvalkar sent out lamb chops marinated in Bengali five-spice and garam masala and finished in the tandoor, which is a piece of equipment with almost no margin in it. The heat is fierce and the window is narrow, and nothing about the decision to pull the meat can be delegated to a timer. Someone stands there and judges it, repeatedly, all evening, and at Kavita they do it while people watch."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Which is roughly where the conversation stopped being about dinner."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_maxs_table_kavita_open_kitchen_images_p4,
+        "alt": "Tushar Tondvalkar standing at the table in conversation with Max So and Jacob Ung, a camera tripod at the edge of the frame",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The question Max and Jacob worked through is one every operator is currently sitting with: whether human expertise still counts for anything now that software can do a convincing impression of it. What they landed on was a way of managing it rather than an opinion about it. Treat AI like an employee. Give it work, expect it to be useful, and then have somebody competent look at what came back before it reaches anyone who matters. Quality is not a property the tool has. It is something a person is answerable for."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "It is a good analogy, and it is worth saying where it stops. You can ask a cook why they pulled the chops when they did, and the answer will be a reason, and the asking changes what they do next week. That loop is what turns oversight into training, and it is the part that does not transfer cleanly. Reviewing a machine’s output catches the error in front of you. It does not necessarily teach anything to the thing that made it."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The open kitchen is the version of this that actually works, which may be why it struck Max as worth remarking on. You are not being shown a report about the cooking. You are being shown the cooking."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Kavita is named after Tondvalkar’s late mother. The word means poetry — script, he says, or the telling of a story. He cooked at Gaggan and at Gaa in Bangkok before coming back to Vancouver and opening a room of his own in October of last year, and inside twelve months it was placed ninety-sixth on Canada’s 100 Best Restaurants and given Vancouver Magazine’s gold for Best Indian."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Asked how that happened so quickly, he did not talk about technique. He credited the kitchen and the front-of-house team, which is the sort of answer that can sound like modesty and in this case describes the mechanism exactly. In a room where the work is visible, the people doing it are the quality control. There is nowhere for a weak night to hide."
+          }
+        ]
+      }
+    ]
+  },
   {
     "slug": "bar-bravo-hundred-kilometres-from-water",
     "category": "Restaurant",
@@ -1060,6 +1225,157 @@ export const POSTS = [
           {
             "t": "text",
             "v": "Niwa joined Bravo in May, alongside restaurants across Metro Vancouver."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "moltaqa-name-is-the-menu",
+    "category": "Restaurant",
+    "title": "The Name Is a Description of the Menu",
+    "crumb": "Moltaqa",
+    "date": "2026-05-12",
+    "dateLabel": "May 12, 2026",
+    "excerpt": "Moltaqa means a meeting place. Four cuisines meet on its plates, and one pastry makes the whole argument.",
+    "hero": img_posts_moltaqa_name_is_the_menu_images_hero,
+    "heroAlt": "The dining room at Moltaqa — a pressed-tin ceiling, brass pendant lanterns over a tiled bar, red stools and a low banquette with cushions and plants",
+    "venue": {
+      "key": "moltaqa",
+      "name": "Moltaqa",
+      "logo": img_venues_images_moltaqa_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/moltaqa-moroccan-restaurant",
+      "street": "1002 Mainland St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/Moltaqa+Moroccan+Restaurant/data=!4m2!3m1!1s0x5486717a1e7fb69d:0x881f4fe7ea11d062",
+      "site": "moltaqarestaurant.ca",
+      "siteUrl": "https://moltaqarestaurant.ca"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Moltaqa"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " is Arabic for a meeting place: a junction, the spot where things converge. The restaurant’s own website never translates the word. It says instead that this is “a place where people come together over food, culture and authentic flavour,” which is the same sentence with the translation taken out."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The menu makes the claim more literally than the room does. Moltaqa describes its cooking as Moroccan by way of four traditions: "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Berber, Arab, Andalusian and French"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": ". That reads like the sort of thing a restaurant writes to sound worldly. It is closer to a syllabus."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_moltaqa_name_is_the_menu_images_p1,
+        "alt": "A whole chicken tagine with preserved lemon, green olives and a spoonful of harissa, in a blue-rimmed dish",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Berber cooking is the floor the rest of it stands on — the tagine itself, the couscous, the slow vessels built for a landscape without much fuel. Arab arrivals brought the spice trade and the preserving, which is why a chicken sits under salted lemon and olives rather than under a sauce. Andalusians crossed from Spain after 1492 and brought a pastry tradition and a taste for sweetness inside savoury food. The French, who governed Morocco for forty-four years, left technique behind: the flame, the reduction, the tableside performance."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Four cuisines, arriving over roughly thirteen centuries, in one country. A meeting place."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_moltaqa_name_is_the_menu_images_p2,
+        "alt": "An overhead table of Moroccan dishes — a pastilla dusted with icing sugar and cinnamon at the centre, with salads, lentils, bread and saffron couscous around it",
+        "aspect": "980 / 1226",
+        "width": 980,
+        "height": 1226
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The dish that carries all of it at once is the pastilla, which Moltaqa calls Morocco’s most celebrated. Sheets of pastry thin enough to read through, wrapped around spiced poultry, dusted over the top with icing sugar and cinnamon. The pastry is Andalusian. The spicing is Arab. The sugar over savoury meat is the argument the Andalusians brought with them, and it is still the thing that surprises anyone eating one for the first time."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "When Vancouver Magazine gave Moltaqa gold for Best African and Diaspora in 2026, its second year running, it singled out two plates: the chicken pastilla and the flambé rack of lamb. One Andalusian, one French, named in the same breath, in a Moroccan restaurant in Yaletown. The list was not making a point about history. It just happened to describe the menu accurately."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_moltaqa_name_is_the_menu_images_p3,
+        "alt": "A copper vessel pouring spirit over meat on a wooden board, a flame rising behind it",
+        "aspect": "980 / 1312",
+        "width": 980,
+        "height": 1312
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The restaurant has been at this for a while. Mimo Bucko opened it in 2018 on West Hastings, in Gastown, and still owns it; it has since moved to Mainland Street, a few minutes’ walk from BC Place. The MICHELIN Guide has recommended it since 2023. The kitchen is entirely halal-certified, grinds its own spice blends from spices imported from Morocco, and pours mint tea at the table in the way that is itself a piece of the same inheritance — a leaf that came up the trade routes, poured in a style that is unmistakably Moroccan and barely two centuries old."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Eight years is long enough to stop being a novelty and not long enough to be taken for granted. What the name promises is not fusion, which is a modern idea about mixing things that were previously apart. It is the older thing: cuisines that met a long time ago, in a place that had no choice about it, and stayed."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Moltaqa joined Bravo in May, alongside restaurants across Metro Vancouver."
           }
         ]
       }
