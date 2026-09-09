@@ -290,7 +290,7 @@ export const POSTS = [
     "crumb": "A Hundred Kilometres From Water",
     "date": "2026-08-19",
     "dateLabel": "August 19, 2026",
-    "excerpt": "Bar Bravo buys its wine by a rule that sounds like provenance and turns out to be something more interesting.",
+    "excerpt": "Bar Bravo only pours wine from wineries within a hundred kilometres of water. The rule turns out to have nothing to do with buying local.",
     "hero": img_posts_bar_bravo_hundred_kilometres_from_water_images_hero,
     "heroAlt": "A table at Bar Bravo with a glass of white wine, a radicchio salad, a bowl of scallops and slices of raw fish in a bright red sauce",
     "venue": {
@@ -310,7 +310,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Bar Bravo buys wine by a rule. The winery has to be within a hundred kilometres of water."
+            "v": "Bar Bravo buys its wine by a rule. The winery has to be within a hundred kilometres of water."
           }
         ]
       },
@@ -319,7 +319,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "It has the shape of one of those provenance claims that get written on a chalkboard and never examined, and it collapses the moment you look at the list. The bottles come from the Willamette Valley in Oregon, from Greece, from Vancouver Island. Two of those are not local by any definition Vancouver would accept, and the third is a ferry ride. Whatever the rule is doing, it is not shortening the distance between the winery and Fraser Street."
+            "v": "That sounds like the sort of line a restaurant chalks on a board and hopes nobody checks. So check it. The bottles come from the Willamette Valley in Oregon, from Greece, and from Vancouver Island. Two of those aren't local by any definition Vancouver would accept, and the third is a ferry ride."
           }
         ]
       },
@@ -328,7 +328,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "It is shortening the distance between the winery and the sea."
+            "v": "Whatever the rule is doing, it isn't shortening the distance between the winery and Fraser Street."
           }
         ]
       },
@@ -337,7 +337,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That is a different argument, and a better one. A restaurant that serves raw oysters, crudo and dry-aged fish is not looking for wine grown nearby. It is looking for wine grown in the same kind of air — coastal, cool, saline enough to sit beside shellfish without either one arguing. Read that way, Oregon and the Aegean and Vancouver Island stop being a scattered list and start being a single idea, applied three times."
+            "v": "It's shortening the distance between the winery and the sea."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Why that works"
           }
         ]
       },
@@ -346,7 +355,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The room applying it is small. Bar Bravo opened on Fraser Street in August 2023, sixty seats in fifteen hundred square feet that had been Ubuntu Canteen before it. Jonathan Merrill works the floor and Jonah Joffe cooks, and they met at an oyster event during the pandemic, which is either a coincidence or the least surprising origin story in the city."
+            "v": "This is a room that serves raw oysters, dry-aged fish and crudo, which is raw fish dressed and served cold. It isn't looking for wine grown nearby. It's looking for wine grown in the same kind of air: coastal, cool, salty enough to sit next to shellfish without either one arguing."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Read it that way and Oregon, Greece and Vancouver Island stop being a random list. They're one idea, used three times."
           }
         ]
       },
@@ -363,7 +381,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The kitchen dry-ages its own fish, in a refrigerator with a glass front. That is a small decision with the same logic as the wine rule underneath it: ageing fish is the sort of work most kitchens do behind a door, and putting it in a lit case turns a technique into a statement about what the room is for."
+            "v": "The room using it is small. Bar Bravo opened on Fraser Street in August 2023, sixty seats in fifteen hundred square feet that used to be Ubuntu Canteen. Jonathan Merrill works the floor and Jonah Joffe cooks. They met at an oyster event during the pandemic, which is either a coincidence or the least surprising origin story in the city."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What to order"
           }
         ]
       },
@@ -372,7 +399,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The signature is Spencer Gulf hiramasa, which is a kingfish farmed in South Australia — roughly as far from a hundred kilometres of "
+            "v": "The Spencer Gulf hiramasa. It's a kingfish farmed in South Australia, which is about as far outside a hundred kilometres of "
           },
           {
             "t": "em",
@@ -385,7 +412,25 @@ export const POSTS = [
           },
           {
             "t": "text",
-            "v": " water as a fish can be sent. It looks like a contradiction and it isn't. The rule was never about distance. It was about what belongs next to what, and a fish raised in cold clean water belongs next to wine grown in sight of it, whichever ocean either of them started in."
+            "v": " water as a fish can get."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That looks like a contradiction and isn't. The rule was never about distance. It was about what belongs beside what. A fish raised in cold clean water belongs beside wine grown in sight of it, whichever ocean either one started in."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The kitchen also dry-ages its own fish, in a fridge with a glass front. Ageing fish is work most kitchens do behind a door. Putting it in a lit case turns a technique into a statement about what the room is for."
           }
         ]
       },
@@ -398,18 +443,36 @@ export const POSTS = [
         "height": 1146
       },
       {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The exception, which is the nicest thing on the menu"
+          }
+        ]
+      },
+      {
         "type": "p",
         "inline": [
           {
             "t": "text",
-            "v": "There is one deliberate exception, and it is the most hospitable thing on the menu: a pasta special, changed nightly, for whoever has been brought along by friends and does not eat seafood. A restaurant this committed to a single idea could reasonably decline to feed that person. This one cooks them something fresh instead."
+            "v": "There's a pasta special, changed nightly, for whoever got dragged along by friends and doesn't eat seafood."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "A restaurant this committed to one idea could fairly tell that person to order a salad. This one cooks them something fresh instead."
           }
         ]
       },
       {
         "type": "figure",
         "src": img_posts_bar_bravo_hundred_kilometres_from_water_images_p3,
-        "alt": "An overhead view of a shared table — raw fish on a floral plate, toasts topped with cured fish, sliced sourdough and a bowl of prawns, with two people reaching in",
+        "alt": "An overhead view of a shared table, raw fish on a floral plate, toasts topped with cured fish, sliced sourdough and a bowl of prawns, with two people reaching in",
         "aspect": "980 / 1119",
         "width": 980,
         "height": 1119
@@ -419,7 +482,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The recognition has followed. Vancouver Magazine named it Best New Restaurant in 2024 and gave it gold for seafood in 2025, and the MICHELIN Guide lists it as Recommended. None of that changed the wine rule, which is the point of having one."
+            "v": "The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, gold for seafood in 2025, Recommended in the MICHELIN Guide."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "None of it changed the wine rule. That's the point of having one."
           }
         ]
       },
@@ -437,11 +509,11 @@ export const POSTS = [
   {
     "slug": "ellipsis-opens-at-nine",
     "category": "Restaurant",
-    "title": "Ellipsis Opens at Nine and Never Switches Over",
+    "title": "Two Bars, One Clock",
     "crumb": "Ellipsis",
     "date": "2026-08-12",
     "dateLabel": "August 12, 2026",
-    "excerpt": "Two bars, one pantry, 47 seats, and fourteen hours a day in which the clock doesn’t decide what you’re allowed to order.",
+    "excerpt": "One bar makes coffee, the other makes cocktails, and neither one closes when the other opens. Fourteen hours a day, the clock doesn't decide what you can order.",
     "hero": img_posts_ellipsis_opens_at_nine_images_hero,
     "heroAlt": "Guests carrying Bravo tote bags walking into the lit triangular entrance of Ellipsis at night",
     "venue": {
@@ -470,7 +542,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The room seats 47 and runs from nine in the morning until eleven at night. One bar makes coffee. The other makes cocktails. They share a pantry, and — the part most of the coverage skated past when Ellipsis opened last August — they share a clock. Owner Ming Yang has described a room where a customer can order a cocktail at nine in the morning or a flat white at ten at night. Nothing changes over in between."
+            "v": "The room seats 47 and runs from nine in the morning until eleven at night. One bar makes coffee. The other makes cocktails. They share a pantry, and they share a clock."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Owner Ming Yang has put it simply. Order a cocktail first thing in the morning if you want one. Order a flat white at ten at night. Nothing switches over in between."
           }
         ]
       },
@@ -487,7 +568,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That is a smaller thing than a concept and a rarer thing than it sounds. Vancouver rooms are usually explicit about what they are and when they are it. A café that becomes a wine bar puts a sign in the window. A kitchen that does brunch stops at two. Ellipsis stays open and lets you work out what sort of visit you are having."
+            "v": "That's a smaller thing than a concept and a rarer one than it sounds. Vancouver rooms are usually clear about what they are and when they're it. A café that turns into a wine bar puts a sign in the window. A brunch kitchen stops at two. Ellipsis just stays open and lets you work out what kind of visit you're having."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The pantry is where it gets real"
           }
         ]
       },
@@ -496,7 +586,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The shared pantry is where the idea stops being a posture and turns into cooking. Seasonal syrups and ingredients cross between the two menus. A cocktail called Ca Va is built on butter-washed brandy, Calvados and croissant syrup, and arrives with a small croissant sitting on it. Matcha shows up in a cream-filled pastry. There is a burrata with peach and a trace of Earl Grey, and an omelette finished with XO sauce."
+            "v": "Seasonal syrups and ingredients cross between the two menus, which is what stops this being a pose."
           }
         ]
       },
@@ -505,7 +595,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "So the kitchen carries pastries and eggs early and duck and pappardelle later, and the bar works from the same jars at both ends of the day. A rotating feature drink is called, simply, “...?” Another, “What’s the Tea,” changes daily and is not written down."
+            "v": "A cocktail called Ca Va is built on Calvados, croissant syrup and butter-washed brandy. Washing a spirit with butter takes the edge off it and leaves the flavour behind. It arrives with a small croissant sitting on top. Matcha turns up inside a cream-filled pastry. There's a burrata with peach and a trace of Earl Grey, and an omelette finished with XO sauce."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "So the kitchen does pastries and eggs early, duck and pappardelle later. The bar works out of the same jars at both ends of the day."
           }
         ]
       },
@@ -522,7 +621,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The rest of the list reads like a set of opening lines: “Are We There Yet.” “What Keeps You Up at Night.” Groups larger than six have to enquire in advance, which suggests a room measured in conversations rather than covers."
+            "v": "The drinks list reads like a set of opening lines. \"Are We There Yet.\" \"What Keeps You Up at Night.\" A rotating feature is called, simply, \"...?\" Another, \"What's the Tea,\" changes daily and isn't written down anywhere."
           }
         ]
       },
@@ -531,7 +630,34 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The building never committed to one function either. Ellipsis sits inside Arthur Erickson’s Waterfall Building, in a space originally intended as an art gallery, and the conversion left the shell largely alone: both metal bars stand free of the walls rather than fixed to them. After dark, a circle of light is projected onto the back wall, which is roughly the extent of what the room does to mark the evening."
+            "v": "Groups bigger than six have to ask in advance, which tells you the room is measured in conversations rather than covers."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The building never picked a side either"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The room was meant to be an art gallery. It sits inside Arthur Erickson's Waterfall Building, and the conversion mostly left the shell alone. Both metal bars stand free of the walls rather than fixed to them."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "After dark, a circle of light gets projected onto the back wall. That's roughly the whole extent of what the room does to mark the evening."
           }
         ]
       },
@@ -544,11 +670,11 @@ export const POSTS = [
         "height": 778
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "The awkward part is finding it. Ellipsis has no street presence to speak of. You reach it through a courtyard off West 2nd Avenue, past a water curtain, on a block most people drive along rather than walk, usually on their way somewhere else on Granville Island. Nothing about the approach announces a bar. That is a real cost for a room that depends on people knowing it is there, and it is the strongest argument for the fourteen-hour day: if a customer cannot happen upon you at seven in the evening, it helps to be available at ten in the morning, and at two, and at nine. Ellipsis recently joined Bravo, alongside restaurants across Metro Vancouver."
+            "v": "The catch"
           }
         ]
       },
@@ -557,26 +683,62 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "In April the cocktail bar handed a shift to Tom Liu, of Thunderbolt in Los Angeles, from five until close, an evening event in a room that had by then already been open for eight hours."
+            "v": "You have to find it."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Ellipsis has almost no street presence. You get there through a courtyard off West 2nd Avenue, past a water curtain. Most people drive down that block rather than walk it. They're usually on their way to Granville Island. Nothing about the approach says bar."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That's a real cost for a place that needs people to know it's there. It's also the best argument for the fourteen-hour day. If nobody can stumble across you at seven in the evening, it helps to be open at ten in the morning. And at two. And at nine."
           }
         ]
       },
       {
         "type": "figure",
         "src": img_posts_ellipsis_opens_at_nine_images_p4,
-        "alt": "The free-standing metal bar at Ellipsis beneath the angled glass roof of Arthur Erickson’s Waterfall Building",
+        "alt": "The free-standing metal bar at Ellipsis beneath the angled glass roof of Arthur Erickson's Waterfall Building",
         "aspect": "980 / 1120",
         "width": 980,
         "height": 1120
       },
       {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "In April the cocktail bar handed a shift to Tom Liu, of Thunderbolt in Los Angeles, from five until close. An evening event, in a room that had already been open for eight hours."
+          }
+        ]
+      },
+      {
         "type": "figure",
         "src": img_posts_ellipsis_opens_at_nine_images_p5,
-        "alt": "A “Pay with Bravo — Scan. Pay. Earn.” card standing on the counter at Ellipsis",
+        "alt": "A \"Pay with Bravo — Scan. Pay. Earn.\" card standing on the counter at Ellipsis",
         "aspect": "980 / 958",
         "focus": "50% 82%",
         "width": 980,
         "height": 958
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Ellipsis recently joined Bravo, alongside restaurants across Metro Vancouver."
+          }
+        ]
       }
     ]
   },
@@ -690,11 +852,11 @@ export const POSTS = [
   {
     "slug": "sprezzatura-hundred-hour-dough",
     "category": "Restaurant",
-    "title": "The Hundred-Hour Dough Behind an Effortless Name",
-    "crumb": "The Hundred-Hour Dough Behind an Effortless Name",
+    "title": "A Hundred Hours of Work, Hidden",
+    "crumb": "A Hundred Hours of Work, Hidden",
     "date": "2026-07-17",
     "dateLabel": "July 17, 2026",
-    "excerpt": "Sprezzatura means looking like you didn’t try. The kitchen behind the name has been trying very hard since 2019.",
+    "excerpt": "Sprezzatura is an Italian word for making hard things look easy. The pizza dough takes four days. You'd never know.",
     "hero": img_posts_sprezzatura_hundred_hour_dough_images_hero,
     "heroAlt": "A mortadella pizza on a dark wooden board, folded slices of mortadella with pistachios, pesto and sliced yellow peppers",
     "venue": {
@@ -713,35 +875,89 @@ export const POSTS = [
         "type": "p",
         "inline": [
           {
-            "t": "em",
+            "t": "text",
+            "v": "Sprezzatura is a Neapolitan pizza place on Kingsway at East 11th, in Mount Pleasant. The patio looks across four lanes of traffic at a Honda dealership."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The name is an old Italian word. It means doing something hard and making it look easy. The restaurant's own website calls it \"the art of effortless style.\""
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That's a lot to hang above a door. It also raises the obvious question: what is being hidden here?"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Quite a lot, as it turns out."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The dough takes four days"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Sprezzatura opened in the summer of 2019 around one oven, built to order. It runs at 900 degrees on the deck and a thousand up in the dome. The mouth was made small on purpose, so the toppings stay wet while the base crisps."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The dough is \"00\" flour, a soft finely milled Italian flour, left to ferment for a hundred hours. That's the standard set in Naples for what counts as real Neapolitan pizza. The pizzaiolo trained in Naples."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "None of that reaches your table, which is the whole point of the word. Four days of fermenting show up as a base thin enough to fold, blistered and black at the rim. On top, a few folds of mortadella and a scatter of pistachios. The work is meant to be silent."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "strong",
             "inline": [
               {
                 "t": "text",
-                "v": "Sprezzatura"
+                "v": "What I'd order:"
               }
             ]
           },
           {
             "t": "text",
-            "v": " is an old Italian word for a particular kind of showing off: the art of making something difficult look as though it cost you nothing. The restaurant on Kingsway that took the name defines it on its own website as “the art of effortless style. A balance of studied nonchalance and refined hospitality.”"
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "That is a large thing to hang above a door. It also invites the obvious question, which is what exactly is being concealed."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Quite a lot, as it turns out. Sprezzatura opened in the summer of 2019 around a custom-built oven that runs to 900 degrees at the deck and a thousand in the dome, and a dough made with “00” flour and left to ferment for a hundred hours — the standard laid down by the Associazione Verace Pizza Napoletana. The oven’s mouth was made deliberately small, so the toppings stay moist while the base crisps. The pizzaiolo trained in Naples."
+            "v": " that one. The mortadella and pistachio is the pizza the whole hundred hours is for."
           }
         ]
       },
@@ -754,11 +970,11 @@ export const POSTS = [
         "height": 1307
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "None of that reaches a table. That is the entire point of the word. Four days of fermentation arrive as a base thin enough to fold, blistered and charred at the rim, under a few folds of mortadella and a scatter of pistachios. The work is meant to be inaudible."
+            "v": "The room does the same thing"
           }
         ]
       },
@@ -767,7 +983,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The room performs the same trick. Sophie Burke designed it, and it is full of decisions that do not announce themselves: dark teal walls hung with framed pictures and mirrors, green factory lamps brought from the Netherlands, a glass panel salvaged from Rockefeller Center and bought from an antiques dealer in Surrey. There is also a power outlet and a USB port at every seat, which is the least romantic detail in the building and possibly the most considered."
+            "v": "Sophie Burke designed it, and it's full of choices that don't announce themselves. Dark teal walls hung with framed pictures. Green factory lamps shipped over from the Netherlands. A glass panel salvaged from Rockefeller Center, of all places, bought off an antiques dealer in Surrey."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "There's also a power outlet and a USB port at every seat. It's the least romantic thing in the building and probably the most thought-through."
           }
         ]
       },
@@ -784,7 +1009,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Kingsway is not the obvious address for any of this. The restaurant sits at East 11th, in the base of the Duke, and its patio looks across the traffic at a Honda dealership. Orange umbrellas, red gingham, rosemary in the planters, a Mount Pleasant banner on the lamp post. It is a determinedly unglamorous corner, and the room behaves as though it were not."
+            "v": "Kingsway is not where you'd expect any of this. Orange umbrellas, red gingham on the tables, rosemary in the planters, a Mount Pleasant banner on the lamp post, and traffic going past. The room carries on as if it were somewhere else entirely."
           }
         ]
       },
@@ -797,11 +1022,20 @@ export const POSTS = [
         "height": 1307
       },
       {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Pizza is only half of it"
+          }
+        ]
+      },
+      {
         "type": "p",
         "inline": [
           {
             "t": "text",
-            "v": "Pizza is only half of what the kitchen does. The other half is Italian roasts and braises, which is cooking whose hours are just as invisible by the time anything reaches a plate: short rib over polenta, the sauce dark enough to read as a full day’s reduction, a scatter of herbs on top and no explanation offered."
+            "v": "The other half is Italian roasts and braises, and they hide their hours just as well. Short rib over soft polenta. The sauce is dark enough to have taken a whole day. Herbs on top, nothing explained."
           }
         ]
       },
@@ -818,7 +1052,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Seven years is a long time to keep up an act of not trying. Sprezzatura joined Bravo in July, alongside restaurants across Metro Vancouver."
+            "v": "Seven years is a long time to keep up an act of not trying."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Sprezzatura joined Bravo in July, alongside restaurants across Metro Vancouver."
           }
         ]
       }
@@ -831,7 +1074,7 @@ export const POSTS = [
     "crumb": "Folke",
     "date": "2026-07-17",
     "dateLabel": "July 17, 2026",
-    "excerpt": "Folke doesn’t take tips. What its owners put inside the price instead is the whole story.",
+    "excerpt": "Folke doesn't take tips. What its owners put inside the price instead is the whole story.",
     "hero": img_posts_folke_no_tipping_kitsilano_images_hero,
     "heroAlt": "A hand sets down a pale blue plate holding two small tomato tartlets, on a wooden patio table crowded with other dishes and a glass of red wine",
     "venue": {
@@ -851,7 +1094,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Folke does not take tips. The number printed beside a dish is the number that leaves your account, which sounds like a small courtesy to the customer and is really about somebody else."
+            "v": "Folke doesn't take tips. The number printed next to a dish is the number that leaves your account."
           }
         ]
       },
@@ -860,7 +1103,34 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "What the owners put inside that number is a kitchen on salary rather than on hours, a four-day working week for the chefs, and benefits and lifestyle spending accounts that staff pay nothing into. Pricilla Deo, who owns the restaurant with Colin Uyeda, has described the arithmetic without any romance at all: the pricing, she told "
+            "v": "That sounds like a small kindness to the customer. It's really about somebody else."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What's inside the price"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "A kitchen on salary instead of hourly. A four-day week for the chefs. Benefits and lifestyle spending accounts that staff pay nothing into."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Pricilla Deo owns the restaurant with Colin Uyeda, and she's described the maths without any romance in it. The pricing, she told "
           },
           {
             "t": "em",
@@ -873,7 +1143,7 @@ export const POSTS = [
           },
           {
             "t": "text",
-            "v": ", has to cover “all aspects of running a business such as overhead costs, wages, and rising food prices.”"
+            "v": ", has to cover \"all aspects of running a business such as overhead costs, wages, and rising food prices.\""
           }
         ]
       },
@@ -882,7 +1152,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The model has a name, hospitality included, and one cost in that list is the one restaurants conventionally leave off the menu, to be settled afterwards, in cash, at the discretion of strangers. Folke moved it inside."
+            "v": "Wages are the cost restaurants usually leave off the menu, to be sorted out afterwards, in cash, by strangers. Folke moved it inside."
           }
         ]
       },
@@ -899,7 +1169,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Doing that has an obvious commercial problem attached, which is that the number on the page gets bigger. A restaurant that folds wages into its prices is competing, on the same street, against restaurants that do not, and it has to persuade people that a larger figure printed on the menu is in fact the same money, or less once the arithmetic at the end is done honestly. That is a harder sell than a policy, and it is renewed every night the room fills or doesn’t."
+            "v": "There's an obvious problem with doing that. The number on the page gets bigger."
           }
         ]
       },
@@ -908,7 +1178,25 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The reason is not abstract. Deo and Uyeda had both spent their working lives in hospitality — they met through social media while cooking in different countries, and landed in Vancouver within months of each other in the autumn of 2016. They worked the restaurant out during the pandemic, when Deo had been laid off from pastry work and Uyeda was at Kissa Tanto. “We both had always had careers in hospitality,” Deo told "
+            "v": "Folke is competing on the same street with restaurants that don't do this. Their menus look cheaper. Then you add fifteen or twenty per cent at the end, and often you've paid more. That's a harder sell than a policy. It has to be made again every night the room fills, or doesn't."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Why they did it"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Deo and Uyeda have both spent their whole working lives in restaurants. They worked this idea out during the pandemic, when Deo had been laid off from pastry work and Uyeda was at Kissa Tanto. \"We both had always had careers in hospitality,\" Deo told "
           },
           {
             "t": "em",
@@ -921,7 +1209,7 @@ export const POSTS = [
           },
           {
             "t": "text",
-            "v": ", “and wanted to do something different that helped it feel more like a stable career for people.”"
+            "v": ", \"and wanted to do something different that helped it feel more like a stable career for people.\""
           }
         ]
       },
@@ -930,7 +1218,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That is a sentence written by someone who has been on the other side of a slow Tuesday."
+            "v": "That's a sentence written by someone who has been on the other side of a slow Tuesday."
           }
         ]
       },
@@ -943,11 +1231,38 @@ export const POSTS = [
         "height": 980
       },
       {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The food is the interesting part"
+          }
+        ]
+      },
+      {
         "type": "p",
         "inline": [
           {
             "t": "text",
-            "v": "Folke opened on West Broadway on the second of June, 2022, and the thing that makes the labour model interesting is that it is attached to a genuinely ambitious kitchen rather than to a modest one. Uyeda cooked at RyuGin in Tokyo, which holds three Michelin stars, and at Relæ in Copenhagen. He now deep-fries chickpea flour into cubes of tofu and serves them with turnip and zhoug, roasts and dehydrates and smokes beets until they can be served like tartare, and folds mushroom XO into tapioca dumplings. Deo’s desserts run to parsnip cake with umeboshi plum caramel."
+            "v": "Folke opened on West Broadway on the second of June, 2022. What makes the pay model worth writing about is that it's attached to an ambitious kitchen, not a modest one."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Uyeda cooked at RyuGin in Tokyo, which has three Michelin stars, and at Relæ in Copenhagen. Now he deep-fries chickpea flour into cubes of tofu and serves them with turnip and zhoug, a green chilli and herb sauce. He roasts, dries and smokes beets until they can be served like tartare. He folds mushroom XO into tapioca dumplings. Deo's desserts run to parsnip cake with a caramel made from umeboshi, the salty Japanese pickled plum."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Neither of them is vegan. The menu is, completely, and nothing on it pretends to be meat. The subject is vegetables, not going without."
           }
         ]
       },
@@ -964,7 +1279,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Neither of them is vegan. The menu is, entirely, and nothing on it imitates meat — the subject is vegetables rather than abstinence, which is a harder brief and a more interesting one."
+            "v": "Four years in, the kitchen has made Air Canada enRoute's Canada's Best New Restaurants and is Recommended in the MICHELIN Guide."
           }
         ]
       },
@@ -973,7 +1288,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Four years in, the kitchen has been named to Air Canada enRoute’s Canada’s Best New Restaurants and listed as Recommended in the MICHELIN Guide. Neither of those is the part that is difficult. Any good restaurant can be praised for a season. Keeping salaried chefs on a four-day week inside a menu price that customers still agree to pay, through four years of the food costs Deo mentioned, is the part that takes doing."
+            "v": "Neither of those is the hard part. Any good restaurant can get praised for a season. Keeping salaried chefs on a four-day week is the hard part. Doing it inside a price customers still agree to pay, through four years of the food costs Deo mentioned, is harder still."
           }
         ]
       },
@@ -1172,7 +1487,7 @@ export const POSTS = [
     "crumb": "Niwa",
     "date": "2026-05-29",
     "dateLabel": "May 29, 2026",
-    "excerpt": "Niwa has the name, the chopsticks and the omakase. Its owners still won’t call it a Japanese restaurant, and the reason is in the kitchen.",
+    "excerpt": "Niwa has the name, the chopsticks and the omakase. Its owners still won't call it a Japanese restaurant, and the reason is in the kitchen.",
     "hero": img_posts_niwa_everything_except_the_label_images_hero,
     "heroAlt": "Niwa seen through its front window at night, a gauze curtain across the top of the glass and a member of staff moving past set tables",
     "venue": {
@@ -1192,7 +1507,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Niwa means garden in Japanese. There are chopsticks on the table, an omakase if you want one, and a list that leans on sake. By any reasonable test the restaurant on Powell Street is a Japanese restaurant, and its owners will not say so."
+            "v": "Niwa means garden in Japanese. There are chopsticks on the table, an omakase if you want one, and a drinks list that leans on sake."
           }
         ]
       },
@@ -1201,7 +1516,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "“There are a lot of things about Niwa that nod to or seemingly feel a bit more Japanese,” Miki Ellis has said, “but by no means do we want to be a Japanese restaurant.”"
+            "v": "By any normal test, the restaurant on Powell Street is a Japanese restaurant. Its owners won't say so."
           }
         ]
       },
@@ -1210,7 +1525,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That reads at first like the kind of thing restaurants say to avoid being put in a box. It isn’t. The reason is upstream of the dining room, in how Darren Gee has arranged the kitchen."
+            "v": "\"There are a lot of things about Niwa that nod to or seemingly feel a bit more Japanese,\" Miki Ellis has said, \"but by no means do we want to be a Japanese restaurant.\""
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That sounds at first like a restaurant dodging a box. It isn't. The reason sits upstream of the dining room, in how Darren Gee runs the kitchen."
           }
         ]
       },
@@ -1223,11 +1547,11 @@ export const POSTS = [
         "height": 1307
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "Gee cooks to what the farms send. Nearly all the produce and protein is local, animals arrive whole rather than as the cuts a menu would order, and what cannot be used gets divided with other kitchens. “What we’re really trying to do is tell the story of producers and the things that are happening around us seasonally,” he has said. And, more plainly: “It’s nice that the season and the ingredients dictate what you’re going to make.”"
+            "v": "The farms decide, not the menu"
           }
         ]
       },
@@ -1236,7 +1560,43 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Follow that through and the label becomes impossible. A cuisine is a promise about what will be on the table — a Japanese restaurant undertakes to have certain things, more or less, whenever you arrive. A kitchen that lets the season decide cannot make that promise, because in February it has no idea what March will bring. What it can offer instead is the narrower and more demanding assurance that whatever does arrive will have been worth cooking."
+            "v": "Gee cooks whatever the farms send him. Nearly all the produce and protein is local. Animals arrive whole, not as the neat cuts a menu would order, and whatever this kitchen can't use gets split with other kitchens."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "\"What we're really trying to do is tell the story of producers and the things that are happening around us seasonally,\" he has said. And more simply: \"It's nice that the season and the ingredients dictate what you're going to make.\""
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Follow that through and the label stops being possible."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "A cuisine is a promise about what will be on the table. A Japanese restaurant is undertaking to have certain things, more or less, whenever you turn up. A kitchen that lets the season decide can't promise that, because in February it has no idea what March will bring."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What it can promise is narrower and harder: whatever does show up will have been worth cooking."
           }
         ]
       },
@@ -1249,11 +1609,11 @@ export const POSTS = [
         "height": 1742
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "So the Japanese element is real but partial. It shows up as technique and as seasoning — shio koji, yuzu kosho, bonito, a dashi — rather than as a category the menu has to keep faith with. The kitchen has sent out charcoal-grilled leeks with shoyu butter, pickles of yellow carrot and cucumber and white turnip, hand-cut pasta with uni and kabocha, and a duck breast aged five weeks. Only some of those belong to any one cuisine. All of them belong to a particular week in Vancouver."
+            "v": "So where is the Japanese part?"
           }
         ]
       },
@@ -1262,24 +1622,51 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The room says the same thing quietly. Claire Saksun’s design is muted and austere, a burnt terracotta ceiling over light wood and earth-toned textiles, and it declines to signal a country the way restaurant rooms usually do."
+            "v": "In the technique and the seasoning, rather than in a category the menu has to keep faith with. Shio koji, which is rice mould and salt used to tenderise and deepen flavour. Yuzu kosho, a hot citrus paste. Bonito. A dashi."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The kitchen has sent out charcoal-grilled leeks with shoyu butter. Pickles of yellow carrot, cucumber and white turnip. Hand-cut pasta with uni and kabocha. A duck breast aged five weeks."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Only some of those belong to any one cuisine. All of them belong to a particular week in Vancouver."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The room says the same thing quietly. Claire Saksun designed it, and it's plain and calm: a burnt terracotta ceiling over light wood and earth-toned fabric. It refuses to signal a country the way restaurant rooms usually do."
           }
         ]
       },
       {
         "type": "figure",
         "src": img_posts_niwa_everything_except_the_label_images_p3,
-        "alt": "A corner of the dining room in daylight — a set table by the window, a low banquette, a hanging textile panel and the street outside",
+        "alt": "A corner of the dining room in daylight, a set table by the window, a low banquette, a hanging textile panel and the street outside",
         "aspect": "980 / 1307",
         "width": 980,
         "height": 1307
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "Niwa opened in December 2024. Gee runs it with Robin Corbett, Miki Ellis and Stephen Whiteside, a group assembled out of Dachi, Ugly Dumpling and Hānai, and within a year Air Canada enRoute had placed it tenth on its list of Canada’s best new restaurants — the strongest national showing of any room we have written about."
+            "v": "Who's behind it"
           }
         ]
       },
@@ -1288,7 +1675,25 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "None of which required a category. It is a harder way to run a restaurant and a harder thing to explain to somebody deciding where to eat, and the achievement is that enough people have stopped needing the explanation."
+            "v": "Niwa opened in December 2024. Gee runs it with three partners, Robin Corbett, Miki Ellis and Stephen Whiteside, who came out of Dachi, Ugly Dumpling and Hānai between them."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Within a year, Air Canada enRoute placed it tenth on its list of Canada's best new restaurants. That's the strongest national showing of any room we've written about."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "They got there without ever naming a cuisine. It's a harder way to run a restaurant, and a harder thing to explain to somebody deciding where to eat. The achievement is that enough people have stopped needing it explained."
           }
         ]
       },
@@ -1306,13 +1711,13 @@ export const POSTS = [
   {
     "slug": "moltaqa-name-is-the-menu",
     "category": "Restaurant",
-    "title": "The Name Is a Description of the Menu",
+    "title": "The Name Means Meeting Place",
     "crumb": "Moltaqa",
     "date": "2026-05-12",
     "dateLabel": "May 12, 2026",
-    "excerpt": "Moltaqa means a meeting place. Four cuisines meet on its plates, and one pastry makes the whole argument.",
+    "excerpt": "Moltaqa is Arabic for a meeting place. Four cuisines meet on the menu, and the pastilla is where you taste all of them at once.",
     "hero": img_posts_moltaqa_name_is_the_menu_images_hero,
-    "heroAlt": "The dining room at Moltaqa — a pressed-tin ceiling, brass pendant lanterns over a tiled bar, red stools and a low banquette with cushions and plants",
+    "heroAlt": "The dining room at Moltaqa, with a pressed-tin ceiling, brass pendant lanterns over a tiled bar, red stools and a low banquette with cushions and plants",
     "venue": {
       "key": "moltaqa",
       "name": "Moltaqa",
@@ -1329,17 +1734,8 @@ export const POSTS = [
         "type": "p",
         "inline": [
           {
-            "t": "em",
-            "inline": [
-              {
-                "t": "text",
-                "v": "Moltaqa"
-              }
-            ]
-          },
-          {
             "t": "text",
-            "v": " is Arabic for a meeting place: a junction, the spot where things converge. The restaurant’s own website never translates the word. It says instead that this is “a place where people come together over food, culture and authentic flavour,” which is the same sentence with the translation taken out."
+            "v": "Moltaqa is a Moroccan restaurant on Mainland Street in Yaletown, a few minutes' walk from BC Place. The name is Arabic. It means a meeting place, the spot where things come together."
           }
         ]
       },
@@ -1348,20 +1744,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The menu makes the claim more literally than the room does. Moltaqa describes its cooking as Moroccan by way of four traditions: "
-          },
-          {
-            "t": "strong",
-            "inline": [
-              {
-                "t": "text",
-                "v": "Berber, Arab, Andalusian and French"
-              }
-            ]
-          },
+            "v": "The restaurant's own website never actually translates it. It says the place is somewhere people come together over food and culture, which is what the name means anyway."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
           {
             "t": "text",
-            "v": ". That reads like the sort of thing a restaurant writes to sound worldly. It is closer to a syllabus."
+            "v": "The menu is more direct. Moltaqa cooks Moroccan food built out of four traditions: Berber, Arab, Andalusian and French. Plenty of restaurants write a line like that to sound worldly. This one means it literally."
           }
         ]
       },
@@ -1374,11 +1766,11 @@ export const POSTS = [
         "height": 1225
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "Berber cooking is the floor the rest of it stands on — the tagine itself, the couscous, the slow vessels built for a landscape without much fuel. Arab arrivals brought the spice trade and the preserving, which is why a chicken sits under salted lemon and olives rather than under a sauce. Andalusians crossed from Spain after 1492 and brought a pastry tradition and a taste for sweetness inside savoury food. The French, who governed Morocco for forty-four years, left technique behind: the flame, the reduction, the tableside performance."
+            "v": "What to order"
           }
         ]
       },
@@ -1387,24 +1779,42 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Four cuisines, arriving over roughly thirteen centuries, in one country. A meeting place."
+            "v": "The pastilla. It's the one dish that holds the whole idea on a single plate. Pastry thin enough to see through, wrapped around spiced poultry, then dusted with icing sugar and cinnamon."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Sugar on savoury meat sounds wrong until you eat it. That's the part people remember."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Vancouver Magazine gave Moltaqa gold for Best African and Diaspora in 2026, its second year running. It picked out two plates: the chicken pastilla and the flambé rack of lamb. One is Andalusian. The other is French. Both are on a Moroccan menu in Yaletown."
           }
         ]
       },
       {
         "type": "figure",
         "src": img_posts_moltaqa_name_is_the_menu_images_p2,
-        "alt": "An overhead table of Moroccan dishes — a pastilla dusted with icing sugar and cinnamon at the centre, with salads, lentils, bread and saffron couscous around it",
+        "alt": "An overhead table of Moroccan dishes, with a pastilla dusted with icing sugar and cinnamon at the centre and salads, lentils, bread and saffron couscous around it",
         "aspect": "980 / 1226",
         "width": 980,
         "height": 1226
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "The dish that carries all of it at once is the pastilla, which Moltaqa calls Morocco’s most celebrated. Sheets of pastry thin enough to read through, wrapped around spiced poultry, dusted over the top with icing sugar and cinnamon. The pastry is Andalusian. The spicing is Arab. The sugar over savoury meat is the argument the Andalusians brought with them, and it is still the thing that surprises anyone eating one for the first time."
+            "v": "The four cuisines, quickly"
           }
         ]
       },
@@ -1413,7 +1823,43 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "When Vancouver Magazine gave Moltaqa gold for Best African and Diaspora in 2026, its second year running, it singled out two plates: the chicken pastilla and the flambé rack of lamb. One Andalusian, one French, named in the same breath, in a Moroccan restaurant in Yaletown. The list was not making a point about history. It just happened to describe the menu accurately."
+            "v": "First, the Berbers. Theirs is the base, and the tagine comes from there. A tagine is the cone-lidded clay pot and the slow stew that cooks in it, built for a place with little fuel to spare. Couscous is theirs too."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Then Arab traders, who brought the spice and the preserving. That's why the chicken sits under salted lemon and olives instead of a sauce."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "After 1492, Andalusians crossing over from Spain, with pastry and with a taste for sweetness inside savoury food. That's your pastilla."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Last, the French, who governed Morocco for forty-four years and left technique behind. The flame, the reduction, the show at your table. That's your flambé lamb."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Four cuisines, arriving over about thirteen hundred years, in one country. A meeting place."
           }
         ]
       },
@@ -1426,11 +1872,11 @@ export const POSTS = [
         "height": 1312
       },
       {
-        "type": "p",
+        "type": "h2",
         "inline": [
           {
             "t": "text",
-            "v": "The restaurant has been at this for a while. Mimo Bucko opened it in 2018 on West Hastings, in Gastown, and still owns it; it has since moved to Mainland Street, a few minutes’ walk from BC Place. The MICHELIN Guide has recommended it since 2023. The kitchen is entirely halal-certified, grinds its own spice blends from spices imported from Morocco, and pours mint tea at the table in the way that is itself a piece of the same inheritance — a leaf that came up the trade routes, poured in a style that is unmistakably Moroccan and barely two centuries old."
+            "v": "Eight years in"
           }
         ]
       },
@@ -1439,7 +1885,34 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Eight years is long enough to stop being a novelty and not long enough to be taken for granted. What the name promises is not fusion, which is a modern idea about mixing things that were previously apart. It is the older thing: cuisines that met a long time ago, in a place that had no choice about it, and stayed."
+            "v": "Mimo Bucko opened Moltaqa in 2018 on West Hastings, in Gastown, and still owns it. It moved to Mainland Street later. The MICHELIN Guide has recommended it since 2023."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The kitchen is fully halal-certified and grinds its own spice blends from spices brought in from Morocco. Mint tea gets poured at the table, from a height, which is its own small piece of the same history."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Eight years is long enough to stop being the new place and not long enough to be taken for granted."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The name isn't a claim about fusion, either. Fusion is a modern idea about putting separate things together. This is the older version: cuisines that met a long time ago, in a country that didn't get much choice about it, and stayed."
           }
         ]
       },

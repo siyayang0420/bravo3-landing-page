@@ -6,34 +6,50 @@ venue: bar-bravo
 venueIsSubject: true
 hero: images/hero.webp
 heroAlt: A table at Bar Bravo with a glass of white wine, a radicchio salad, a bowl of scallops and slices of raw fish in a bright red sauce
-excerpt: Bar Bravo buys its wine by a rule that sounds like provenance and turns out to be something more interesting.
+excerpt: Bar Bravo only pours wine from wineries within a hundred kilometres of water. The rule turns out to have nothing to do with buying local.
 seo:
   title: "Bar Bravo Vancouver: Seafood and Wine on Fraser Street"
-  description: Bar Bravo pours wine only from wineries within a hundred kilometres of water — from Oregon, Greece and Vancouver Island. The rule is not about local at all.
+  description: Bar Bravo pours wine only from wineries within a hundred kilometres of water, from Oregon to Greece. Here's why the rule works, and what to order on Fraser Street.
 ---
 
-Bar Bravo buys wine by a rule. The winery has to be within a hundred kilometres of water.
+Bar Bravo buys its wine by a rule. The winery has to be within a hundred kilometres of water.
 
-It has the shape of one of those provenance claims that get written on a chalkboard and never examined, and it collapses the moment you look at the list. The bottles come from the Willamette Valley in Oregon, from Greece, from Vancouver Island. Two of those are not local by any definition Vancouver would accept, and the third is a ferry ride. Whatever the rule is doing, it is not shortening the distance between the winery and Fraser Street.
+That sounds like the sort of line a restaurant chalks on a board and hopes nobody checks. So check it. The bottles come from the Willamette Valley in Oregon, from Greece, and from Vancouver Island. Two of those aren't local by any definition Vancouver would accept, and the third is a ferry ride.
 
-It is shortening the distance between the winery and the sea.
+Whatever the rule is doing, it isn't shortening the distance between the winery and Fraser Street.
 
-That is a different argument, and a better one. A restaurant that serves raw oysters, crudo and dry-aged fish is not looking for wine grown nearby. It is looking for wine grown in the same kind of air — coastal, cool, saline enough to sit beside shellfish without either one arguing. Read that way, Oregon and the Aegean and Vancouver Island stop being a scattered list and start being a single idea, applied three times.
+It's shortening the distance between the winery and the sea.
 
-The room applying it is small. Bar Bravo opened on Fraser Street in August 2023, sixty seats in fifteen hundred square feet that had been Ubuntu Canteen before it. Jonathan Merrill works the floor and Jonah Joffe cooks, and they met at an oyster event during the pandemic, which is either a coincidence or the least surprising origin story in the city.
+## Why that works
+
+This is a room that serves raw oysters, dry-aged fish and crudo, which is raw fish dressed and served cold. It isn't looking for wine grown nearby. It's looking for wine grown in the same kind of air: coastal, cool, salty enough to sit next to shellfish without either one arguing.
+
+Read it that way and Oregon, Greece and Vancouver Island stop being a random list. They're one idea, used three times.
 
 ![A full dining room at Bar Bravo, guests seated on bentwood chairs and along the bar, bottles lined up on the shelf behind](images/p1.webp)
 
-The kitchen dry-ages its own fish, in a refrigerator with a glass front. That is a small decision with the same logic as the wine rule underneath it: ageing fish is the sort of work most kitchens do behind a door, and putting it in a lit case turns a technique into a statement about what the room is for.
+The room using it is small. Bar Bravo opened on Fraser Street in August 2023, sixty seats in fifteen hundred square feet that used to be Ubuntu Canteen. Jonathan Merrill works the floor and Jonah Joffe cooks. They met at an oyster event during the pandemic, which is either a coincidence or the least surprising origin story in the city.
 
-The signature is Spencer Gulf hiramasa, which is a kingfish farmed in South Australia — roughly as far from a hundred kilometres of *this* water as a fish can be sent. It looks like a contradiction and it isn't. The rule was never about distance. It was about what belongs next to what, and a fish raised in cold clean water belongs next to wine grown in sight of it, whichever ocean either of them started in.
+## What to order
+
+The Spencer Gulf hiramasa. It's a kingfish farmed in South Australia, which is about as far outside a hundred kilometres of *this* water as a fish can get.
+
+That looks like a contradiction and isn't. The rule was never about distance. It was about what belongs beside what. A fish raised in cold clean water belongs beside wine grown in sight of it, whichever ocean either one started in.
+
+The kitchen also dry-ages its own fish, in a fridge with a glass front. Ageing fish is work most kitchens do behind a door. Putting it in a lit case turns a technique into a statement about what the room is for.
 
 ![Slices of raw fish laid out in a shallow bowl of red broth dotted with green sauce, a cook's hand placing the last piece](images/p2.webp)
 
-There is one deliberate exception, and it is the most hospitable thing on the menu: a pasta special, changed nightly, for whoever has been brought along by friends and does not eat seafood. A restaurant this committed to a single idea could reasonably decline to feed that person. This one cooks them something fresh instead.
+## The exception, which is the nicest thing on the menu
 
-![An overhead view of a shared table — raw fish on a floral plate, toasts topped with cured fish, sliced sourdough and a bowl of prawns, with two people reaching in](images/p3.webp)
+There's a pasta special, changed nightly, for whoever got dragged along by friends and doesn't eat seafood.
 
-The recognition has followed. Vancouver Magazine named it Best New Restaurant in 2024 and gave it gold for seafood in 2025, and the MICHELIN Guide lists it as Recommended. None of that changed the wine rule, which is the point of having one.
+A restaurant this committed to one idea could fairly tell that person to order a salad. This one cooks them something fresh instead.
+
+![An overhead view of a shared table, raw fish on a floral plate, toasts topped with cured fish, sliced sourdough and a bowl of prawns, with two people reaching in](images/p3.webp)
+
+The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, gold for seafood in 2025, Recommended in the MICHELIN Guide.
+
+None of it changed the wine rule. That's the point of having one.
 
 The room joined Bravo in August, alongside restaurants across Metro Vancouver.
