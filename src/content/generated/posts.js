@@ -32,6 +32,7 @@ import img_posts_maxs_table_kavita_open_kitchen_images_p1 from '../../../content
 import img_posts_maxs_table_kavita_open_kitchen_images_p2 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p2.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_p3 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p3.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_p4 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p4.webp';
+import img_posts_maxs_table_kavita_open_kitchen_images_p5 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p5.webp';
 import img_posts_moltaqa_name_is_the_menu_images_hero from '../../../content/posts/moltaqa-name-is-the-menu/images/hero.webp';
 import img_posts_moltaqa_name_is_the_menu_images_p1 from '../../../content/posts/moltaqa-name-is-the-menu/images/p1.webp';
 import img_posts_moltaqa_name_is_the_menu_images_p2 from '../../../content/posts/moltaqa-name-is-the-menu/images/p2.webp';
@@ -131,14 +132,6 @@ export const POSTS = [
         "height": 1307
       },
       {
-        "type": "figure",
-        "src": img_posts_maxs_table_kavita_open_kitchen_images_p3,
-        "alt": "Two tandoor-cooked lamb chops on a pale plate with salad leaves, edible flowers and two dots of green purée",
-        "aspect": "980 / 735",
-        "width": 980,
-        "height": 735
-      },
-      {
         "type": "p",
         "inline": [
           {
@@ -155,6 +148,14 @@ export const POSTS = [
             "v": "Which is roughly where the conversation stopped being about dinner."
           }
         ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_maxs_table_kavita_open_kitchen_images_p3,
+        "alt": "The table at Kavita mid-meal — a basket of flatbread, a chutney-topped naan, the plate of lamb chops and a small bowl of pickled onion, with hands reaching across",
+        "aspect": "980 / 735",
+        "width": 980,
+        "height": 735
       },
       {
         "type": "figure",
@@ -199,6 +200,14 @@ export const POSTS = [
             "v": "Kavita is named after Tondvalkar’s late mother. The word means poetry — script, he says, or the telling of a story. He cooked at Gaggan and at Gaa in Bangkok before coming back to Vancouver and opening a room of his own in October of last year, and inside twelve months it was placed ninety-sixth on Canada’s 100 Best Restaurants and given Vancouver Magazine’s gold for Best Indian."
           }
         ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_maxs_table_kavita_open_kitchen_images_p5,
+        "alt": "Charred eggplant under piped white purée with wild rice and nasturtium leaves, in a wide white bowl",
+        "aspect": "980 / 1307",
+        "width": 980,
+        "height": 1307
       },
       {
         "type": "p",

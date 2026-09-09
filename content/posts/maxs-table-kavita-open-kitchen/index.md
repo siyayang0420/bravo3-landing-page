@@ -25,11 +25,11 @@ An open kitchen is not really about the view. It is a decision to be watched. Ev
 
 ![Guests seated along the counter at Kavita while a cook in an apron works in front of them, pendant lights and curved bottle shelves behind](images/p2.webp)
 
-![Two tandoor-cooked lamb chops on a pale plate with salad leaves, edible flowers and two dots of green purée](images/p3.webp)
-
 The tandoor is where that gets sharpest. Chef and owner Tushar Tondvalkar sent out lamb chops marinated in Bengali five-spice and garam masala and finished in the tandoor, which is a piece of equipment with almost no margin in it. The heat is fierce and the window is narrow, and nothing about the decision to pull the meat can be delegated to a timer. Someone stands there and judges it, repeatedly, all evening, and at Kavita they do it while people watch.
 
 Which is roughly where the conversation stopped being about dinner.
+
+![The table at Kavita mid-meal — a basket of flatbread, a chutney-topped naan, the plate of lamb chops and a small bowl of pickled onion, with hands reaching across](images/p3.webp)
 
 ![Tushar Tondvalkar standing at the table in conversation with Max So and Jacob Ung, a camera tripod at the edge of the frame](images/p4.webp)
 
@@ -40,5 +40,7 @@ It is a good analogy, and it is worth saying where it stops. You can ask a cook 
 The open kitchen is the version of this that actually works, which may be why it struck Max as worth remarking on. You are not being shown a report about the cooking. You are being shown the cooking.
 
 Kavita is named after Tondvalkar’s late mother. The word means poetry — script, he says, or the telling of a story. He cooked at Gaggan and at Gaa in Bangkok before coming back to Vancouver and opening a room of his own in October of last year, and inside twelve months it was placed ninety-sixth on Canada’s 100 Best Restaurants and given Vancouver Magazine’s gold for Best Indian.
+
+![Charred eggplant under piped white purée with wild rice and nasturtium leaves, in a wide white bowl](images/p5.webp)
 
 Asked how that happened so quickly, he did not talk about technique. He credited the kitchen and the front-of-house team, which is the sort of answer that can sound like modesty and in this case describes the mechanism exactly. In a room where the work is visible, the people doing it are the quality control. There is nowhere for a weak night to hide.
