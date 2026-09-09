@@ -70,6 +70,7 @@ export const POSTS = [
       "key": "kavita",
       "name": "Kavita",
       "logo": img_venues_images_kavita_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/restaurant-kavita",
       "street": "250 W 3rd Ave",
       "locality": "Vancouver",
       "mapUrl": "https://www.google.com/maps/place/Restaurant+Kavita/data=!4m2!3m1!1s0x548673c81e296bef:0x6b586749d3dffc92",
