@@ -28,7 +28,7 @@ Which suits this place, because Kavita is a person.
 
 ## The name is a person
 
-Kavita was his mother’s name. She’s gone now, and when he finally opened a place of his own he put her name on the front instead of his. The word means poetry, too.
+Kavita was his mother’s name. When he finally opened a place of his own he put her name on the front instead of his. The word means poetry, too.
 
 He’s Tushar Tondvalkar, and he’s from Mumbai. He cooked at Gaggan and Gaa in Bangkok, both Michelin-starred, then came here and worked through Blue Water Cafe, Bauhaus and the Fish House in Stanley Park. He ran the kitchen at Mumbai Local before this. So Kavita is the first room that’s really his, and he gave it to her.
 
