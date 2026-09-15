@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import Button from './Button.jsx';
 import AskStage2 from './AskStage2.jsx';
 import { useSceneProgress, track, smooth } from '../lib/useSceneProgress.js';
@@ -42,15 +42,10 @@ export default function Ask() {
   const p = useSceneProgress('.ask-scene');
   const stageRef = useRef(null);
   const flyerRef = useRef(null);
-  const [reduced, setReduced] = useState(false);
 
   const out = track(p, ...FADE1);
   const into = track(p, ...FADE2);
   const morph = smooth(track(p, ...MORPH));
-
-  useEffect(() => {
-    setReduced(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false);
-  }, []);
 
   /* Shared element: rather than animating either slot, lerp a flyer between the
      two slots' live rects. Both endpoints are laid out by the same responsive
