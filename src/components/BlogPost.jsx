@@ -2,6 +2,7 @@ import Nav from './Nav.jsx';
 import Footer from './Footer.jsx';
 import BravoMark from './BravoMark.jsx';
 import VenueReviews from './VenueReviews.jsx';
+import VideoEmbed from './VideoEmbed.jsx';
 import chevron from '../assets/blog/chevron.svg';
 import { EXTERNAL_LINK } from '../lib/links.js';
 import { categoryUrl } from '../lib/posts.js';
@@ -142,6 +143,9 @@ export default function BlogPost({ post }) {
                   decoding="async"
                 />
               );
+            }
+            if (block.type === 'video') {
+              return <VideoEmbed key={block.videoId} {...block} />;
             }
             if (block.type === 'h2') {
               return <h2 className="post__subhead" key={i}><Inline nodes={block.inline} /></h2>;

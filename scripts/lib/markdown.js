@@ -55,6 +55,54 @@ function parseImageOptions(title, file, token) {
   return out;
 }
 
+/* youtu.be/<id> and youtube.com/watch?v=<id> only. Returns the 11-char id, or
+   null for any other link — a lone link that is not YouTube stays an ordinary
+   paragraph, which is what keeps existing posts (e.g. the Wren Cafe store link
+   in AI Sessions Vol. 3) rendering exactly as they do now. */
+const YOUTUBE_ID = /^[A-Za-z0-9_-]{11}$/;
+function youTubeId(href) {
+  if (!href) return null;
+  let url;
+  try {
+    url = new URL(href);
+  } catch {
+    return null;
+  }
+  const host = url.hostname.replace(/^www\./, '');
+  /* the ?si=... share suffix rides along on every "Copy link" and must not end
+     up in the embed URL */
+  const id = host === 'youtu.be'
+    ? url.pathname.slice(1)
+    : host === 'youtube.com' && url.pathname === '/watch'
+      ? url.searchParams.get('v')
+      : null;
+  return id && YOUTUBE_ID.test(id) ? id : null;
+}
+
+/* "poster: images/p1.webp" — the same title-slot convention images already use
+   for aspect/focus, so there is one way to pass options, not two. */
+function parseVideoOptions(title, file, token) {
+  const out = {};
+  for (const part of (title ?? '').split(';')) {
+    const trimmed = part.trim();
+    if (!trimmed) continue;
+    const [rawKey, ...rest] = trimmed.split(':');
+    const key = rawKey.trim();
+    const value = rest.join(':').trim();
+    if (key === 'poster') {
+      out.poster = value;
+    } else {
+      throw new Error(`${where(file, token)}: unknown video option "${key}" — supported: poster`);
+    }
+  }
+  if (!out.poster) {
+    throw new Error(
+      `${where(file, token)}: a YouTube link needs a poster image — write it as [label](url "poster: images/p1.webp")`,
+    );
+  }
+  return out;
+}
+
 function parseInline(token, file) {
   const stack = [{ inline: [] }];
   const push = (node) => stack[stack.length - 1].inline.push(node);
@@ -116,6 +164,16 @@ function parseInline(token, file) {
 const isLoneImage = (inline) =>
   inline.children?.length === 1 && inline.children[0].type === 'image';
 
+/* A paragraph whose entire content is one link — [text](href) on its own line.
+   Exactly three inline tokens: link_open, text, link_close. Wrapping it in
+   **bold** adds a strong_open/strong_close pair and this stops matching, which
+   is deliberate: a video is a block, not a phrase inside a sentence. */
+const isLoneLink = (inline) =>
+  inline.children?.length === 3
+  && inline.children[0].type === 'link_open'
+  && inline.children[1].type === 'text'
+  && inline.children[2].type === 'link_close';
+
 export function parseMarkdown(source, file, bodyStartLine = 0) {
   lineOffset = bodyStartLine;
   const tokens = md.parse(source, {});
@@ -126,6 +184,27 @@ export function parseMarkdown(source, file, bodyStartLine = 0) {
 
     if (token.type === 'paragraph_open') {
       const inline = tokens[i + 1];
+      const videoId = isLoneLink(inline) ? youTubeId(inline.children[0].attrGet('href')) : null;
+      if (videoId) {
+        const link = inline.children[0];
+        const label = inline.children[1].content?.trim();
+        if (!label) {
+          throw new Error(
+            `${where(file, token)}: video link needs text — it becomes the poster's alt text and the play button's name`,
+          );
+        }
+        blocks.push({
+          type: 'video',
+          provider: 'youtube',
+          videoId,
+          href: link.attrGet('href'),
+          label,
+          line: (token.map?.[0] ?? 0) + 1 + lineOffset,
+          ...parseVideoOptions(link.attrGet('title'), file, token),
+        });
+        i += 2;
+        continue;
+      }
       if (isLoneImage(inline)) {
         const img = inline.children[0];
         const src = img.attrGet('src');

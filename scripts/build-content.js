@@ -3,7 +3,7 @@ import path from 'node:path';
 import { readPosts, readVenues, byDateDesc } from './lib/read.js';
 import { validatePost, validateVenue } from './lib/validate.js';
 import { parseMarkdown, inlineToText } from './lib/markdown.js';
-import { resolveFigure, assertOgCard, measure } from './lib/images.js';
+import { resolveFigure, resolveVideo, assertOgCard, measure } from './lib/images.js';
 import { emitPosts } from './lib/emit-posts.js';
 import { emitVenues } from './lib/emit-venues.js';
 import { emitPostHtml, emitIndexHtml } from './lib/emit-html.js';
@@ -60,9 +60,11 @@ export function buildContent({ silent = false } = {}) {
 
       const blocks = parseMarkdown(post.markdown, post.file, post.bodyStartLine);
 
-      const content = blocks.map((block) =>
-        block.type === 'figure' ? resolveFigure(block, post.dir, post.file) : block,
-      );
+      const content = blocks.map((block) => {
+        if (block.type === 'figure') return resolveFigure(block, post.dir, post.file);
+        if (block.type === 'video') return resolveVideo(block, post.dir, post.file);
+        return block;
+      });
 
       const firstParagraph = content.find((b) => b.type === 'p');
       const ogImageFile = fm.seo?.ogImage ?? `blog-hero-${post.slug}.jpg`;

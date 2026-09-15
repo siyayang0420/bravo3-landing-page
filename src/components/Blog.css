@@ -139,6 +139,72 @@ a.post__crumb:hover { opacity: .6; }
 }
 .post__hero { aspect-ratio: 980 / 599; }
 
+/* Video episode. The frame is 16:9 whatever the poster's own ratio, so the
+   player and the still it replaces occupy exactly the same box and nothing
+   shifts when someone presses play. */
+.post__video {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background: var(--ds-black, #111);
+}
+.post__video-frame { display: block; width: 100%; height: 100%; border: 0; }
+
+.post__video-play {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+.post__video-poster { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* The play glyph: a white rounded rectangle with a triangle cut into it. */
+.post__video-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 68px;
+  height: 48px;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  background: rgba(17, 17, 17, .78);
+  transition: background .15s ease, transform .15s ease;
+}
+.post__video-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-42%, -50%);
+  border-style: solid;
+  border-width: 9px 0 9px 15px;
+  border-color: transparent transparent transparent #fff;
+}
+.post__video-play:hover .post__video-icon { background: rgba(17, 17, 17, .92); transform: translate(-50%, -50%) scale(1.06); }
+.post__video-play:focus-visible { outline: 3px solid var(--ds-black, #111); outline-offset: 3px; }
+
+/* Named for screen readers without showing on screen. */
+.post__video-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .post__video-icon { transition: none; }
+  .post__video-play:hover .post__video-icon { transform: translate(-50%, -50%); }
+}
+
 /* Venue credit — Figma node 5893:16639. `width: auto` opts out of the
    `.post > *` full-width rule so the block hugs its content. */
 .venue {

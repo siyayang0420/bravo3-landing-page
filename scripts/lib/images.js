@@ -54,6 +54,25 @@ export function resolveFigure(block, dir, describedAs) {
 }
 
 /*
+ * Resolve a video block's poster.
+ *
+ * The frame is 16:9 because that is what the player renders into, regardless of
+ * the poster's own ratio — the same reasoning as the hero's fixed 980/599. The
+ * poster is measured anyway so a missing or unreadable file fails the build
+ * against the line the author wrote, exactly like a figure.
+ */
+export function resolveVideo(block, dir, describedAs) {
+  const abs = path.join(dir, block.poster);
+  measure(abs, `${describedAs}:${block.line}: video poster "${block.poster}"`);
+  return {
+    ...block,
+    posterAbs: abs,
+    width: COLUMN,
+    height: Math.round((COLUMN * 9) / 16),
+  };
+}
+
+/*
  * The og:image is produced by `npm run images` (sips — macOS only), so it can't
  * be generated during a portable build. Assert it exists instead: shipping a
  * post whose social preview 404s is the mistake an explicit script invites.

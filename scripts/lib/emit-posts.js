@@ -80,9 +80,9 @@ export function emitPosts(posts, venues) {
     hero: importFor(p.heroAbs),
     heroAlt: p.frontmatter.heroAlt,
     venue: p.frontmatter.venue ? venueValue(p.frontmatter.venue) : undefined,
-    content: p.content.map((block) =>
-      block.type === 'figure'
-        ? {
+    content: p.content.map((block) => {
+      if (block.type === 'figure') {
+        return {
           type: 'figure',
           src: importFor(block.abs),
           alt: block.alt,
@@ -90,9 +90,21 @@ export function emitPosts(posts, venues) {
           focus: block.focus,
           width: block.width,
           height: block.height,
-        }
-        : block,
-    ),
+        };
+      }
+      if (block.type === 'video') {
+        return {
+          type: 'video',
+          videoId: block.videoId,
+          href: block.href,
+          label: block.label,
+          poster: importFor(block.posterAbs),
+          width: block.width,
+          height: block.height,
+        };
+      }
+      return block;
+    }),
   }));
 
   /* serialize first so every importFor() has run and `imports` is complete */
