@@ -155,7 +155,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Kavita was his mother’s name. She’s gone now, and when he finally opened a place of his own he put her name on the front instead of his. The word means poetry, too."
+            "v": "Kavita was his mother’s name. When he finally opened a place of his own he put her name on the front instead of his. The word means poetry, too."
           }
         ]
       },
