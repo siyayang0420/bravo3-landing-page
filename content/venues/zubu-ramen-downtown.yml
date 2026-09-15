@@ -1,0 +1,27 @@
+name: ZUBU Ramen - Downtown
+logo: images/zubu-ramen-downtown-logo.webp
+bravoUrl: https://www.bravoup.ca/store/zubu-ramen-downtown
+street: 869 Hornby St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/ZUBU+Ramen+-+Downtown/data=!4m2!3m1!1s0x548671e772f9f2bb:0x9504961a406bca7c
+site: byzubu.com
+siteUrl: https://byzubu.com/ramen/
+# Identifies the venue to the Google Places API. Supplied by Siya, 2026-09-15,
+# checked two ways: grepped against every venue record (no collision), and decoded —
+# it encodes exactly the CID pair in the Maps URL above
+# (0x548671e772f9f2bb:0x9504961a406bca7c). No review content is stored.
+#
+# NOTE: the FIRST Maps URL supplied was the Metrotown branch
+# (0x548677de6e5416f5:0xd3b9dc93123922f), which did NOT match this ID. Nothing was
+# written until Siya confirmed Downtown was correct and sent the matching URL.
+# ZUBU Ramen - Metrotown is a different venue and would need its own record and ID.
+#
+# site/siteUrl supplied by Siya, 2026-09-15. Independently confirmed: the official
+# site's downtown page states the same street address she gave. That page also lists
+# opening hours; they are deliberately NOT recorded here — hours are never stored or
+# published as structured operational data.
+googlePlaceId: ChIJu_L5cudxhlQRfMprQBqWBJU
+schema:
+  type: Restaurant
+  region: BC
+  country: CA

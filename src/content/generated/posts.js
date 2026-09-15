@@ -33,6 +33,8 @@ import img_posts_maxs_table_kavita_open_kitchen_images_p2 from '../../../content
 import img_posts_maxs_table_kavita_open_kitchen_images_p3 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p3.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_p4 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p4.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_p5 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p5.webp';
+import img_posts_maxs_table_zubu_ramen_ai_order_images_hero from '../../../content/posts/maxs-table-zubu-ramen-ai-order/images/hero.webp';
+import img_posts_maxs_table_zubu_ramen_ai_order_images_p1 from '../../../content/posts/maxs-table-zubu-ramen-ai-order/images/p1.webp';
 import img_posts_moltaqa_name_is_the_menu_images_hero from '../../../content/posts/moltaqa-name-is-the-menu/images/hero.webp';
 import img_posts_moltaqa_name_is_the_menu_images_p1 from '../../../content/posts/moltaqa-name-is-the-menu/images/p1.webp';
 import img_posts_moltaqa_name_is_the_menu_images_p2 from '../../../content/posts/moltaqa-name-is-the-menu/images/p2.webp';
@@ -55,8 +57,66 @@ import img_venues_images_niwa_logo from '../../../content/venues/images/niwa-log
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
 import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
+import img_venues_images_zubu_ramen_downtown_logo from '../../../content/venues/images/zubu-ramen-downtown-logo.webp';
 
 export const POSTS = [
+  {
+    "slug": "maxs-table-zubu-ramen-ai-order",
+    "category": "Max's Table",
+    "title": "AI Ordered My Lunch",
+    "crumb": "Zubu Ramen",
+    "date": "2026-09-10",
+    "dateLabel": "September 10, 2026",
+    "excerpt": "Max stood at the counter at Zubu Ramen downtown and let the assistant phone the order in.",
+    "hero": img_posts_maxs_table_zubu_ramen_ai_order_images_hero,
+    "heroAlt": "Max So at the counter at Zubu Ramen Downtown, grinning at the camera while a member of staff takes a phone order behind him, under the caption AI ORDERED MY LUNCH TODAY",
+    "venue": {
+      "key": "zubu-ramen-downtown",
+      "name": "ZUBU Ramen - Downtown",
+      "logo": img_venues_images_zubu_ramen_downtown_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/zubu-ramen-downtown",
+      "street": "869 Hornby St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/ZUBU+Ramen+-+Downtown/data=!4m2!3m1!1s0x548671e772f9f2bb:0x9504961a406bca7c",
+      "site": "byzubu.com",
+      "siteUrl": "https://byzubu.com/ramen/"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Most people's AI lives on a screen. You type at it, it types back, and that's the whole relationship. Max wanted to know what happens when it has to do something out here instead, with a real person on the other end of the line. So he had it phone Zubu Ramen downtown and order his lunch. Let's see how that goes."
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "videoId": "WuvGjA9s_uY",
+        "href": "https://youtu.be/WuvGjA9s_uY",
+        "label": "Watch the episode on YouTube",
+        "poster": img_posts_maxs_table_zubu_ramen_ai_order_images_p1,
+        "width": 980,
+        "height": 551
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "a",
+            "href": "https://www.linkedin.com/feed/update/urn:li:activity:7505672484374024194/",
+            "inline": [
+              {
+                "t": "text",
+                "v": "LinkedIn link here"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   {
     "slug": "maxs-table-kavita-open-kitchen",
     "category": "Max's Table",

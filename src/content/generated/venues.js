@@ -17,6 +17,7 @@ export const VENUE_PLACES = {
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
   "sprezzatura": { name: "Sprezzatura Restaurant", googlePlaceId: "ChIJCU7GmHVzhlQRVCX3eeeGIqo" },
   "wren-cafe": { name: "Wren Cafe", googlePlaceId: "ChIJPVtgMgBzhlQRMJ3LT4cv2gs" },
+  "zubu-ramen-downtown": { name: "ZUBU Ramen - Downtown", googlePlaceId: "ChIJu_L5cudxhlQRfMprQBqWBJU" },
 };
 
 /** @returns {string | undefined} the Google Place ID, if this venue has one */
