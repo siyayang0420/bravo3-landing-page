@@ -147,6 +147,7 @@ venueIsSubject:   # conditional — only with `venue`; true when the venue IS th
 draft:            # optional  — omit to publish; `true` to hold back
 hero:             # required  — images/hero.webp
 heroAlt:          # required  — describes the hero photo
+heroInArticle:    # optional  — `false` to keep the hero off the post page (still the card + social image)
 excerpt:          # optional  — defaults to the first paragraph
 seo:
   title:          # optional  — only to override the derived title
@@ -181,6 +182,7 @@ Apostrophes, em dashes and accented characters need no quoting and are preserved
 | `draft` | optional | Omit to publish. `true` keeps the post out of `sitemap.xml` and the blog-index JSON-LD, and sets `robots: noindex, follow`. The page still builds and still shows on the blog index, so you can review it. Publishing = deleting this line. |
 | `hero` | required | Always `images/hero.webp`. Displayed in a fixed 980×599 frame and centre-cropped, so faces near the edges may be trimmed. |
 | `heroAlt` | required | Describes the hero photo. Also the default `og:image:alt`. |
+| `heroInArticle` | optional | Omit to show the hero at the top of the post. `false` leaves it off the page while it still serves as the blog-index card image, the social card source and `og:image:alt`. Use when the first body image would repeat it — a video episode whose poster is the same frame. Any value other than `true`/`false` fails the build. |
 | `excerpt` | optional | The blog-index card summary, clamped to two lines. Defaults to the first paragraph, which is usually too long — write one sentence. |
 | `seo.title` | optional | Overrides the `<title>`, `og:title`, `twitter:title` and adds `alternativeHeadline`. Use for a search-facing title unlike the editorial one. **When omitted**, `<title>` is `"<title> — Bravo Blog"` and the social title is `title`. When present it is used verbatim, with no suffix. |
 | `seo.description` | required | The `<meta name="description">`. One or two sentences. |

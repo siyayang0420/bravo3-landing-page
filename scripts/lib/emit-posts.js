@@ -79,6 +79,8 @@ export function emitPosts(posts, venues) {
     excerpt: p.excerpt,
     hero: importFor(p.heroAbs),
     heroAlt: p.frontmatter.heroAlt,
+    /* only the opt-out is emitted, like `draft` — the default is not a value */
+    heroInArticle: p.frontmatter.heroInArticle === false ? false : undefined,
     venue: p.frontmatter.venue ? venueValue(p.frontmatter.venue) : undefined,
     content: p.content.map((block) => {
       if (block.type === 'figure') {

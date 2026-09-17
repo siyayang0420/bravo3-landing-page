@@ -99,14 +99,19 @@ export default function BlogPost({ post }) {
             <span className="post__crumb" aria-current="page">{post.crumb}</span>
           </nav>
 
-          <img
-            className="post__hero"
-            src={post.hero}
-            alt={post.heroAlt}
-            width="980"
-            height="599"
-            decoding="async"
-          />
+          {/* `heroInArticle: false` keeps the hero as the card and social image
+              but leaves it off the page — for a post whose first body image
+              (a video poster, say) would otherwise repeat it. */}
+          {post.heroInArticle !== false && (
+            <img
+              className="post__hero"
+              src={post.hero}
+              alt={post.heroAlt}
+              width="980"
+              height="599"
+              decoding="async"
+            />
+          )}
 
           {/* Everything the venue block knows about the place, then the rule
               that opens the article. <VenueReviews> renders nothing when the

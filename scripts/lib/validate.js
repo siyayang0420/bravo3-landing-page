@@ -34,6 +34,9 @@ export function validatePost(post, { categories, venues }) {
   required(fm.date, 'date', file);
   required(fm.hero, 'hero', file);
   required(fm.heroAlt, 'heroAlt', file);
+  if (fm.heroInArticle !== undefined && typeof fm.heroInArticle !== 'boolean') {
+    throw new Error(`${file}: heroInArticle must be true or false, got "${fm.heroInArticle}"`);
+  }
 
   /* js-yaml parses an unquoted 2026-08-08 into a Date; either form is fine to
      author, but downstream wants the ISO string. */
