@@ -3,10 +3,11 @@ title: AI Ordered My Lunch
 crumb: Zubu Ramen
 date: 2026-09-10
 category: Max's Table
-venue: zubu-ramen-downtown
-venueIsSubject: true
+# venue: zubu-ramen-downtown
+# venueIsSubject: true
 hero: images/hero.webp
-heroAlt: Max So at the counter at Zubu Ramen Downtown, grinning at the camera while a member of staff takes a phone order behind him, under the caption AI ORDERED MY LUNCH TODAY
+heroAlt: Max So in a Bravo T-shirt at a takeout counter, pointing at a phone that shows an AI assistant calling a restaurant, under the headline Can AI Call for Takeout?
+heroInArticle: false
 excerpt: Max stood at the counter at Zubu Ramen downtown and let the assistant phone the order in.
 seo:
   title: "Max's Table: AI Orders Lunch at Zubu Ramen Downtown"

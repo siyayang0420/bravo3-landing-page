@@ -57,7 +57,6 @@ import img_venues_images_niwa_logo from '../../../content/venues/images/niwa-log
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
 import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
-import img_venues_images_zubu_ramen_downtown_logo from '../../../content/venues/images/zubu-ramen-downtown-logo.webp';
 
 export const POSTS = [
   {
@@ -69,18 +68,8 @@ export const POSTS = [
     "dateLabel": "September 10, 2026",
     "excerpt": "Max stood at the counter at Zubu Ramen downtown and let the assistant phone the order in.",
     "hero": img_posts_maxs_table_zubu_ramen_ai_order_images_hero,
-    "heroAlt": "Max So at the counter at Zubu Ramen Downtown, grinning at the camera while a member of staff takes a phone order behind him, under the caption AI ORDERED MY LUNCH TODAY",
-    "venue": {
-      "key": "zubu-ramen-downtown",
-      "name": "ZUBU Ramen - Downtown",
-      "logo": img_venues_images_zubu_ramen_downtown_logo,
-      "bravoUrl": "https://www.bravoup.ca/store/zubu-ramen-downtown",
-      "street": "869 Hornby St",
-      "locality": "Vancouver",
-      "mapUrl": "https://www.google.com/maps/place/ZUBU+Ramen+-+Downtown/data=!4m2!3m1!1s0x548671e772f9f2bb:0x9504961a406bca7c",
-      "site": "byzubu.com",
-      "siteUrl": "https://byzubu.com/ramen/"
-    },
+    "heroAlt": "Max So in a Bravo T-shirt at a takeout counter, pointing at a phone that shows an AI assistant calling a restaurant, under the headline Can AI Call for Takeout?",
+    "heroInArticle": false,
     "content": [
       {
         "type": "p",
