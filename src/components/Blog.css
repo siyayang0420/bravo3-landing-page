@@ -59,13 +59,19 @@
   color: var(--ds-white);
 }
 
-/* Rows of up to three cards, 64px apart; the last short row stretches to fill.
-   Each card is `flex: 1 0 0`, so a row of one spans full width, two go halves,
-   three go thirds — the design's 3/2/1 pattern falls out of the row size. */
+/* Rows of up to three cards, 64px apart. Every card is exactly one third of
+   the row — the basis subtracts the two 32px gaps — so a short last row (one
+   or two cards) keeps the same tile size as a full one instead of stretching. */
 .blog__rows { display: flex; flex-direction: column; gap: 64px; padding: 0 var(--gutter); }
 .blog__row { display: flex; gap: 32px; align-items: flex-start; }
 
-.blog-card { flex: 1 0 0; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.blog-card {
+  flex: 0 0 calc((100% - 2 * 32px) / 3);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
 .blog-card__img {
   display: block;
   width: 100%;
@@ -291,6 +297,7 @@ a.post__crumb:hover { opacity: .6; }
 @media (max-width: 700px) {
   /* stack the row so each card is full width rather than a sliver */
   .blog__row { flex-direction: column; gap: 32px; }
+  .blog-card { flex-basis: auto; }
   .blog-card__img { height: 62vw; }
 }
 
