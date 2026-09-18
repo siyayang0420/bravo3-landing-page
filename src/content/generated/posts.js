@@ -35,6 +35,8 @@ import img_posts_maxs_table_kavita_open_kitchen_images_p4 from '../../../content
 import img_posts_maxs_table_kavita_open_kitchen_images_p5 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p5.webp';
 import img_posts_maxs_table_zubu_ramen_ai_order_images_hero from '../../../content/posts/maxs-table-zubu-ramen-ai-order/images/hero.webp';
 import img_posts_maxs_table_zubu_ramen_ai_order_images_p1 from '../../../content/posts/maxs-table-zubu-ramen-ai-order/images/p1.webp';
+import img_posts_maxs_table_zubu_ramen_robots_images_hero from '../../../content/posts/maxs-table-zubu-ramen-robots/images/hero.webp';
+import img_posts_maxs_table_zubu_ramen_robots_images_p1 from '../../../content/posts/maxs-table-zubu-ramen-robots/images/p1.webp';
 import img_posts_moltaqa_name_is_the_menu_images_hero from '../../../content/posts/moltaqa-name-is-the-menu/images/hero.webp';
 import img_posts_moltaqa_name_is_the_menu_images_p1 from '../../../content/posts/moltaqa-name-is-the-menu/images/p1.webp';
 import img_posts_moltaqa_name_is_the_menu_images_p2 from '../../../content/posts/moltaqa-name-is-the-menu/images/p2.webp';
@@ -59,6 +61,48 @@ import img_venues_images_sprezzatura_logo from '../../../content/venues/images/s
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
 
 export const POSTS = [
+  {
+    "slug": "maxs-table-zubu-ramen-robots",
+    "category": "Max's Table",
+    "title": "Will a Robot Replace Your Server?",
+    "crumb": "Zubu Ramen",
+    "date": "2026-09-15",
+    "dateLabel": "September 15, 2026",
+    "excerpt": "AI has turned up nearly everywhere this year. A restaurant is a strange place for it, so Max asked the man who founded Zubu Ramen what he actually thinks.",
+    "hero": img_posts_maxs_table_zubu_ramen_robots_images_hero,
+    "heroAlt": "Max So and Tim Yu of Zubu Ramen talking across a table by the window, plants and daylight behind them, under the question Will AI Robot Replace Servers? Or Chefs??",
+    "heroInArticle": false,
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "AI has turned up nearly everywhere this year. A restaurant is a strange place for it, though. Eating out runs on people: someone reads the room, notices you're in a hurry, tells you the special is actually worth it tonight. That part is hard to hand over."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "So Max went to see Tim Yu, who founded Zubu Ramen in 2020, and asked him straight out. Would a robot ever replace the servers? Would it replace the chefs?"
+          }
+        ]
+      },
+      {
+        "type": "video",
+        "videoId": "FykpEW5GPAA",
+        "href": "https://youtube.com/shorts/FykpEW5GPAA",
+        "label": "Watch the episode on YouTube",
+        "poster": img_posts_maxs_table_zubu_ramen_robots_images_p1,
+        "portrait": true,
+        "width": 980,
+        "height": 551
+      }
+    ]
+  },
   {
     "slug": "maxs-table-zubu-ramen-ai-order",
     "category": "Max's Table",
@@ -86,6 +130,7 @@ export const POSTS = [
         "href": "https://youtu.be/WuvGjA9s_uY",
         "label": "Watch the episode on YouTube",
         "poster": img_posts_maxs_table_zubu_ramen_ai_order_images_p1,
+        "portrait": true,
         "width": 980,
         "height": 551
       },
