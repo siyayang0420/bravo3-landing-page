@@ -101,6 +101,7 @@ export function emitPosts(posts, venues) {
           href: block.href,
           label: block.label,
           poster: importFor(block.posterAbs),
+          portrait: block.portrait,
           width: block.width,
           height: block.height,
         };

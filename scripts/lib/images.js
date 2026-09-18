@@ -63,12 +63,16 @@ export function resolveFigure(block, dir, describedAs) {
  */
 export function resolveVideo(block, dir, describedAs) {
   const abs = path.join(dir, block.poster);
-  measure(abs, `${describedAs}:${block.line}: video poster "${block.poster}"`);
+  const intrinsic = measure(abs, `${describedAs}:${block.line}: video poster "${block.poster}"`);
   return {
     ...block,
     posterAbs: abs,
     width: COLUMN,
     height: Math.round((COLUMN * 9) / 16),
+    /* A Short's poster is taller than it is wide. The frame stays 16:9 — the
+       player letterboxes a Short anyway — so the poster must be contained
+       rather than cropped, or a cover's own title and captions get cut off. */
+    portrait: intrinsic.height > intrinsic.width || undefined,
   };
 }
 

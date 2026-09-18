@@ -55,7 +55,10 @@ function parseImageOptions(title, file, token) {
   return out;
 }
 
-/* youtu.be/<id> and youtube.com/watch?v=<id> only. Returns the 11-char id, or
+/* youtu.be/<id>, youtube.com/watch?v=<id> and youtube.com/shorts/<id>. A Short
+   embeds at the same /embed/<id> path as any other video, so the id is all the
+   player needs — the URL form the author pasted does not matter downstream.
+   Returns the 11-char id, or
    null for any other link — a lone link that is not YouTube stays an ordinary
    paragraph, which is what keeps existing posts (e.g. the Wren Cafe store link
    in AI Sessions Vol. 3) rendering exactly as they do now. */
@@ -71,11 +74,14 @@ function youTubeId(href) {
   const host = url.hostname.replace(/^www\./, '');
   /* the ?si=... share suffix rides along on every "Copy link" and must not end
      up in the embed URL */
+  const shorts = host === 'youtube.com' && url.pathname.match(/^\/shorts\/([^/]+)/);
   const id = host === 'youtu.be'
     ? url.pathname.slice(1)
-    : host === 'youtube.com' && url.pathname === '/watch'
-      ? url.searchParams.get('v')
-      : null;
+    : shorts
+      ? shorts[1]
+      : host === 'youtube.com' && url.pathname === '/watch'
+        ? url.searchParams.get('v')
+        : null;
   return id && YOUTUBE_ID.test(id) ? id : null;
 }
 

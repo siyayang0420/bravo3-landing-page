@@ -13,7 +13,7 @@ import { useState } from 'react';
  * the visually-hidden span gives the button its own name, so a screen reader
  * hears "Play video: ..." rather than only the picture's description.
  */
-export default function VideoEmbed({ videoId, poster, label, width, height }) {
+export default function VideoEmbed({ videoId, poster, label, width, height, portrait }) {
   const [playing, setPlaying] = useState(false);
 
   if (playing) {
@@ -35,7 +35,7 @@ export default function VideoEmbed({ videoId, poster, label, width, height }) {
     <div className="post__video">
       <button type="button" className="post__video-play" onClick={() => setPlaying(true)}>
         <img
-          className="post__video-poster"
+          className={portrait ? 'post__video-poster post__video-poster--contain' : 'post__video-poster'}
           src={poster}
           alt={label}
           width={width}
