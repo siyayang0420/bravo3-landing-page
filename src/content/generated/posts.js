@@ -27,6 +27,12 @@ import img_posts_folke_no_tipping_kitsilano_images_hero from '../../../content/p
 import img_posts_folke_no_tipping_kitsilano_images_p1 from '../../../content/posts/folke-no-tipping-kitsilano/images/p1.webp';
 import img_posts_folke_no_tipping_kitsilano_images_p2 from '../../../content/posts/folke-no-tipping-kitsilano/images/p2.webp';
 import img_posts_folke_no_tipping_kitsilano_images_p3 from '../../../content/posts/folke-no-tipping-kitsilano/images/p3.webp';
+import img_posts_madame_danh_table_for_madame_danh_images_hero from '../../../content/posts/madame-danh-table-for-madame-danh/images/hero.webp';
+import img_posts_madame_danh_table_for_madame_danh_images_p1 from '../../../content/posts/madame-danh-table-for-madame-danh/images/p1.webp';
+import img_posts_madame_danh_table_for_madame_danh_images_p2 from '../../../content/posts/madame-danh-table-for-madame-danh/images/p2.webp';
+import img_posts_madame_danh_table_for_madame_danh_images_p3 from '../../../content/posts/madame-danh-table-for-madame-danh/images/p3.webp';
+import img_posts_madame_danh_table_for_madame_danh_images_p4 from '../../../content/posts/madame-danh-table-for-madame-danh/images/p4.webp';
+import img_posts_madame_danh_table_for_madame_danh_images_p5 from '../../../content/posts/madame-danh-table-for-madame-danh/images/p5.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_hero from '../../../content/posts/maxs-table-kavita-open-kitchen/images/hero.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_p1 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p1.webp';
 import img_posts_maxs_table_kavita_open_kitchen_images_p2 from '../../../content/posts/maxs-table-kavita-open-kitchen/images/p2.webp';
@@ -54,6 +60,7 @@ import img_venues_images_bar_bravo_logo from '../../../content/venues/images/bar
 import img_venues_images_ellipsis_logo from '../../../content/venues/images/ellipsis-logo.webp';
 import img_venues_images_folke_logo from '../../../content/venues/images/folke-logo.webp';
 import img_venues_images_kavita_logo from '../../../content/venues/images/kavita-logo.webp';
+import img_venues_images_madame_danh_logo from '../../../content/venues/images/madame-danh-logo.webp';
 import img_venues_images_moltaqa_logo from '../../../content/venues/images/moltaqa-logo.webp';
 import img_venues_images_niwa_logo from '../../../content/venues/images/niwa-logo.webp';
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
@@ -372,6 +379,349 @@ export const POSTS = [
           {
             "t": "text",
             "v": "Ask Tondvalkar how a one-year-old restaurant ends up on a national list and he doesn’t talk about technique. He credits his kitchen and his floor staff. His general manager, Yash Shah, has been his friend since kindergarten."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "madame-danh-table-for-madame-danh",
+    "category": "Restaurant",
+    "title": "Put the Marrow in Your Phở",
+    "crumb": "Madame Danh",
+    "date": "2026-08-31",
+    "dateLabel": "August 31, 2026",
+    "excerpt": "You can add a roasted bone marrow to your steak phở at Madame Danh. Start there, then stay for everything else.",
+    "hero": img_posts_madame_danh_table_for_madame_danh_images_hero,
+    "heroAlt": "An overhead table at Madame Danh with squid ink fried rice, steak pho with marrow bones, a crispy duck leg, a marrow plate with grilled baguette and four coloured iced drinks",
+    "venue": {
+      "key": "madame-danh",
+      "name": "Madame Danh",
+      "logo": img_venues_images_madame_danh_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/madame-danh",
+      "street": "4288 Fraser St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/Madame+Danh/data=!4m2!3m1!1s0x5486757e6318e771:0xcfbfb507369982ee",
+      "site": "madamedanh.com",
+      "siteUrl": "https://madamedanh.com/"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "You can put a roasted bone marrow on your phở here."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That's it, that's the pitch. Order the grilled steak phở, add the marrow, and it arrives with the bone standing up in the broth like it's been planted there. If you're the sort of person who was always going to order that, you can stop reading and go."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Everything else worth getting"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "squid ink fried rice"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " is the one I'd fight for. It comes out black, scattered with puffed rice and a spoonful of tobiko, with squid and dried scallop and egg through it. The food blog Mag Mei Adventures called it "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "\"airy and light\""
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " and not greasy, which is not the usual problem with fried rice."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "charred octopus"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " comes with a chilli sauce that, in the same write-up, "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "\"actually tingled as it burned so good.\""
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " I didn't write that sentence and I'm slightly annoyed about it."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "grilled pork jowl on rice"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " gets described as some of the most tender meat that writer had eaten. Jowl usually is, and it's usually not on the menu."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "carrots"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " are roasted and glazed with maple and fish sauce, then finished with crispy almonds. They're on the menu as Carrots à la Marble and they behave less like a vegetable than anything else on the table."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_madame_danh_table_for_madame_danh_images_p1,
+        "alt": "The dining room at Madame Danh, a tan leather banquette against a deep teal wall, with framed family photographs above it including a Vietnamese street cafe with scooters parked outside",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Then there's the "
+          },
+          {
+            "t": "strong",
+            "inline": [
+              {
+                "t": "text",
+                "v": "bún bò Huế"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": ", a spicy beef noodle soup from the old imperial city. It's a weekly special and they make fifteen bowls a day. Go early or don't go for that."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_madame_danh_table_for_madame_danh_images_p2,
+        "alt": "An overhead table spread at Madame Danh with squid ink fried rice in the centre, roasted bone marrow with grilled baguette, a crispy duck leg, steak pho and four coloured iced drinks",
+        "aspect": "980 / 1307",
+        "width": 980,
+        "height": 1307
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The drinks are doing their own thing. Kumquat red tea, marble green milk tea, and a butterfly pea sugarcane that comes out in two colours and doesn't stay that way."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_madame_danh_table_for_madame_danh_images_p3,
+        "alt": "A bowl of grilled steak pho at Madame Danh, sliced beef under a heap of shaved spring onion, with two roasted marrow bones standing in the broth",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Whose living room this is"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Sixteen seats on Fraser Street, in the stretch of Vancouver that's started calling itself the Fraserhood. Light wood, burnt orange, dark teal, and family photographs all over the walls. Street vendors, a cafe beside the railway tracks, the market at Đà Lạt. They're the family's own photographs, which is why the room feels like somebody's front room and not a set."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Madame Danh is the chef's grandmother. "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Madame"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " is French, an honorific; "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Danh"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " is her family name. She was raised in the French Catholic Church until she married, and she left Vietnam for Canada in 1986."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "She also still comes in and sits down in the room with her name on it. I think about that a lot."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Her grandson Tyson cooks. He grew up in Vietnam, learned from his mother, moved here in 2012, then worked at Cactus Club, West, Miku, Como Taperia and Nemesis Coffee. His sister Vi works there too."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_madame_danh_table_for_madame_danh_images_p4,
+        "alt": "A crispy duck leg at Madame Danh on rice noodle sheets with herbs and pickled vegetables, a dark dipping sauce alongside",
+        "aspect": "980 / 1224",
+        "width": 980,
+        "height": 1224
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Before it was this"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "This address was Golden Joy for seventeen years, a Filipino cafe doing adobo and barbecue pork noodles, until it closed quietly in 2024."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "One family's long run, then another family's first go, in the same room."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_madame_danh_table_for_madame_danh_images_p5,
+        "alt": "Roasted bone marrow at Madame Danh on a dark plate with grilled baguette and pickled daikon and carrot, beside the restaurant's blue menu",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Madame Danh joined Bravo in August, alongside restaurants across Metro Vancouver."
           }
         ]
       }

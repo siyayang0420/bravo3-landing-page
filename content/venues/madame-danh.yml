@@ -1,0 +1,27 @@
+name: Madame Danh
+logo: images/madame-danh-logo.webp
+bravoUrl: https://www.bravoup.ca/store/madame-danh
+street: 4288 Fraser St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/Madame+Danh/data=!4m2!3m1!1s0x5486757e6318e771:0xcfbfb507369982ee
+site: madamedanh.com
+siteUrl: https://madamedanh.com/
+# Identifies the venue to the Google Places API. Supplied by Siya, 2026-09-21,
+# checked two ways before being written:
+#   1. grepped against all ten existing venue records — no collision
+#   2. decoded — it encodes exactly the CID pair in the Maps URL above
+#      (0x5486757e6318e771:0xcfbfb507369982ee)
+# No review content is stored — only the ID.
+googlePlaceId: ChIJcecYY351hlQR7oKZNge1v88
+#
+# bravoUrl supplied by Siya, 2026-09-21. It was missing at first draft and was
+# deliberately left blank rather than marked `# no-bravoUrl:` — that marker is
+# only for a venue POSITIVELY confirmed not to be a Bravo merchant, naming who
+# confirmed it. The asset check fired every run until the URL arrived, which is
+# exactly what it is for: on Kavita (BM-009) the marker went on an inference and
+# silenced a warning that was correct.
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Vietnamese]

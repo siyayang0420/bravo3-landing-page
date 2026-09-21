@@ -12,6 +12,7 @@ export const VENUE_PLACES = {
   "ellipsis": { name: "Ellipsis", googlePlaceId: "ChIJg4UbagBzhlQR1tHd7tI6fdk" },
   "folke": { name: "Folke", googlePlaceId: "ChIJg2CDD-hzhlQR6RfTpau_YYw" },
   "kavita": { name: "Kavita", googlePlaceId: "ChIJ72spHshzhlQRkvzf00lnWGs" },
+  "madame-danh": { name: "Madame Danh", googlePlaceId: "ChIJcecYY351hlQR7oKZNge1v88" },
   "moltaqa": { name: "Moltaqa", googlePlaceId: "ChIJnbZ_HnpxhlQRYtAR6udPH4g" },
   "niwa": { name: "Niwa", googlePlaceId: "ChIJzeZiaABxhlQRdz6rzPbZNos" },
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
