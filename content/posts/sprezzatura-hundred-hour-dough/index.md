@@ -40,7 +40,7 @@ There's also a power outlet and a USB port at every seat. It's the least romanti
 
 ![The dining room at Sprezzatura, with a dark teal wall hung with framed pictures, a wooden banquette and plants along the window](images/p2.webp)
 
-Kingsway is not where you'd expect any of this. Orange umbrellas, red gingham on the tables, rosemary in the planters, a Mount Pleasant banner on the lamp post, and traffic going past. The room carries on as if it were somewhere else entirely.
+Kingsway is not where you'd expect any of this. Orange umbrellas, red gingham on the tables, rosemary in the planters, a Mount Pleasant banner on the lamp post, and traffic going past. The room carries on as if it were somewhere else entirely. Sprezzatura joined Bravo in July, which is a likelier way to come across it than driving past.
 
 ![Guests laughing at a table on the patio under orange umbrellas, with gingham tablecloths and planters along the sidewalk](images/p3.webp)
 
@@ -51,5 +51,3 @@ The other half is Italian roasts and braises, and they hide their hours just as 
 ![A braised short rib served over soft polenta with a dark sauce and fresh herbs](images/p4.webp)
 
 Seven years is a long time to keep up an act of not trying.
-
-Sprezzatura joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

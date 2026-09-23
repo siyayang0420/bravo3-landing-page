@@ -51,8 +51,6 @@ Mimo Bucko opened Moltaqa in 2018 on West Hastings, in Gastown, and still owns i
 
 The kitchen is fully halal-certified and grinds its own spice blends from spices brought in from Morocco. Mint tea gets poured at the table, from a height, which is its own small piece of the same history.
 
-Eight years is long enough to stop being the new place and not long enough to be taken for granted.
+Eight years is long enough to stop being the new place and not long enough to be taken for granted. Moltaqa joined Bravo in May, which is one more way for a room on Mainland Street to turn up in front of somebody.
 
 The name isn't a claim about fusion, either. Fusion is a modern idea about putting separate things together. This is the older version: cuisines that met a long time ago, in a country that didn't get much choice about it, and stayed.
-
-Moltaqa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

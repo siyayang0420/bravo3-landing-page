@@ -53,12 +53,10 @@ You have to find it.
 
 Ellipsis has almost no street presence. You get there through a courtyard off West 2nd Avenue, past a water curtain. Most people drive down that block rather than walk it. They're usually on their way to Granville Island. Nothing about the approach says bar.
 
-That's a real cost for a place that needs people to know it's there. It's also the best argument for the fourteen-hour day. If nobody can stumble across you at seven in the evening, it helps to be open at ten in the morning. And at two. And at nine.
+That's a real cost for a place that needs people to know it's there. It's also the best argument for the fourteen-hour day. If nobody can stumble across you at seven in the evening, it helps to be open at ten in the morning. And at two. And at nine. Ellipsis recently joined Bravo, which is another way of being found by somebody who wasn't looking for you.
 
 ![The free-standing metal bar at Ellipsis beneath the angled glass roof of Arthur Erickson's Waterfall Building](images/p4.webp "aspect: 980/1120")
 
 In April the cocktail bar handed a shift to Tom Liu, of Thunderbolt in Los Angeles, from five until close. An evening event, in a room that had already been open for eight hours.
 
 ![A "Pay with Bravo — Scan. Pay. Earn." card standing on the counter at Ellipsis](images/p5.webp "aspect: 980/958; focus: 50% 82%")
-
-Ellipsis recently joined Bravo. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

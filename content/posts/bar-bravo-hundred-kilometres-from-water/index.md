@@ -48,8 +48,6 @@ A restaurant this committed to one idea could fairly tell that person to order a
 
 ![An overhead view of a shared table, raw fish on a floral plate, toasts topped with cured fish, sliced sourdough and a bowl of prawns, with two people reaching in](images/p3.webp)
 
-The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, gold for seafood in 2025, Recommended in the MICHELIN Guide.
+The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, gold for seafood in 2025, Recommended in the MICHELIN Guide. The room joined Bravo in August, which is one more list it turns up on.
 
 None of it changed the wine rule. That's the point of having one.
-
-The room joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

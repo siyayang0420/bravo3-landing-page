@@ -39,7 +39,7 @@ The teriyaki is made without oil. The tempura is whole wheat. There's inari made
 
 That last one is the tell. Nobody is checking. They did it anyway.
 
-Then it got smaller. Denman closed in 2022. Broadway closed in May 2024, after thirteen years. One room is left, the one on Hornby, and the rice in it has not changed.
+Then it got smaller. Denman closed in 2022. Broadway closed in May 2024, after thirteen years. One room is left, the one on Hornby, and the rice in it has not changed. Shizenya joined Bravo in September, which is a useful thing to have when you are down to one address.
 
 ![A chirashi bowl at Shizenya with tuna, yellowtail, scallop, uni, ikura and a whole spot prawn laid over rice, with a branded bamboo paddle](images/p2.webp)
 
@@ -60,7 +60,5 @@ And the hand rolls, which are where the brown rice stops being a talking point a
 Ordering a brown rice roll in Vancouver now gets you a shrug. It didn't in 2009, and somebody had to be the first person to look silly.
 
 ![A salad bowl at Shizenya with albacore, sockeye, avocado, crab, sunflower seeds, shredded carrot and microgreens](images/p5.webp)
-
-Shizenya joined Bravo in September. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.
 
 *Correction, 23 September 2026: an earlier version of this story said Shizenya had three rooms, without noting that the Denman location closed in 2022 and the Broadway location in May 2024. It also credited the 2009 decision to Hide Hirose, who is on the record as the company's president in 2018 but is not sourced anywhere as its founder. Both have been corrected.*

@@ -231,7 +231,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Then it got smaller. Denman closed in 2022. Broadway closed in May 2024, after thirteen years. One room is left, the one on Hornby, and the rice in it has not changed."
+            "v": "Then it got smaller. Denman closed in 2022. Broadway closed in May 2024, after thirteen years. One room is left, the one on Hornby, and the rice in it has not changed. Shizenya joined Bravo in September, which is a useful thing to have when you are down to one address."
           }
         ]
       },
@@ -320,15 +320,6 @@ export const POSTS = [
         "aspect": "980 / 1224",
         "width": 980,
         "height": 1224
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Shizenya joined Bravo in September. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
-          }
-        ]
       },
       {
         "type": "p",
@@ -894,7 +885,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Sixteen seats on Fraser Street, in the stretch of Vancouver that's started calling itself the Fraserhood. Light wood, burnt orange, dark teal, and family photographs all over the walls. Street vendors, a cafe beside the railway tracks, the market at Đà Lạt. They're the family's own photographs, which is why the room feels like somebody's front room and not a set."
+            "v": "Sixteen seats on Fraser Street, in the stretch of Vancouver that's started calling itself the Fraserhood. Light wood, burnt orange, dark teal, and family photographs all over the walls. Street vendors, a cafe beside the railway tracks, the market at Đà Lạt. They're the family's own photographs, which is why the room feels like somebody's front room and not a set. Madame Danh joined Bravo in August, which is how a sixteen-seat room gets found without a sign big enough to read from a car."
           }
         ]
       },
@@ -993,15 +984,6 @@ export const POSTS = [
         "aspect": "980 / 1225",
         "width": 980,
         "height": 1225
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Madame Danh joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
-          }
-        ]
       }
     ]
   },
@@ -1204,7 +1186,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, gold for seafood in 2025, Recommended in the MICHELIN Guide."
+            "v": "The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, gold for seafood in 2025, Recommended in the MICHELIN Guide. The room joined Bravo in August, which is one more list it turns up on."
           }
         ]
       },
@@ -1214,15 +1196,6 @@ export const POSTS = [
           {
             "t": "text",
             "v": "None of it changed the wine rule. That's the point of having one."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "The room joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -1423,7 +1396,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That's a real cost for a place that needs people to know it's there. It's also the best argument for the fourteen-hour day. If nobody can stumble across you at seven in the evening, it helps to be open at ten in the morning. And at two. And at nine."
+            "v": "That's a real cost for a place that needs people to know it's there. It's also the best argument for the fourteen-hour day. If nobody can stumble across you at seven in the evening, it helps to be open at ten in the morning. And at two. And at nine. Ellipsis recently joined Bravo, which is another way of being found by somebody who wasn't looking for you."
           }
         ]
       },
@@ -1452,15 +1425,6 @@ export const POSTS = [
         "focus": "50% 82%",
         "width": 980,
         "height": 958
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Ellipsis recently joined Bravo. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
-          }
-        ]
       }
     ]
   },
@@ -1749,7 +1713,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Kingsway is not where you'd expect any of this. Orange umbrellas, red gingham on the tables, rosemary in the planters, a Mount Pleasant banner on the lamp post, and traffic going past. The room carries on as if it were somewhere else entirely."
+            "v": "Kingsway is not where you'd expect any of this. Orange umbrellas, red gingham on the tables, rosemary in the planters, a Mount Pleasant banner on the lamp post, and traffic going past. The room carries on as if it were somewhere else entirely. Sprezzatura joined Bravo in July, which is a likelier way to come across it than driving past."
           }
         ]
       },
@@ -1793,15 +1757,6 @@ export const POSTS = [
           {
             "t": "text",
             "v": "Seven years is a long time to keep up an act of not trying."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Sprezzatura joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -1918,7 +1873,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Folke is competing on the same street with restaurants that don't do this. Their menus look cheaper. Then you add fifteen or twenty per cent at the end, and often you've paid more. That's a harder sell than a policy. It has to be made again every night the room fills, or doesn't."
+            "v": "Folke is competing on the same street with restaurants that don't do this. Their menus look cheaper. Then you add fifteen or twenty per cent at the end, and often you've paid more. That's a harder sell than a policy. It has to be made again every night the room fills, or doesn't. Folke joined Bravo in July, which is one more way for a room that needs explaining to get found."
           }
         ]
       },
@@ -2029,15 +1984,6 @@ export const POSTS = [
           {
             "t": "text",
             "v": "Neither of those is the hard part. Any good restaurant can get praised for a season. Keeping salaried chefs on a four-day week is the hard part. Doing it inside a price customers still agree to pay, through four years of the food costs Deo mentioned, is harder still."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Folke joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -2483,16 +2429,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "They got there without ever naming a cuisine. It's a harder way to run a restaurant, and a harder thing to explain to somebody deciding where to eat. The achievement is that enough people have stopped needing it explained."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Niwa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
+            "v": "They got there without ever naming a cuisine. It's a harder way to run a restaurant, and a harder thing to explain to somebody deciding where to eat. Niwa joined Bravo in May, which mostly helps the people who were never going to look it up. The achievement is that enough people have stopped needing it explained."
           }
         ]
       }
@@ -2693,7 +2630,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Eight years is long enough to stop being the new place and not long enough to be taken for granted."
+            "v": "Eight years is long enough to stop being the new place and not long enough to be taken for granted. Moltaqa joined Bravo in May, which is one more way for a room on Mainland Street to turn up in front of somebody."
           }
         ]
       },
@@ -2703,15 +2640,6 @@ export const POSTS = [
           {
             "t": "text",
             "v": "The name isn't a claim about fusion, either. Fusion is a modern idea about putting separate things together. This is the older version: cuisines that met a long time ago, in a country that didn't get much choice about it, and stayed."
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "inline": [
-          {
-            "t": "text",
-            "v": "Moltaqa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }

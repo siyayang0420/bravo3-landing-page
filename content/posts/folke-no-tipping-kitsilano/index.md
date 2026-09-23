@@ -29,7 +29,7 @@ Wages are the cost restaurants usually leave off the menu, to be sorted out afte
 
 There's an obvious problem with doing that. The number on the page gets bigger.
 
-Folke is competing on the same street with restaurants that don't do this. Their menus look cheaper. Then you add fifteen or twenty per cent at the end, and often you've paid more. That's a harder sell than a policy. It has to be made again every night the room fills, or doesn't.
+Folke is competing on the same street with restaurants that don't do this. Their menus look cheaper. Then you add fifteen or twenty per cent at the end, and often you've paid more. That's a harder sell than a policy. It has to be made again every night the room fills, or doesn't. Folke joined Bravo in July, which is one more way for a room that needs explaining to get found.
 
 ## Why they did it
 
@@ -52,5 +52,3 @@ Neither of them is vegan. The menu is, completely, and nothing on it pretends to
 Four years in, the kitchen has made Air Canada enRoute's Canada's Best New Restaurants and is Recommended in the MICHELIN Guide.
 
 Neither of those is the hard part. Any good restaurant can get praised for a season. Keeping salaried chefs on a four-day week is the hard part. Doing it inside a price customers still agree to pay, through four years of the food costs Deo mentioned, is harder still.
-
-Folke joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

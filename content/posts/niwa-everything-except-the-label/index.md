@@ -55,6 +55,4 @@ Niwa opened in December 2024. Gee runs it with three partners, Robin Corbett, Mi
 
 Within a year, Air Canada enRoute placed it tenth on its list of Canada's best new restaurants. That's the strongest national showing of any room we've written about.
 
-They got there without ever naming a cuisine. It's a harder way to run a restaurant, and a harder thing to explain to somebody deciding where to eat. The achievement is that enough people have stopped needing it explained.
-
-Niwa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.
+They got there without ever naming a cuisine. It's a harder way to run a restaurant, and a harder thing to explain to somebody deciding where to eat. Niwa joined Bravo in May, which mostly helps the people who were never going to look it up. The achievement is that enough people have stopped needing it explained.

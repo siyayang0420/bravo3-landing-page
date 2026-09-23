@@ -39,7 +39,7 @@ The drinks are doing their own thing. Kumquat red tea, marble green milk tea, an
 
 ## Whose living room this is
 
-Sixteen seats on Fraser Street, in the stretch of Vancouver that's started calling itself the Fraserhood. Light wood, burnt orange, dark teal, and family photographs all over the walls. Street vendors, a cafe beside the railway tracks, the market at Đà Lạt. They're the family's own photographs, which is why the room feels like somebody's front room and not a set.
+Sixteen seats on Fraser Street, in the stretch of Vancouver that's started calling itself the Fraserhood. Light wood, burnt orange, dark teal, and family photographs all over the walls. Street vendors, a cafe beside the railway tracks, the market at Đà Lạt. They're the family's own photographs, which is why the room feels like somebody's front room and not a set. Madame Danh joined Bravo in August, which is how a sixteen-seat room gets found without a sign big enough to read from a car.
 
 Madame Danh is the chef's grandmother. *Madame* is French, an honorific; *Danh* is her family name. She was raised in the French Catholic Church until she married, and she left Vietnam for Canada in 1986.
 
@@ -56,5 +56,3 @@ This address was Golden Joy for seventeen years, a Filipino cafe doing adobo and
 One family's long run, then another family's first go, in the same room.
 
 ![Roasted bone marrow at Madame Danh on a dark plate with grilled baguette and pickled daikon and carrot, beside the restaurant's blue menu](images/p5.webp)
-
-Madame Danh joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.
