@@ -51,6 +51,12 @@ import img_posts_niwa_everything_except_the_label_images_hero from '../../../con
 import img_posts_niwa_everything_except_the_label_images_p1 from '../../../content/posts/niwa-everything-except-the-label/images/p1.webp';
 import img_posts_niwa_everything_except_the_label_images_p2 from '../../../content/posts/niwa-everything-except-the-label/images/p2.webp';
 import img_posts_niwa_everything_except_the_label_images_p3 from '../../../content/posts/niwa-everything-except-the-label/images/p3.webp';
+import img_posts_shizenya_seventeen_years_without_white_rice_images_hero from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/hero.webp';
+import img_posts_shizenya_seventeen_years_without_white_rice_images_p1 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p1.webp';
+import img_posts_shizenya_seventeen_years_without_white_rice_images_p2 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p2.webp';
+import img_posts_shizenya_seventeen_years_without_white_rice_images_p3 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p3.webp';
+import img_posts_shizenya_seventeen_years_without_white_rice_images_p4 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p4.webp';
+import img_posts_shizenya_seventeen_years_without_white_rice_images_p5 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p5.webp';
 import img_posts_sprezzatura_hundred_hour_dough_images_hero from '../../../content/posts/sprezzatura-hundred-hour-dough/images/hero.webp';
 import img_posts_sprezzatura_hundred_hour_dough_images_p1 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p1.webp';
 import img_posts_sprezzatura_hundred_hour_dough_images_p2 from '../../../content/posts/sprezzatura-hundred-hour-dough/images/p2.webp';
@@ -64,10 +70,259 @@ import img_venues_images_madame_danh_logo from '../../../content/venues/images/m
 import img_venues_images_moltaqa_logo from '../../../content/venues/images/moltaqa-logo.webp';
 import img_venues_images_niwa_logo from '../../../content/venues/images/niwa-logo.webp';
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
+import img_venues_images_shizenya_logo from '../../../content/venues/images/shizenya-logo.webp';
 import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
 import img_venues_images_wren_cafe_logo from '../../../content/venues/images/wren-cafe-logo.webp';
 
 export const POSTS = [
+  {
+    "slug": "shizenya-seventeen-years-without-white-rice",
+    "category": "Restaurant",
+    "title": "Seventeen Years Without White Rice",
+    "crumb": "Shizenya",
+    "date": "2026-09-15",
+    "dateLabel": "September 15, 2026",
+    "excerpt": "In 2009 a man opened a sushi restaurant in Vancouver and refused to serve white rice. Seventeen years later he still hasn't.",
+    "hero": img_posts_shizenya_seventeen_years_without_white_rice_images_hero,
+    "heroAlt": "A server in a black Shizenya polo carrying out a wide bowl of sashimi in both hands, with salmon, albacore, scallops, spot prawns and shredded carrot",
+    "venue": {
+      "key": "shizenya",
+      "name": "Shizenya",
+      "logo": img_venues_images_shizenya_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/shizenya",
+      "street": "965 Hornby St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/Shizenya/data=!4m2!3m1!1s0x548673d541a464dd:0xfd3a133de977ef7f",
+      "site": "shizenya.ca",
+      "siteUrl": "https://www.shizenya.ca/"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "In 2009, a man opened a sushi restaurant in downtown Vancouver and decided it would not serve white rice."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Not \"brown rice also available.\" Not \"ask your server.\" None. In a city people fly to for sushi."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Seventeen years later, he still hasn't budged."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What he was betting against"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Ask a sushi chef and a fair few will tell you the rice "
+          },
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "is"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " the sushi. The fish gets the attention, but the thing being made is seasoned rice, and everything else sits on top of it."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Brown rice doesn't behave the same way. It's chewier, it holds together differently, and it will not quietly do what white rice does. Choosing it means choosing a harder version of your own job, every service, forever."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Hide Hirose chose it anyway, and Shizenya describes itself as the first Japanese natural food restaurant in North America."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_shizenya_seventeen_years_without_white_rice_images_p1,
+        "alt": "A slate plate of sashimi at Shizenya with sockeye salmon, albacore and hamachi, shiso leaves, sprouts, wakame and a yellow chrysanthemum",
+        "aspect": "980 / 1224",
+        "width": 980,
+        "height": 1224
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "He kept going further, not less far"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The easy version of this story is a man who softens over time. That isn't what happened."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "He opened a second room on Broadway in 2011, moved the original up the street in 2017, and added a third on Denman in 2018. Three rooms, no white rice in any of them, and the rest of the menu went the same way."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The teriyaki is made without oil. The tempura is whole wheat. There's inari made with organic quinoa, and a curry with no MSG in it. The wasabi is real wasabi, not the dyed horseradish almost everywhere serves and nobody mentions."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That last one is the tell. Nobody is checking. He did it anyway."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_shizenya_seventeen_years_without_white_rice_images_p2,
+        "alt": "A chirashi bowl at Shizenya with tuna, yellowtail, scallop, uni, ikura and a whole spot prawn laid over rice, with a branded bamboo paddle",
+        "aspect": "980 / 1224",
+        "width": 980,
+        "height": 1224
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What to order"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The chirashi, if the uni is on. It comes with a whole spot prawn lying across the top and a stripe of ikura beside it. Nothing about it looks like a compromise."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The sashimi platter if there are a few of you. Sockeye and albacore are both caught locally, and the seafood is Ocean Wise, the sustainable-seafood programme."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The salmon tataki, seared at the edges and still raw through the middle, which arrives under potato chips. I have no notes on that. It works."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_shizenya_seventeen_years_without_white_rice_images_p3,
+        "alt": "Two hand rolls at Shizenya, nori wrapped around rice with uni and a heap of ikura, on a bamboo mat",
+        "aspect": "980 / 1224",
+        "width": 980,
+        "height": 1224
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "And the hand rolls, which are where the brown rice stops being a talking point. Someone who ate here put it plainly: the brown rice made them feel like they were eating healthier sushi. That's the whole promise, delivered without a lecture."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_shizenya_seventeen_years_without_white_rice_images_p4,
+        "alt": "Seared sockeye salmon tataki at Shizenya, sliced and fanned on a dark plate with spring onion, greens and potato chips",
+        "aspect": "980 / 1224",
+        "width": 980,
+        "height": 1224
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Ordering a brown rice roll in Vancouver now gets you a shrug. It didn't in 2009, and somebody had to be the first person to look silly."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_shizenya_seventeen_years_without_white_rice_images_p5,
+        "alt": "A salad bowl at Shizenya with albacore, sockeye, avocado, crab, sunflower seeds, shredded carrot and microgreens",
+        "aspect": "980 / 1224",
+        "width": 980,
+        "height": 1224
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Shizenya joined Bravo in September, alongside restaurants across Metro Vancouver."
+          }
+        ]
+      }
+    ]
+  },
   {
     "slug": "maxs-table-zubu-ramen-robots",
     "category": "Max's Table",

@@ -16,6 +16,7 @@ export const VENUE_PLACES = {
   "moltaqa": { name: "Moltaqa", googlePlaceId: "ChIJnbZ_HnpxhlQRYtAR6udPH4g" },
   "niwa": { name: "Niwa", googlePlaceId: "ChIJzeZiaABxhlQRdz6rzPbZNos" },
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
+  "shizenya": { name: "Shizenya", googlePlaceId: "ChIJ3WSkQdVzhlQRf-936T0TOv0" },
   "sprezzatura": { name: "Sprezzatura Restaurant", googlePlaceId: "ChIJCU7GmHVzhlQRVCX3eeeGIqo" },
   "wren-cafe": { name: "Wren Cafe", googlePlaceId: "ChIJPVtgMgBzhlQRMJ3LT4cv2gs" },
   "zubu-ramen-downtown": { name: "ZUBU Ramen - Downtown", googlePlaceId: "ChIJu_L5cudxhlQRfMprQBqWBJU" },

@@ -1,0 +1,25 @@
+name: Shizenya
+logo: images/shizenya-logo.webp
+bravoUrl: https://www.bravoup.ca/store/shizenya
+street: 965 Hornby St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/Shizenya/data=!4m2!3m1!1s0x548673d541a464dd:0xfd3a133de977ef7f
+site: shizenya.ca
+siteUrl: https://www.shizenya.ca/
+# Identifies the venue to the Google Places API. Supplied by Siya, 2026-09-22,
+# checked two ways before being written:
+#   1. grepped against all eleven existing venue records — no collision
+#   2. decoded — it encodes exactly the CID pair in the Maps URL above
+#      (0x548673d541a464dd:0xfd3a133de977ef7f)
+#
+# CAUTION FOR FUTURE CHECKS: the Maps URL Siya supplied carried TWO CID pairs —
+# an `!5s` pair (0x5486717f0a6c35a5:0x2cba7a9c7cdc2aeb) as well as the `!1s` one
+# above. Only the `!1s` is the place the ID points at. A decode check run against
+# the wrong pair would fail for no reason, or worse, pass against a neighbour.
+# No review content is stored — only the ID.
+googlePlaceId: ChIJ3WSkQdVzhlQRf-936T0TOv0
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [Japanese, Sushi]
