@@ -55,4 +55,4 @@ Eight years is long enough to stop being the new place and not long enough to be
 
 The name isn't a claim about fusion, either. Fusion is a modern idea about putting separate things together. This is the older version: cuisines that met a long time ago, in a country that didn't get much choice about it, and stayed.
 
-Moltaqa joined Bravo in May, alongside restaurants across Metro Vancouver.
+Moltaqa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

@@ -53,4 +53,4 @@ Four years in, the kitchen has made Air Canada enRoute's Canada's Best New Resta
 
 Neither of those is the hard part. Any good restaurant can get praised for a season. Keeping salaried chefs on a four-day week is the hard part. Doing it inside a price customers still agree to pay, through four years of the food costs Deo mentioned, is harder still.
 
-Folke joined Bravo in July, alongside restaurants across Metro Vancouver.
+Folke joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

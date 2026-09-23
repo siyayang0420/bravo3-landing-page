@@ -57,4 +57,4 @@ One family's long run, then another family's first go, in the same room.
 
 ![Roasted bone marrow at Madame Danh on a dark plate with grilled baguette and pickled daikon and carrot, beside the restaurant's blue menu](images/p5.webp)
 
-Madame Danh joined Bravo in August, alongside restaurants across Metro Vancouver.
+Madame Danh joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

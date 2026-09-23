@@ -61,4 +61,4 @@ In April the cocktail bar handed a shift to Tom Liu, of Thunderbolt in Los Angel
 
 ![A "Pay with Bravo — Scan. Pay. Earn." card standing on the counter at Ellipsis](images/p5.webp "aspect: 980/958; focus: 50% 82%")
 
-Ellipsis recently joined Bravo, alongside restaurants across Metro Vancouver.
+Ellipsis recently joined Bravo. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

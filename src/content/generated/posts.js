@@ -120,7 +120,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Seventeen years later, he still hasn't budged."
+            "v": "Seventeen years later, it still hasn't budged."
           }
         ]
       },
@@ -169,7 +169,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Hide Hirose chose it anyway, and Shizenya describes itself as the first Japanese natural food restaurant in North America."
+            "v": "Shizenya chose it anyway, and describes itself as the first Japanese natural food restaurant in North America."
           }
         ]
       },
@@ -186,7 +186,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "He kept going further, not less far"
+            "v": "It went further before it went smaller"
           }
         ]
       },
@@ -195,7 +195,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The easy version of this story is a man who softens over time. That isn't what happened."
+            "v": "The easy version of this story is a restaurant that softens over time. That isn't what happened."
           }
         ]
       },
@@ -204,7 +204,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "He opened a second room on Broadway in 2011, moved the original up the street in 2017, and added a third on Denman in 2018. Three rooms, no white rice in any of them, and the rest of the menu went the same way."
+            "v": "A second room opened on Broadway in 2011. The original moved up the street in 2017. A third opened on Denman in 2018. Three rooms, no white rice in any of them, and the rest of the menu went the same way."
           }
         ]
       },
@@ -222,7 +222,16 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "That last one is the tell. Nobody is checking. He did it anyway."
+            "v": "That last one is the tell. Nobody is checking. They did it anyway."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Then it got smaller. Denman closed in 2022. Broadway closed in May 2024, after thirteen years. One room is left, the one on Hornby, and the rice in it has not changed."
           }
         ]
       },
@@ -283,7 +292,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "And the hand rolls, which are where the brown rice stops being a talking point. Someone who ate here put it plainly: the brown rice made them feel like they were eating healthier sushi. That's the whole promise, delivered without a lecture."
+            "v": "And the hand rolls, which are where the brown rice stops being a talking point and just becomes lunch. That's the whole promise, delivered without a lecture."
           }
         ]
       },
@@ -317,7 +326,21 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Shizenya joined Bravo in September, alongside restaurants across Metro Vancouver."
+            "v": "Shizenya joined Bravo in September. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Correction, 23 September 2026: an earlier version of this story said Shizenya had three rooms, without noting that the Denman location closed in 2022 and the Broadway location in May 2024. It also credited the 2009 decision to Hide Hirose, who is on the record as the company's president in 2018 but is not sourced anywhere as its founder. Both have been corrected."
+              }
+            ]
           }
         ]
       }
@@ -976,7 +999,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Madame Danh joined Bravo in August, alongside restaurants across Metro Vancouver."
+            "v": "Madame Danh joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -1199,7 +1222,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "The room joined Bravo in August, alongside restaurants across Metro Vancouver."
+            "v": "The room joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -1435,7 +1458,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Ellipsis recently joined Bravo, alongside restaurants across Metro Vancouver."
+            "v": "Ellipsis recently joined Bravo. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -1778,7 +1801,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Sprezzatura joined Bravo in July, alongside restaurants across Metro Vancouver."
+            "v": "Sprezzatura joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -2014,7 +2037,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Folke joined Bravo in July, alongside restaurants across Metro Vancouver."
+            "v": "Folke joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -2469,7 +2492,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Niwa joined Bravo in May, alongside restaurants across Metro Vancouver."
+            "v": "Niwa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }
@@ -2688,7 +2711,7 @@ export const POSTS = [
         "inline": [
           {
             "t": "text",
-            "v": "Moltaqa joined Bravo in May, alongside restaurants across Metro Vancouver."
+            "v": "Moltaqa joined Bravo in May. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver."
           }
         ]
       }

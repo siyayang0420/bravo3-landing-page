@@ -52,4 +52,4 @@ The other half is Italian roasts and braises, and they hide their hours just as 
 
 Seven years is a long time to keep up an act of not trying.
 
-Sprezzatura joined Bravo in July, alongside restaurants across Metro Vancouver.
+Sprezzatura joined Bravo in July. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.

@@ -52,4 +52,4 @@ The praise has followed: Best New Restaurant from Vancouver Magazine in 2024, go
 
 None of it changed the wine rule. That's the point of having one.
 
-The room joined Bravo in August, alongside restaurants across Metro Vancouver.
+The room joined Bravo in August. Bravo is a restaurant discovery and social dining platform working with restaurants across Metro Vancouver.
