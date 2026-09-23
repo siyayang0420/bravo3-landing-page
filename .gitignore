@@ -28,3 +28,6 @@ pnpm-debug.log*
 
 # Vercel CLI link + local env pulls
 .vercel/
+
+# Vite writes these when the config changes; they are not source.
+vite.config.js.timestamp-*
