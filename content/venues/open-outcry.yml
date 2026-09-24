@@ -1,0 +1,17 @@
+# Place ID ChIJgdfM96RxhlQR34bOr7vNyG8 decodes cleanly to 0x548671a4f7ccd781:0x6fc8cdbbafce86df.
+# NOT cross-checked: the Maps link supplied was a search URL with no !1s CID pair to compare against.
+# The 0x5486... prefix matches other downtown Vancouver venues in this repo.
+name: Open Outcry
+logo: images/open-outcry-logo.webp
+bravoUrl: https://www.bravoup.ca/store/open-outcry
+street: 811 W Pender St
+locality: Vancouver
+mapUrl: https://www.google.com/maps/place/?q=place_id:ChIJgdfM96RxhlQR34bOr7vNyG8
+site: openoutcry.cc
+siteUrl: https://www.openoutcry.cc/
+googlePlaceId: ChIJgdfM96RxhlQR34bOr7vNyG8
+schema:
+  type: Restaurant
+  region: BC
+  country: CA
+  servesCuisine: [International, Bistro]

@@ -16,6 +16,7 @@ export const VENUE_PLACES = {
   "madame-danh": { name: "Madame Danh", googlePlaceId: "ChIJcecYY351hlQR7oKZNge1v88" },
   "moltaqa": { name: "Moltaqa", googlePlaceId: "ChIJnbZ_HnpxhlQRYtAR6udPH4g" },
   "niwa": { name: "Niwa", googlePlaceId: "ChIJzeZiaABxhlQRdz6rzPbZNos" },
+  "open-outcry": { name: "Open Outcry", googlePlaceId: "ChIJgdfM96RxhlQR34bOr7vNyG8" },
   "pinche-taco-shop": { name: "Pinche Taco Shop", googlePlaceId: "ChIJC0TUZABxhlQR67ZNMmVof_4" },
   "shizenya": { name: "Shizenya", googlePlaceId: "ChIJ3WSkQdVzhlQRf-936T0TOv0" },
   "sprezzatura": { name: "Sprezzatura Restaurant", googlePlaceId: "ChIJCU7GmHVzhlQRVCX3eeeGIqo" },

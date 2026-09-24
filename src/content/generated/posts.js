@@ -57,6 +57,11 @@ import img_posts_niwa_everything_except_the_label_images_hero from '../../../con
 import img_posts_niwa_everything_except_the_label_images_p1 from '../../../content/posts/niwa-everything-except-the-label/images/p1.webp';
 import img_posts_niwa_everything_except_the_label_images_p2 from '../../../content/posts/niwa-everything-except-the-label/images/p2.webp';
 import img_posts_niwa_everything_except_the_label_images_p3 from '../../../content/posts/niwa-everything-except-the-label/images/p3.webp';
+import img_posts_open_outcry_bear_and_bull_images_hero from '../../../content/posts/open-outcry-bear-and-bull/images/hero.webp';
+import img_posts_open_outcry_bear_and_bull_images_p1 from '../../../content/posts/open-outcry-bear-and-bull/images/p1.webp';
+import img_posts_open_outcry_bear_and_bull_images_p2 from '../../../content/posts/open-outcry-bear-and-bull/images/p2.webp';
+import img_posts_open_outcry_bear_and_bull_images_p3 from '../../../content/posts/open-outcry-bear-and-bull/images/p3.webp';
+import img_posts_open_outcry_bear_and_bull_images_p4 from '../../../content/posts/open-outcry-bear-and-bull/images/p4.webp';
 import img_posts_shizenya_seventeen_years_without_white_rice_images_hero from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/hero.webp';
 import img_posts_shizenya_seventeen_years_without_white_rice_images_p1 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p1.webp';
 import img_posts_shizenya_seventeen_years_without_white_rice_images_p2 from '../../../content/posts/shizenya-seventeen-years-without-white-rice/images/p2.webp';
@@ -76,6 +81,7 @@ import img_venues_images_kavita_logo from '../../../content/venues/images/kavita
 import img_venues_images_madame_danh_logo from '../../../content/venues/images/madame-danh-logo.webp';
 import img_venues_images_moltaqa_logo from '../../../content/venues/images/moltaqa-logo.webp';
 import img_venues_images_niwa_logo from '../../../content/venues/images/niwa-logo.webp';
+import img_venues_images_open_outcry_logo from '../../../content/venues/images/open-outcry-logo.webp';
 import img_venues_images_pinche_taco_shop_logo from '../../../content/venues/images/pinche-taco-shop-logo.webp';
 import img_venues_images_shizenya_logo from '../../../content/venues/images/shizenya-logo.webp';
 import img_venues_images_sprezzatura_logo from '../../../content/venues/images/sprezzatura-logo.webp';
@@ -302,6 +308,242 @@ export const POSTS = [
           {
             "t": "text",
             "v": "Above the bar there's a grid of lit wooden boxes, and inside nearly every one is the same shape, cut dark against the light. The leaf, over and over, the length of the room. Whoever chose it thought about it for a long time."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "open-outcry-bear-and-bull",
+    "category": "Restaurant",
+    "title": "The Bear and the Bull Are Having a Drink",
+    "crumb": "Open Outcry",
+    "date": "2026-09-21",
+    "dateLabel": "September 21, 2026",
+    "excerpt": "A bull market goes up, a bear market goes down, and they are supposed to be enemies. On this sign they are holding hands.",
+    "hero": img_posts_open_outcry_bear_and_bull_images_hero,
+    "heroAlt": "The Open Outcry logo on a tan ground, a bear in a top hat and a bull in a tie holding hands as if dancing, a martini in each free paw",
+    "venue": {
+      "key": "open-outcry",
+      "name": "Open Outcry",
+      "logo": img_venues_images_open_outcry_logo,
+      "bravoUrl": "https://www.bravoup.ca/store/open-outcry",
+      "street": "811 W Pender St",
+      "locality": "Vancouver",
+      "mapUrl": "https://www.google.com/maps/place/?q=place_id:ChIJgdfM96RxhlQR34bOr7vNyG8",
+      "site": "openoutcry.cc",
+      "siteUrl": "https://www.openoutcry.cc/"
+    },
+    "content": [
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The sign on West Pender says OPEN OUTCRY. Underneath it, two animals in evening dress are holding hands, and each of them has a martini."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "One is a bear in a top hat. The other is a bull in a tie. They appear to be dancing."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What the two animals are for"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "A bull market is one going up. A bear market is one going down. They are the only two moods money has, and they are meant to be opponents: every trade needs somebody who thinks the price is about to rise and somebody who is sure it's about to fall."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "On this sign they've put the argument down and got a drink."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_open_outcry_bear_and_bull_images_p1,
+        "alt": "The Open Outcry storefront on West Pender at night, the lit sign above dark windows, a car passing in a blur of light",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "As far as I can tell nobody has ever explained the joke, and it doesn't need explaining. The fight is off. The two of them are out for the evening."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Something really did stop here"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "em",
+            "inline": [
+              {
+                "t": "text",
+                "v": "Open outcry"
+              }
+            ]
+          },
+          {
+            "t": "text",
+            "v": " is a way of trading, and it is the reason the restaurant has that name."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Before computers, buying and selling happened out loud. Prices were shouted across a pit, and hands did the numbers over the top of the noise. Palms turned outward meant you were selling. Palms turned in meant you were buying."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "It was a language, and it was spoken in this building. 811 West Pender went up in 1929 as Vancouver's first modern stock exchange, a few months before the Crash, designed by Townley, Matheson, the firm that would later build City Hall. The trading floor is the room you eat in."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The exchange moved out in 1946. The shouting lasted longer elsewhere, and then it stopped there too: London in 1986, Toronto in 1997. A way of talking that thousands of people once knew by heart became something you have to look up."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_open_outcry_bear_and_bull_images_p2,
+        "alt": "Inside Open Outcry, a dark red steel staircase under a globe chandelier, beside a wall-sized painted mural of a crowd of figures in suits",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The mural is still on the wall, a crowd of men in suits, which is a strange thing to eat under and a good one."
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "What gets carried across the floor now"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Softer things than the room was built for. There is toast, with cold-smoked salmon on it, or with prosciutto and pomegranate seeds. There is burrata, and there are anchovy tarts, and beef cheeks, and prawns with pappardelle. And there is a meatball called the Outcry, which has been on the menu since the room first became a restaurant in 2019, through a closure and a reopening."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_open_outcry_bear_and_bull_images_p3,
+        "alt": "A slice of toast in a yellow bowl at Open Outcry, layered with greens, shaved fennel and folds of cold-smoked salmon",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "On Saturdays there is brunch, and somebody pours syrup over a stack of pancakes in a room that was built for arguing about money."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "I haven't eaten there, and nobody at Bravo has. Bravo is the Vancouver restaurant app that publishes this magazine, and Open Outcry is listed on it. I would go for the room first and make my mind up about the food once I was sitting in it."
+          }
+        ]
+      },
+      {
+        "type": "figure",
+        "src": img_posts_open_outcry_bear_and_bull_images_p4,
+        "alt": "A stack of pancakes on a white plate at Open Outcry, dusted with icing sugar and topped with strawberries and kiwi, syrup falling in a thin line through a shaft of window light",
+        "aspect": "980 / 1225",
+        "width": 980,
+        "height": 1225
+      },
+      {
+        "type": "h2",
+        "inline": [
+          {
+            "t": "text",
+            "v": "The bear is wearing a hat"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "That's the part I keep going back to. Not the martini. The hat."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "inline": [
+          {
+            "t": "text",
+            "v": "Somebody drew a top hat on a bear, with a small bow on the brim, and sent him in to dance on a floor where fortunes were shouted away. The market never stopped being a fight. It just stopped being one you could hear from the street."
           }
         ]
       }
